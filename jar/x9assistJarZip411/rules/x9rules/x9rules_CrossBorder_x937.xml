@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074718_964</timestamp>
+    <basis>
+        <base>x9rules_dstu_2003.xml</base>
+        <extension>x9rules_x937.xml</extension>
+    </basis>
+    <x9Controls>
+        <gender>X9</gender>
+        <dialect>X9</dialect>
+        <x9Specification>x9.37 2003 Cross Border</x9Specification>
+        <fieldZeroPresence>required</fieldZeroPresence>
+        <fieldZeroFormat>bigEndian</fieldZeroFormat>
+    </x9Controls>
+    <overrides>
+        <x9record>
+            <type>25</type>
+            <format>000</format>
+            <name>Check Detail Record</name>
+            <length>f80</length>
+            <creditsAddToItemCount>true</creditsAddToItemCount>
+            <creditsAddToTotalAmount>true</creditsAddToTotalAmount>
+            <field>
+                <item>x25.04-p019-l008-mandatory-modifiable</item>
+                <name>Payor Bank Routing Number</name>
+                <edit>AbaOrCpaPayorRouting</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>31</type>
+            <format>000</format>
+            <name>Return Record</name>
+            <length>f80</length>
+            <creditsAddToItemCount>false</creditsAddToItemCount>
+            <creditsAddToTotalAmount>false</creditsAddToTotalAmount>
+            <field>
+                <item>x31.02-p003-l008-mandatory-modifiable</item>
+                <name>Payor Bank Routing Number</name>
+                <edit>AbaOrCpaPayorRouting</edit>
+            </field>
+        </x9record>
+    </overrides>
+</x9rules>

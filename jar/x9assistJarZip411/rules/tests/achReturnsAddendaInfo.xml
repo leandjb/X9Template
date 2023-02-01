@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: achReturnsAddendaInformation -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>7.3</field> <isEqual>R11</isEqual> <fail>b</fail> </test>
+  <test> <field>7.3</field> <isEqual>R17</isEqual> <fail>b</fail> </test>
+  <test> <pass>[true]</pass> </test>   
+  <message>Required when return reason has a value of R11 and R17</message>
+</testSet>

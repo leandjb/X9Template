@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>C01</key> <value>Incorrect DFI Account Number</value> </entry> 
+  <entry> <key>C02</key> <value>Incorrect Routing Number</value> </entry>
+  <entry> <key>C03</key> <value>Incorrect Routing Number and Incorrect DFI Account Number</value> </entry> 
+  <entry> <key>C04</key> <value>Incorrect Individual Name/ Receiving Company Name</value> </entry>  
+  <entry> <key>C05</key> <value>Incorrect Transaction Code</value> </entry> 
+  <entry> <key>C06</key> <value>Incorrect DFI Account Number and Incorrect Transaction Code</value> </entry>
+  <entry> <key>C07</key> <value>Incorrect Routing Number, Incorrect DFI Account Number, and Incorrect Transaction Code</value> </entry> 
+  <entry> <key>C09</key> <value>Incorrect Individual Identification Number</value> </entry> 
+  <entry> <key>C13</key> <value>Addenda Format Error</value> </entry>
+  <entry> <key>C61</key> <value>Misrouted Notification of Change</value> </entry> 
+  <entry> <key>C62</key> <value>Incorrect Trace Number</value> </entry>  
+  <entry> <key>C63</key> <value>Incorrect Company Identification Number</value> </entry> 
+  <entry> <key>C64</key> <value>Incorrect Individual Identification Number/Identification Number</value> </entry>
+  <entry> <key>C65</key> <value>Incorrectly Formatted Corrected Data</value> </entry> 
+  <entry> <key>C66</key> <value>Incorrect Discretionary Data</value> </entry>  
+  <entry> <key>C67</key> <value>Routing Number Not From Original Entry Detail Record</value> </entry> 
+  <entry> <key>C68</key> <value>DFI Account Number Not From Original Entry Detail Record</value> </entry>
+  <entry> <key>C69</key> <value>Incorrect Transaction Code</value> </entry> 
+  
+</x9table>

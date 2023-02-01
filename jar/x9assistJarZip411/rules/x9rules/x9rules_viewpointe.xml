@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074953_122</timestamp>
+    <basis>
+        <base>x9rules_x9.100-187_UCD.xml</base>
+    </basis>
+    <x9Controls>
+        <gender>X9</gender>
+        <dialect>X9</dialect>
+        <x9Specification>VP 100-187-2008</x9Specification>
+        <maximumFileSize>2048</maximumFileSize>
+    </x9Controls>
+    <overrides>
+        <x9record>
+            <type>1</type>
+            <format>000</format>
+            <name>File Header Record</name>
+            <length>f80</length>
+            <field>
+                <item>x01.03-p005-l001-conditional-modifiable</item>
+                <name>Test File Indicator</name>
+                <validate>false</validate>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x01.09-p037-l018-conditional-modifiable</item>
+                <name>Immediate Destination name</name>
+                <validate>false</validate>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x01.11-p073-l001-conditional-modifiable</item>
+                <name>File ID Modifier</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>10</type>
+            <format>000</format>
+            <name>Cash Letter Header Record</name>
+            <length>f80</length>
+            <field>
+                <item>x10.02-p003-l002-mandatory-modifiable</item>
+                <name>Collection Type Indicator</name>
+                <values>=1|2|3</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x10.08-p043-l001-mandatory-modifiable</item>
+                <name>Cash Letter Record Type Indicator</name>
+                <values>=I|E|F</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x10.09-p044-l001-mandatory-modifiable</item>
+                <name>Cash Letter Documentation Type Indicator</name>
+                <values>=C|Z|G|K</values>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>20</type>
+            <format>000</format>
+            <name>Bundle Header Record</name>
+            <length>f80</length>
+            <field>
+                <item>x20.02-p003-l002-mandatory-modifiable</item>
+                <name>Collection Type Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x20.03-p005-l009-conditional-modifiable</item>
+                <name>Destination Routing Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x20.04-p014-l009-conditional-modifiable</item>
+                <name>ECE Institution Routing Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x20.05-p023-l008-mandatory-modifiable</item>
+                <name>Bundle Business Date</name>
+                <edit>yyyymmdd</edit>
+                <edit>MinimumDate/8</edit>
+                <edit>MaximumDate/120</edit>
+            </field>
+            <field>
+                <item>x20.06-p031-l008-mandatory-modifiable</item>
+                <name>Bundle Creation Date</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x20.07-p039-l010-conditional-modifiable</item>
+                <name>Bundle ID</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x20.08-p049-l004-conditional-modifiable</item>
+                <name>Bundle Sequence Number</name>
+                <validate>false</validate>
+                <edit>nb</edit>
+            </field>
+            <field>
+                <item>x20.10-p055-l009-conditional-modifiable</item>
+                <name>Return Location Routing Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>27</type>
+            <format>000</format>
+            <name>Check Detail Addendum B Record</name>
+            <length>v80</length>
+            <allowed>false</allowed>
+        </x9record>
+        <x9record>
+            <type>28</type>
+            <format>000</format>
+            <name>Check Detail Addendum C Record</name>
+            <length>f80</length>
+            <field>
+                <item>x28.09-p040-l001-conditional-modifiable</item>
+                <name>Return Reason</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x28.11-p060-l001-conditional-modifiable</item>
+                <name>Endorsing Bank Identifier</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>31</type>
+            <format>000</format>
+            <name>Return Record</name>
+            <length>f80</length>
+            <creditsAddToItemCount>false</creditsAddToItemCount>
+            <creditsAddToTotalAmount>false</creditsAddToTotalAmount>
+            <field>
+                <item>x31.06-p042-l001-conditional-modifiable</item>
+                <name>Return Reason</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x31.07-p043-l002-conditional-modifiable</item>
+                <name>Return Record Addendum Count</name>
+                <validate>false</validate>
+                <edit>n</edit>
+                <edit>AddendumCount</edit>
+            </field>
+            <field>
+                <item>x31.08-p045-l001-conditional-modifiable</item>
+                <name>Return Documentation Type Indicator</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x31.09-p046-l008-conditional-modifiable</item>
+                <name>Forward Bundle Date</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x31.10-p054-l015-conditional-modifiable</item>
+                <name>ECE Institution Item Sequence Number</name>
+                <validate>false</validate>
+                <edit>nb</edit>
+                <edit>warnIfZero</edit>
+            </field>
+            <field>
+                <item>x31.11-p069-l001-conditional-modifiable</item>
+                <name>External Processing Code</name>
+                <values>=0|1|2|3|4|5|6|7|8|9|*</values>
+                <validate>false</validate>
+                <edit>ns</edit>
+            </field>
+            <field>
+                <item>x31.14-p072-l001-conditional-modifiable</item>
+                <name>Number of Rimes Returned</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>32</type>
+            <format>000</format>
+            <name>Return Addendum A Record</name>
+            <length>f80</length>
+            <field>
+                <item>x32.02-p003-l001-conditional-modifiable</item>
+                <name>Record Addendum A Record Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x32.03-p004-l009-conditional-modifiable</item>
+                <name>BOFD Routing Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x32.04-p013-l008-conditional-modifiable</item>
+                <name>BOFD Business (Endorsement) Date</name>
+                <validate>false</validate>
+                <edit>ns</edit>
+            </field>
+            <field>
+                <item>x32.05-p021-l015-conditional-modifiable</item>
+                <name>BOFD Item Sequence Number</name>
+                <validate>false</validate>
+                <edit>nb</edit>
+                <edit>warnIfZero</edit>
+            </field>
+            <field>
+                <item>x32.09-p074-l001-conditional-modifiable</item>
+                <name>Truncation Indicator</name>
+                <validate>false</validate>
+                <edit>a</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>35</type>
+            <format>000</format>
+            <name>Return Addendum D Record</name>
+            <length>f80</length>
+            <field>
+                <item>x35.06-p037-l001-conditional-modifiable</item>
+                <name>Truncation Indicator</name>
+                <validate>false</validate>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x35.09-p040-l001-conditional-modifiable</item>
+                <name>Return Reason</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x35.11-p060-l001-conditional-modifiable</item>
+                <name>Endorsing bank identifier</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>50</type>
+            <format>000</format>
+            <name>Image View Detail Record</name>
+            <length>f80</length>
+            <field>
+                <item>x50.10-p035-l001-conditional-modifiable</item>
+                <name>Digital Signature Indicator</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x50.12-p038-l005-conditional-modifiable</item>
+                <name>Security Key Size</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x50.13-p043-l007-conditional-modifiable</item>
+                <name>Start of Protected Data</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x50.14-p050-l007-conditional-modifiable</item>
+                <name>Length of Protected Data</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x50.17-p066-l001-conditional-modifiable</item>
+                <name>Image Tiff Variance Indicator</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x50.18-p067-l001-conditional-modifiable</item>
+                <name>Image Override Indicator</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>52</type>
+            <format>000</format>
+            <name>Image View Data Record</name>
+            <length>v117</length>
+            <field>
+                <item>x52.02-p003-l009-conditional-modifiable</item>
+                <name>ECE Institution Routing Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x52.03-p012-l008-conditional-modifiable</item>
+                <name>Bundle Business Date</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x52.05-p022-l015-conditional-modifiable</item>
+                <name>ECE Institution Item Sequence Number</name>
+                <validate>false</validate>
+                <edit>nb</edit>
+                <edit>warnIfZero</edit>
+            </field>
+            <field>
+                <item>x52.09-p085-l001-conditional-modifiable</item>
+                <name>Clipping Origin</name>
+                <validate>false</validate>
+                <edit>nb</edit>
+            </field>
+            <field>
+                <item>x52.18-p000-l007-mandatory-notModifiable</item>
+                <name>Length of Image Data</name>
+                <variableLengthDescriptor>true</variableLengthDescriptor>
+                <edit>nb</edit>
+                <edit>ImageBounds/250|200000</edit>
+                <edit>MaximumCombinedImageLength/350000</edit>
+                <edit>CompareToImageDetailImageLength</edit>
+                <edit>CompareToImageDetailImageIndicator</edit>
+                <edit>ImagePresenceBasedOnDocType</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>70</type>
+            <format>000</format>
+            <name>Bundle Control Record</name>
+            <length>f80</length>
+            <field>
+                <item>x70.02-p003-l004-conditional-modifiable</item>
+                <name>Items Within Bundle Count</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>99</type>
+            <format>000</format>
+            <name>File Control Record</name>
+            <length>f80</length>
+            <field>
+                <item>x99.03-p009-l008-conditional-modifiable</item>
+                <name>Total Record Count</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+        </x9record>
+    </overrides>
+</x9rules>

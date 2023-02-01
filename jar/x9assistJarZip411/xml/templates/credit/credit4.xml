@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkFormat>
+ <copyright>X9Ware LLC 2012-2016</copyright>
+ <product>X9Assist</product>
+ <release>R4.11</release>
+ <buildDate>2021.03.18</buildDate> 
+ <timestamp>20210316_135847_488</timestamp>
+ 
+	<template>
+	<formatName>credit4</formatName>
+	<templateName>creditFrontImage4.tif</templateName>
+	<backTemplateName/>	
+	
+	<field>
+	<fieldName>nameAddress</fieldName>
+	<x>0.10</x> <y>0.20</y> <length>2.30</length>
+	<font>serif</font> <fontSize>30</fontSize>
+	</field>
+	
+	<field>
+	<fieldName>itemIdentifier</fieldName>
+	<x>4.00</x> <y>0.20</y> <length>3.50</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>
+
+	<field>
+	<fieldName>bankName</fieldName>
+	<x>4.00</x> <y>0.55</y> <length>3.50</length>
+	<font>serif</font> <fontSize>30</fontSize>
+	</field>	
+	
+	<field>
+	<fieldName>signature</fieldName>
+	<x>4.00</x> <y>2.95</y> <length>3.50</length>
+	<font>handwriting1.ttf</font> <fontSize>60</fontSize>
+	</field>		
+
+	<field>
+	<fieldName>checkNumber</fieldName>
+	<x>0.15</x> <y>2.30</y> <length>1.15</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>
+
+	<field>
+	<fieldName>dateWritten</fieldName>
+	<x>0.15</x> <y>2.55</y> <length>1.15</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	<formatString>MM / dd / yyyy</formatString>
+	</field>
+
+	<field>
+	<fieldName>courtesyAmount</fieldName>
+	<x>0.15</x> <y>2.80</y> <length>1.15</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>
+	
+
+	<field>
+	<fieldName>memoLine</fieldName>
+	<x>0.15</x> <y>3.05</y> <length>6.20</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>	
+
+	<field>
+	<fieldName>legalAmount</fieldName>
+	<x>1.50</x> <y>0.20</y> <length>6.00</length>
+	<font>serif</font> <fontSize>45</fontSize>
+	</field>
+	
+	<field>
+	<fieldName>payeeName</fieldName>
+	<x>1.50</x> <y>0.40</y> <length>6.00</length>
+	<font>serif</font> <fontSize>50</fontSize>
+	</field>	
+	
+  </template>	
+	
+</checkFormat>

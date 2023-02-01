@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+ <copyright>X9Ware LLC 2012-2018</copyright>
+ <product>X9Assist</product>
+ <release>R4.11</release>
+ <timestamp>20210316_135127_282</timestamp>
+	
+  <category>
+    <categoryName>credit</categoryName>
+    <format entryType="System" status="Active">credit1</format> 
+    <format entryType="System" status="Active">credit2</format> 
+    <format entryType="System" status="Active">credit3</format>
+    <format entryType="System" status="Active">credit4</format> 	
+  </category> 
+ 
+  <category>
+    <categoryName>retail</categoryName>
+    <format entryType="System" status="Active">retail1</format>
+    <format entryType="System" status="Active">retail2</format>	
+	<format entryType="System" status="Active">retail3</format>	
+	<format entryType="System" status="Active">retail4</format>	
+	<format entryType="System" status="Active">retail5</format>	
+  </category>
+ 
+  <category>
+    <categoryName>business</categoryName>
+    <format entryType="System" status="Active">business1</format> 
+    <format entryType="System" status="Active">business2</format> 
+    <format entryType="System" status="Active">business3</format> 
+    <format entryType="System" status="Active">business4</format> 	
+  </category>
+	
+  <category>
+    <categoryName>rcc</categoryName>
+    <format entryType="System" status="Active">rcc1</format> 
+    <format entryType="System" status="Active">rcc2</format> 
+	<format entryType="System" status="Active">debit</format> 
+	<format entryType="System" status="Active">credit</format> 
+  </category> 
+
+  <category>
+    <categoryName>test</categoryName>
+    <format entryType="System" status="Active">testDoc1</format> 
+  </category>    
+
+</templates>

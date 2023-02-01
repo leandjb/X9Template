@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>01</key> <value>City</value> </entry>
+  <entry> <key>02</key> <value>City Group</value> </entry>
+  <entry> <key>03</key> <value>City Fine Sort</value> </entry>
+  <entry> <key>04</key> <value>RCPC</value> </entry>
+  <entry> <key>05</key> <value>RCPC Group</value> </entry>
+  <entry> <key>06</key> <value>RCPC Fine Sort</value> </entry>
+  <entry> <key>07</key> <value>High Dollar Group Sort</value> </entry>
+  <entry> <key>08</key> <value>Country</value> </entry>
+  <entry> <key>09</key> <value>Country Group Sort</value> </entry>
+  <entry> <key>10</key> <value>Country Fine Sort</value> </entry>
+  <entry> <key>11</key> <value>Other District</value> </entry>
+  <entry> <key>12</key> <value>Other District Group Sort</value> </entry>
+  <entry> <key>13</key> <value>Mixed</value> </entry>
+  <entry> <key>14</key> <value>High Volume Mixed</value> </entry>
+  <entry> <key>15</key> <value>Electronic Group Sort</value> </entry>
+  <entry> <key>16</key> <value>Government Item Fine Sort Deposits</value> </entry>
+  <entry> <key>17</key> <value>Postal Money Order Fine Sort Deposits</value> </entry>
+  <entry> <key>26</key> <value>Mixed</value> </entry>
+  <entry> <key>27</key> <value>High Volume Mixed</value> </entry>
+  <entry> <key>28</key> <value>Payor Bank Group Sort</value> </entry>
+  <entry> <key>29</key> <value>Government Item Fine Sort Deposits </value> </entry>
+  <entry> <key>30</key> <value>Postal Money Order Fine Sort Deposits</value> </entry>
+  <entry> <key>31</key> <value>Aggregation Fed Work Type I</value> </entry>
+  <entry> <key>32</key> <value>Aggregation Fed Work Type II</value> </entry>
+  <entry> <key>33</key> <value>Aggregation Fed Work Type III</value> </entry>
+  <entry> <key>34</key> <value>Aggregation Fed Work Type IV</value> </entry>
+  <entry> <key>35</key> <value>Mixed (non-iCPCS to iCPCS</value> </entry>
+  <entry> <key>36</key> <value>Mixed (iCPCS to iCPCS</value> </entry>
+  <entry> <key>62</key> <value>CLHS Clearing House</value> </entry>
+  <entry> <key>63</key> <value>Unqualified Reserves</value> </entry>
+  <entry> <key>64</key> <value>Mixed qualified</value> </entry>
+  <entry> <key>65</key> <value>Mixed unqualified</value> </entry>
+  <entry> <key>66</key> <value>Internal</value> </entry>
+  <entry> <key>91</key> <value>Canadian Paper Debits</value> </entry>
+  <entry> <key>92</key> <value>U.S. Paper Debits</value> </entry>
+  <entry> <key>93</key> <value>CDN Paper Credits</value> </entry>
+  <entry> <key>94</key> <value>U.S. Paper Credits</value> </entry>
+
+</x9table>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>A </key> <value>NOT SUFFICIENT FUNDS</value> </entry>
+  <entry> <key>B </key> <value>UNCOLLECTED FUNDS HOLD</value> </entry>
+  <entry> <key>C </key> <value>STOP PAYMENT</value> </entry>
+  <entry> <key>D </key> <value>CLOSED ACCOUNT</value> </entry>
+  <entry> <key>E </key> <value>UNABLE TO LOCATE ACCOUNT</value> </entry>
+  <entry> <key>F </key> <value>FROZEN BLOCKED</value> </entry>
+  <entry> <key>G </key> <value>STALE DATED</value> </entry>
+  <entry> <key>H </key> <value>POST DATED</value> </entry>
+  <entry> <key>I </key> <value>ENDORSEMENT MISSING</value> </entry>
+  <entry> <key>J </key> <value>EMDPORSEMENT IRREGULAR</value> </entry>
+  <entry> <key>K </key> <value>SIGNATURES MISSING</value> </entry>
+  <entry> <key>L </key> <value>SIGNATURES IRREGULAR</value> </entry>
+  <entry> <key>M </key> <value>NON CASH ITEM</value> </entry>
+  <entry> <key>N </key> <value>ALTERED FICTITIOUS</value> </entry>
+  <entry> <key>O </key> <value>UNABLE TO PROCESS</value> </entry>
+  <entry> <key>P </key> <value>EXCEEDS DOLLAR LIMIT</value> </entry>
+  <entry> <key>Q </key> <value>NOT AUTHORIZED</value> </entry>
+  <entry> <key>R </key> <value>BRANCH ACCOUNT SOLD</value> </entry>
+  <entry> <key>S </key> <value>REFER TO MAKER</value> </entry>
+  <entry> <key>T </key> <value>STOP PAYMENT SUSPECT</value> </entry>
+  <entry> <key>U </key> <value>UNUSABLE IMAGE</value> </entry>
+  <entry> <key>V </key> <value>IMAGE FAILS SECURITY CHECK</value> </entry>
+  <entry> <key>W </key> <value>CANNOT DETERMINE ACCOUNT</value> </entry>
+  <entry> <key>Y </key> <value>DUPLICATE PRESENTMENT</value> </entry>
+  <entry> <key>Z </key> <value>FORGERY</value> </entry>
+  <entry> <key>2 </key> <value>UNAVAILABLE FUNDS</value> </entry>
+  <entry> <key>3 </key> <value>INELIGIBLE</value> </entry>
+  <entry> <key>4 </key> <value>NOT OUR ITEM</value> </entry>
+  <entry> <key>5 </key> <value>RETIRED ABA</value> </entry>
+  <entry> <key>6 </key> <value>SUSPECTED COUNTERFEIT</value> </entry>
+  <entry> <key>7 </key> <value>COUNTERFEIT</value> </entry>
+  <entry> <key>8 </key> <value>WARRANTY BREACH</value> </entry>
+  <entry> <key>9 </key> <value>AMOUNTS DIFFER</value> </entry>
+  <entry> <key>10</key> <value>DOUBLE POST</value> </entry>
+  <entry> <key>11</key> <value>AMOUNT NOT AUTHORIZED</value> </entry>
+  <entry> <key>12</key> <value>PAYEE DECEASED</value> </entry>
+  <entry> <key>13</key> <value>PERSONAL ENDORSEMENT MISSING</value> </entry>
+  <entry> <key>14</key> <value>CHECK FRAUD</value> </entry>
+  <entry> <key>15</key> <value>NON COMFORMING IMAGE</value> </entry>
+  <entry> <key>16</key> <value>NON CONFORMING IRD</value> </entry>
+  <entry> <key>19</key> <value>EXCEEDS PRESENTMENT LIMITS</value> </entry>
+  <entry> <key>21</key> <value>ALTERED FICTITIOUS AMOUNT</value> </entry>
+  <entry> <key>22</key> <value>ALTERED FICTITIOUS DATE</value> </entry>
+  <entry> <key>23</key> <value>ALTERED FICTITIOUS PAYEE SIGNATURE</value> </entry>
+  <entry> <key>24</key> <value>ALTERED FICTITIOUS NAME</value> </entry>
+  <entry> <key>25</key> <value>ALTERED FICTITIOUS MAKER</value> </entry>
+  <entry> <key>26</key> <value>UTP MISSING PAYEE</value> </entry>
+  <entry> <key>27</key> <value>UTP MISSING AMOUNT</value> </entry>
+  <entry> <key>28</key> <value>UTP MISSING MAKER SIGNATURE</value> </entry>
+  <entry> <key>31</key> <value>SIGNATURE NOT ON FILE</value> </entry>
+  <entry> <key>32</key> <value>TWO SIGNATURES REQUIRED</value> </entry>
+  <entry> <key>33</key> <value>UNAUTHORIZED SIGNATURE</value> </entry>
+  <entry> <key>34</key> <value>SIGNATURE QUESTIONABLE</value> </entry>
+  <entry> <key>35</key> <value>INVALID ACCOUNT</value> </entry>
+  <entry> <key>36</key> <value>DIVESTED ACCOUNT</value> </entry>
+  <entry> <key>41</key> <value>MISSING IMAGE</value> </entry>
+  <entry> <key>42</key> <value>MISSING FRONT IMAGE</value> </entry>
+  <entry> <key>43</key> <value>MISSING BACK IMAGE</value> </entry>
+  <entry> <key>50</key> <value>FAILS IQA</value> </entry>
+  <entry> <key>70</key> <value>INVALID DATA</value> </entry>
+  <entry> <key>71</key> <value>MISSING MANDATORY DATA</value> </entry>
+  <entry> <key>72</key> <value>NON ACCEPTABLE IMAGE</value> </entry>
+  <entry> <key>74</key> <value>DATA MISMATCH</value> </entry>
+  <entry> <key>75</key> <value>IMAGE DECOMPRESSION ERROR</value> </entry>
+  <entry> <key>76</key> <value>INVALID IMAGE STRUCTURE</value> </entry>
+  <entry> <key>77</key> <value>VARIABLE DATA LENGTH ERROR</value> </entry>
+  <entry> <key>78</key> <value>ITEM BUNDLING ERROR</value> </entry>
+  <entry> <key>79</key> <value>CLIPPING COORDINATES INCONSISTENT</value> </entry>
+  <entry> <key>80</key> <value>CODE LINE MISMATCH</value> </entry>
+
+</x9table>

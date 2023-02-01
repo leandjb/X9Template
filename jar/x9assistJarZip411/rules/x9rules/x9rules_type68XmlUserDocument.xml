@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074944_288</timestamp>
+    <basis>
+        <base>x9rules_x9.100-187_CCD.xml</base>
+    </basis>
+    <x9Controls>
+        <gender>X9</gender>
+        <dialect>X9</dialect>
+        <x9Specification>CPA 015 Type68XmlUserDocument</x9Specification>
+        <characterSet>ebcdic</characterSet>
+        <fieldZeroPresence>required</fieldZeroPresence>
+        <fieldZeroFormat>bigEndian</fieldZeroFormat>
+        <maximumFileSize>2048</maximumFileSize>
+        <multipleLogicalFilesAllowed>false</multipleLogicalFilesAllowed>
+        <iclCollectionTypes>=00|01|02|12</iclCollectionTypes>
+        <iclRecordTypeIndicators>=E|I|F</iclRecordTypeIndicators>
+        <iclrCollectionTypes>=03|04|05|06</iclrCollectionTypes>
+        <iclrRecordTypeIndicators>=E|I|F</iclrRecordTypeIndicators>
+    </x9Controls>
+    <overrides>
+        <x9record>
+            <type>68</type>
+            <format></format>
+            <name>User Record</name>
+            <length>v82</length>
+            <location>=a25g</location>
+            <xmlTags>ItemUserRecord|FieldCount|Field|name|value</xmlTags>
+            <field>
+                <item>x68.01-p001-l002-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.02-p003-l001-mandatory-modifiable</item>
+                <name>Owner Identifier Indicator</name>
+                <values>=G</values>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x68.03-p004-l009-mandatory-modifiable</item>
+                <name>Owner Identifier</name>
+                <values>=FIS</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x68.04-p013-l020-conditional-modifiable</item>
+                <name>Owner Identifier Modifier</name>
+                <values>=ITEM USER RECORD</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x68.05-p033-l003-conditional-modifiable</item>
+                <name>User Record Format Type</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x68.06-p036-l003-mandatory-modifiable</item>
+                <name>Format Type Version Level</name>
+                <values>=001</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.07-p039-l007-mandatory-modifiable</item>
+                <name>Length of User Data</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.08-p046-l001-mandatory-modifiable</item>
+                <name>Financial Indicator</name>
+                <xmlid>Finind</xmlid>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x68.09-p047-l019-mandatory-modifiable</item>
+                <name>Access Card Number</name>
+                <xmlid>ACS</xmlid>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x68.10-p066-l001-mandatory-modifiable</item>
+                <name>Fraud Indicator</name>
+                <values>=0|1|3</values>
+                <xmlid>Fraudind</xmlid>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.11-p067-l002-conditional-modifiable</item>
+                <name>Fraud Response Code</name>
+                <xmlid>Fraudresp</xmlid>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.12-p069-l001-conditional-modifiable</item>
+                <name>Fraud Action</name>
+                <values>=1|2|3</values>
+                <xmlid>Fraudaction</xmlid>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.13-p070-l001-mandatory-modifiable</item>
+                <name>EDD Duplicate Indicator</name>
+                <values>=0|1|3</values>
+                <xmlid>Dupind</xmlid>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.14-p071-l001-conditional-modifiable</item>
+                <name>EDD Duplicate Action</name>
+                <values>=1|2|3</values>
+                <xmlid>Dupaction</xmlid>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.15-p072-l001-mandatory-modifiable</item>
+                <name>Amount override Indicator</name>
+                <values>=0|1</values>
+                <xmlid>Amtind</xmlid>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x68.16-p073-l010-mandatory-modifiable</item>
+                <name>Transaction Set Sequence Number</name>
+                <xmlid>TSISN</xmlid>
+                <edit>n</edit>
+            </field>
+        </x9record>
+    </overrides>
+</x9rules>

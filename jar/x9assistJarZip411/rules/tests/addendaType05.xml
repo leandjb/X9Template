@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: addendaType05 -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>5.06</field> <isEqual>ACK</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>ATX</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>CCD</isEqual> </test> 
+  <test> <field>5.06</field> <isEqual>CIE</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>CTX</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>DNE</isEqual> </test> 
+  <test> <field>5.06</field> <isEqual>ENR</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>PPD</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>TRX</isEqual> </test>  
+  <test> <field>5.06</field> <isEqual>WEB</isEqual> </test>     
+  <message>Invalid for this standard entry class</message>
+</testSet>

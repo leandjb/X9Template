@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9ScrubImages>
+  <copyright>X9Ware LLC 2012-2018</copyright>
+  <company>X9Ware LLC</company>
+  <release>R4.11</release>
+  <buildDate>2018.12.14</buildDate>
+  <timestamp>20190105_065120_152</timestamp>
+ 
+  <frontImage>
+     <drawMissing>true</drawMissing>
+     <retainSize>true</retainSize>
+  </frontImage>
+ 
+  <backImage>
+     <drawMissing>true</drawMissing>
+	 <retainSize>true</retainSize>
+  </backImage>
+
+</x9ScrubImages>
+

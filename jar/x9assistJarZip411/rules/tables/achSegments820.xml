@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>ISA</key> <value>Interchange Control Header</value> </entry> 
+  <entry> <key>ADX</key> <value>Adjustment</value> </entry>  
+  <entry> <key>AIN</key> <value>Income</value> </entry> 
+  <entry> <key>AMT</key> <value>Monetary Amount</value> </entry>  
+  <entry> <key>ASM</key> <value>Amount/Settlement Method</value> </entry>  
+  <entry> <key>ATN</key> <value>Attendance</value> </entry>  
+  <entry> <key>BPR</key> <value>Payment Order/Remittance Advice</value> </entry>
+  <entry> <key>CUR</key> <value>Currency</value> </entry>
+  <entry> <key>DED</key> <value>Deductions</value> </entry> 
+  <entry> <key>DTM</key> <value>Date/Time Reference</value> </entry>
+  <entry> <key>DTP</key> <value>Date or Time Period</value> </entry> 
+  <entry> <key>ENT</key> <value>Entity</value> </entry>
+  <entry> <key>EMS</key> <value>Employment Position</value> </entry>  
+  <entry> <key>GE</key> <value>Functional Group Trailer</value> </entry>
+  <entry> <key>GS</key> <value>Functional Group Header</value> </entry>
+  <entry> <key>G53</key> <value>Maintenance Type</value> </entry>
+  <entry> <key>IEA</key> <value>Interchange Control Trailer</value> </entry>
+  <entry> <key>INV</key> <value>Investment Vehicle Selection</value> </entry>  
+  <entry> <key>IT1</key> <value>Baseline Item Data (Invoice)</value> </entry> 
+  <entry> <key>LOC</key> <value>Location</value> </entry>
+  <entry> <key>LX</key> <value>Assigned Number</value> </entry>    
+  <entry> <key>N1</key> <value>Name</value> </entry>
+  <entry> <key>N2</key> <value>Additional Name Information</value> </entry>
+  <entry> <key>N3</key> <value>Address Information</value> </entry>
+  <entry> <key>N4</key> <value>Geographic Location</value> </entry>
+  <entry> <key>NM1</key> <value>Individual or Organizational Name</value> </entry>    
+  <entry> <key>NTE</key> <value>Note/Special Instruction</value> </entry>  
+  <entry> <key>PCT</key> <value>Percent Amounts</value> </entry>  
+  <entry> <key>PEN</key> <value>Pension Information</value> </entry>  
+  <entry> <key>PER</key> <value>Administrative Communications Contact</value> </entry>
+  <entry> <key>PID</key> <value>Product/Item Description</value> </entry> 
+  <entry> <key>PYD</key> <value>Payroll Deduction</value> </entry>  
+  <entry> <key>QTY</key> <value>Quantity</value> </entry>  
+  <entry> <key>RDM</key> <value>Remittance Delivery Method</value> </entry> 
+  <entry> <key>RMR</key> <value>Remittance Advice Accounts Receivable Open</value> </entry>
+  <entry> <key>REF</key> <value>Reference Identification</value> </entry>
+  <entry> <key>RYL</key> <value>Royalty Payment</value> </entry> 
+  <entry> <key>SAC</key> <value>Service, Promotion, Allowance, Charge</value> </entry>  
+  <entry> <key>SLN</key> <value>Subline Item Detail</value> </entry>  
+  <entry> <key>SE</key> <value>Transaction Set Trailer</value> </entry>
+  <entry> <key>ST</key> <value>Transaction Set Header</value> </entry>  
+  <entry> <key>TRN</key> <value>Trace</value> </entry>  
+  <entry> <key>TXI</key> <value>Tax Information</value> </entry>  
+  <entry> <key>TXP</key> <value>Tax Payment</value> </entry> 
+  
+</x9table>

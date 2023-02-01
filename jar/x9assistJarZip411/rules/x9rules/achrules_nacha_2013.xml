@@ -1,0 +1,3048 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074613_301</timestamp>
+    <x9Controls>
+        <gender>ACH</gender>
+        <dialect>ACH</dialect>
+        <x9Specification>nacha</x9Specification>
+        <characterSet>either</characterSet>
+        <lineBreaks>optional</lineBreaks>
+        <fieldZeroPresence>prohibited</fieldZeroPresence>
+        <maximumFileSize>0</maximumFileSize>
+        <dateMinimumYear>1993</dateMinimumYear>
+        <dateMaximumYear>2099</dateMaximumYear>
+        <dateWindowMinusDays>1095</dateWindowMinusDays>
+        <dateWindowPlusDays>95</dateWindowPlusDays>
+        <userFieldsValidated>true</userFieldsValidated>
+        <reservedFieldsValidated>true</reservedFieldsValidated>
+        <requiredFieldsAreMandatory>false</requiredFieldsAreMandatory>
+        <multipleLogicalFilesAllowed>false</multipleLogicalFilesAllowed>
+        <creditBalancing>disabled</creditBalancing>
+        <creditOrientation>any</creditOrientation>
+    </x9Controls>
+    <records>
+        <x9record>
+            <type>0</type>
+            <format>000</format>
+            <name>Invalid Record Type</name>
+            <length>f94</length>
+            <field>
+                <item>x00.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x00.02-p002-l093-mandatory-modifiable</item>
+                <name>Reserved</name>
+                <edit>none</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>1</type>
+            <format>000</format>
+            <name>File Header Record</name>
+            <length>f94</length>
+            <field>
+                <item>x01.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.02-p002-l002-required-modifiable</item>
+                <name>Priority Code</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.03-p004-l010-mandatory-modifiable</item>
+                <name>Immediate Destination</name>
+                <justify>r</justify>
+                <edit>achABA10</edit>
+            </field>
+            <field>
+                <item>x01.04-p014-l010-mandatory-modifiable</item>
+                <name>Immediate Origin</name>
+                <justify>r</justify>
+                <edit>achImmediateOrigin</edit>
+            </field>
+            <field>
+                <item>x01.05-p024-l006-mandatory-modifiable</item>
+                <name>File Creation Date</name>
+                <edit>yymmdd</edit>
+            </field>
+            <field>
+                <item>x01.06-p030-l004-optional-modifiable</item>
+                <name>File Creation Time</name>
+                <edit>hhmm</edit>
+            </field>
+            <field>
+                <item>x01.07-p034-l001-mandatory-modifiable</item>
+                <name>File ID Modifier</name>
+                <edit>uan</edit>
+            </field>
+            <field>
+                <item>x01.08-p035-l003-mandatory-modifiable</item>
+                <name>Record Size</name>
+                <values>=94</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.09-p038-l002-mandatory-modifiable</item>
+                <name>Blocking Factor</name>
+                <values>=10</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.10-p040-l001-mandatory-modifiable</item>
+                <name>Format Code</name>
+                <values>=1</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.11-p041-l023-optional-modifiable</item>
+                <name>Immediate Destination Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x01.12-p064-l023-optional-modifiable</item>
+                <name>Immediate Origin Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x01.13-p087-l008-optional-modifiable</item>
+                <name>Reference Code</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>5</type>
+            <format>000</format>
+            <name>Company/Batch Header Record</name>
+            <length>f94</length>
+            <field>
+                <item>x05.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x05.02-p002-l003-mandatory-modifiable</item>
+                <name>Service Class Code</name>
+                <values>=200|220|225|280</values>
+                <edit>n</edit>
+                <edit>AchServiceClass</edit>
+            </field>
+            <field>
+                <item>x05.03-p005-l016-mandatory-modifiable</item>
+                <name>Company Name</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+                <edit>achCompanyName</edit>
+            </field>
+            <field>
+                <item>x05.04-p021-l020-optional-modifiable</item>
+                <name>Company Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.05-p041-l010-mandatory-modifiable</item>
+                <name>Company Identification</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x05.06-p051-l003-mandatory-modifiable</item>
+                <name>Standard Entry Class Code</name>
+                <edit>ua</edit>
+                <edit>achEntryClass</edit>
+            </field>
+            <field>
+                <item>x05.07-p054-l010-mandatory-modifiable</item>
+                <name>Company Entry Description</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+                <edit>achCompanyDesc</edit>
+            </field>
+            <field>
+                <item>x05.08-p064-l006-optional-modifiable</item>
+                <name>Company Descriptive Date</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.09-p070-l006-required-modifiable</item>
+                <name>Effective Entry Date</name>
+                <edit>yymmdd</edit>
+            </field>
+            <field>
+                <item>x05.10-p076-l003-optional-modifiable</item>
+                <name>Settlement Date Julian</name>
+                <edit>n</edit>
+                <edit>max/366</edit>
+            </field>
+            <field>
+                <item>x05.11-p079-l001-mandatory-modifiable</item>
+                <name>Originator Status Code</name>
+                <values>=0|1|2</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.12-p080-l008-mandatory-modifiable</item>
+                <name>Originator DFI Identification</name>
+                <edit>achABA8</edit>
+            </field>
+            <field>
+                <item>x05.13-p088-l007-mandatory-modifiable</item>
+                <name>Batch Number</name>
+                <edit>n</edit>
+                <edit>AchBatchNumberUnique</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>5</type>
+            <format>IAT</format>
+            <name>IAT Company/Batch Header Record</name>
+            <length>f94</length>
+            <field>
+                <item>x05.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x05.02-p002-l003-mandatory-modifiable</item>
+                <name>Service Class Code</name>
+                <values>=200|220|225|280</values>
+                <edit>n</edit>
+                <edit>AchServiceClass</edit>
+            </field>
+            <field>
+                <item>x05.03-p005-l016-optional-modifiable</item>
+                <name>IAT Indicator</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.04-p021-l002-mandatory-modifiable</item>
+                <name>Foreign Exchange Indicator</name>
+                <values>=FF|VF|FV</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.05-p023-l001-required-modifiable</item>
+                <name>Foreign Exchange Reference Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x05.06-p024-l015-required-modifiable</item>
+                <name>Foreign Exchange Reference</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.07-p039-l002-mandatory-modifiable</item>
+                <name>ISO Destination Country Code</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x05.08-p041-l010-mandatory-modifiable</item>
+                <name>Originator Identification</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x05.09-p051-l003-mandatory-modifiable</item>
+                <name>Standard Entry Class Code</name>
+                <edit>ua</edit>
+                <edit>achEntryClass</edit>
+            </field>
+            <field>
+                <item>x05.10-p054-l010-mandatory-modifiable</item>
+                <name>Company Entry Description</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+                <edit>achCompanyDesc</edit>
+            </field>
+            <field>
+                <item>x05.11-p064-l003-mandatory-modifiable</item>
+                <name>ISO Originating Currency Code</name>
+                <edit>ans</edit>
+                <edit>table/achCurrencyCodes</edit>
+                <edit>AchIatCurrency</edit>
+            </field>
+            <field>
+                <item>x05.12-p067-l003-mandatory-modifiable</item>
+                <name>ISO Destination Currency Code</name>
+                <edit>ans</edit>
+                <edit>table/achCurrencyCodes</edit>
+                <edit>AchIatCurrency</edit>
+            </field>
+            <field>
+                <item>x05.13-p070-l006-required-modifiable</item>
+                <name>Effective Entry Date</name>
+                <edit>yymmdd</edit>
+            </field>
+            <field>
+                <item>x05.14-p076-l003-optional-modifiable</item>
+                <name>Settlement Date Julian</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+                <edit>max/366</edit>
+            </field>
+            <field>
+                <item>x05.15-p079-l001-mandatory-modifiable</item>
+                <name>Originator Status Code</name>
+                <values>=0|1|2</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x05.16-p080-l008-mandatory-modifiable</item>
+                <name>GO Identification Originating DFI Identification</name>
+                <edit>achABA8</edit>
+            </field>
+            <field>
+                <item>x05.17-p088-l007-mandatory-modifiable</item>
+                <name>Batch Number</name>
+                <edit>n</edit>
+                <edit>AchBatchNumberUnique</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>000</format>
+            <name>Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ACK</format>
+            <name>ACK Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Original Entry Trace Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-optional-modifiable</item>
+                <name>Receiving Company Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ADV</format>
+            <name>ADV Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <values>=81|82|83|84|85|86|87|88</values>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l015-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p028-l012-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l009-mandatory-modifiable</item>
+                <name>Advice Routing Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.08-p049-l005-optional-modifiable</item>
+                <name>File Identification</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p054-l001-optional-modifiable</item>
+                <name>Ach Operator Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.11-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l008-mandatory-modifiable</item>
+                <name>Routing Number of Ach Operator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.14-p088-l003-mandatory-modifiable</item>
+                <name>Advice Julian Date</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.15-p091-l004-mandatory-modifiable</item>
+                <name>Sequence Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ARC</format>
+            <name>ARC Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+                <edit>max/2500000</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Check Serial Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-optional-modifiable</item>
+                <name>Individual/Receiving Company Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ATX</format>
+            <name>ATX Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Original Entry Trace Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l004-mandatory-modifiable</item>
+                <name>Number of Addenda Records</name>
+                <edit>n</edit>
+                <edit>AchItemAddendaCount</edit>
+            </field>
+            <field>
+                <item>x06.09-p059-l016-required-modifiable</item>
+                <name>Receiving Company Name/ID Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p075-l002-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x06.11-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>BOC</format>
+            <name>BOC Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+                <edit>max/2500000</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Check Serial Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-optional-modifiable</item>
+                <name>Individual/Receiving Company Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>CCD</format>
+            <name>CCD Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-optional-modifiable</item>
+                <name>Receiving Company Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>CIE</format>
+            <name>CIE Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>COR</format>
+            <name>COR Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <values>=21|26|31|36|41|46|51|56</values>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Individual Identification</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>CTX</format>
+            <name>CTX Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Total Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l004-mandatory-modifiable</item>
+                <name>Number of Addenda Records</name>
+                <edit>n</edit>
+                <edit>AchItemAddendaCount</edit>
+            </field>
+            <field>
+                <item>x06.09-p059-l016-required-modifiable</item>
+                <name>Receiving Company Name/ID Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p075-l002-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x06.11-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>DNE</format>
+            <name>DNE Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <values>=21|23|31|33</values>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ENR</format>
+            <name>ENR Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Total Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l004-mandatory-modifiable</item>
+                <name>Number of Addenda Records</name>
+                <edit>n</edit>
+                <edit>AchItemAddendaCount</edit>
+            </field>
+            <field>
+                <item>x06.09-p059-l016-required-modifiable</item>
+                <name>Receiving Company Name/ID Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p075-l002-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x06.11-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>IAT</format>
+            <name>IAT Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>GO/Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l004-mandatory-modifiable</item>
+                <name>Number of Addenda Records</name>
+                <edit>n</edit>
+                <edit>AchItemAddendaCount</edit>
+            </field>
+            <field>
+                <item>x06.06-p017-l013-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x06.07-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.08-p040-l035-optional-modifiable</item>
+                <name>Foreign Receiver/DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p075-l002-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x06.10-p077-l001-optional-modifiable</item>
+                <name>Gateway Operator OFAC Screening Indicator</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.11-p078-l001-optional-modifiable</item>
+                <name>Secondary OFAC Screening Indicator</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>MTE</format>
+            <name>MTE Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>POP</format>
+            <name>POP Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+                <edit>max/2499999</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l009-mandatory-modifiable</item>
+                <name>Check Serial Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p049-l004-mandatory-modifiable</item>
+                <name>Terminal City</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.09-p053-l002-mandatory-modifiable</item>
+                <name>Terminal State</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.10-p055-l022-optional-modifiable</item>
+                <name>Individual/Receiving Company Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.11-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>POS</format>
+            <name>POS Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-mandatory-modifiable</item>
+                <name>Card Transaction Type Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>PPD</format>
+            <name>PPD Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>RCK</format>
+            <name>RCK Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Check Serial Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-required-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>SHR</format>
+            <name>SHR Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l004-mandatory-modifiable</item>
+                <name>Card Expiration Date</name>
+                <edit>mmyy</edit>
+            </field>
+            <field>
+                <item>x06.08-p044-l011-required-modifiable</item>
+                <name>Document Reference Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.09-p055-l022-required-modifiable</item>
+                <name>Individual Card Account Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.10-p077-l002-mandatory-modifiable</item>
+                <name>Card Transaction Type Code</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.12-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>TEL</format>
+            <name>TEL Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Payment Type Code</name>
+                <values>=R|S</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>TRC</format>
+            <name>TRC Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Check Serial Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l006-required-modifiable</item>
+                <name>Process Control Field</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p061-l016-required-modifiable</item>
+                <name>Item Research Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p077-l002-optional-modifiable</item>
+                <name>Item Type Indicator</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.11-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.12-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>TRX</format>
+            <name>TRX Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Total Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l004-mandatory-modifiable</item>
+                <name>Number of Addenda Records</name>
+                <edit>n</edit>
+                <edit>AchItemAddendaCount</edit>
+            </field>
+            <field>
+                <item>x06.09-p059-l016-required-modifiable</item>
+                <name>Receiving Company Name/ID Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p075-l002-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x06.11-p077-l002-mandatory-modifiable</item>
+                <name>Item Type Indicator</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.12-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.13-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>WEB</format>
+            <name>WEB Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-optional-modifiable</item>
+                <name>Individual Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.09-p077-l002-optional-modifiable</item>
+                <name>Payment Type Code</name>
+                <values>=R|S</values>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.11-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>XCK</format>
+            <name>XCK Entry Detail Record</name>
+            <length>f94</length>
+            <field>
+                <item>x06.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.02-p002-l002-mandatory-modifiable</item>
+                <name>Transaction Code</name>
+                <edit>n</edit>
+                <edit>table/achTranCodes</edit>
+                <edit>AchTranCodeAllowed</edit>
+            </field>
+            <field>
+                <item>x06.03-p004-l008-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>achABA9</edit>
+            </field>
+            <field>
+                <item>x06.04-p012-l001-mandatory-modifiable</item>
+                <name>Check Digit</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.05-p013-l017-required-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.06-p030-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>AchItemAmount</edit>
+            </field>
+            <field>
+                <item>x06.07-p040-l015-mandatory-modifiable</item>
+                <name>Check Serial Number</name>
+                <edit>ans</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l006-required-modifiable</item>
+                <name>Process Control Field</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.09-p061-l016-required-modifiable</item>
+                <name>Item Research Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p077-l002-optional-modifiable</item>
+                <name>Discretionary Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.11-p079-l001-mandatory-modifiable</item>
+                <name>Addenda Record Indicator</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x06.12-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+                <edit>AchTraceNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>000</format>
+            <name>Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=5</values>
+                <edit>n</edit>
+                <edit>test/addendaType05</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l080-optional-modifiable</item>
+                <name>Payment Related Information</name>
+                <edit>AchValidate820Payment</edit>
+            </field>
+            <field>
+                <item>x07.04-p084-l004-mandatory-modifiable</item>
+                <name>Addenda Sequence Number</name>
+                <edit>sequential</edit>
+            </field>
+            <field>
+                <item>x07.05-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>MTE</format>
+            <name>MTE Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=2</values>
+                <edit>n</edit>
+                <edit>test/addendaType02</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l007-required-modifiable</item>
+                <name>Transaction Description</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p011-l003-optional-modifiable</item>
+                <name>Network Identification Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.05-p014-l006-required-modifiable</item>
+                <name>Terminal Identification Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.06-p020-l006-required-modifiable</item>
+                <name>Transaction Serial Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.07-p026-l004-required-modifiable</item>
+                <name>Transaction Date</name>
+                <edit>mmdd</edit>
+            </field>
+            <field>
+                <item>x07.08-p030-l006-required-modifiable</item>
+                <name>Transaction Time</name>
+                <edit>hhmmss</edit>
+            </field>
+            <field>
+                <item>x07.09-p036-l027-required-modifiable</item>
+                <name>Terminal Location</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.10-p063-l015-required-modifiable</item>
+                <name>Terminal City</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.11-p078-l002-required-modifiable</item>
+                <name>Terminal State</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.12-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>POS</format>
+            <name>POS/SHR Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=2</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l007-optional-modifiable</item>
+                <name>Reference Information #1</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p011-l003-optional-modifiable</item>
+                <name>Reference Information #2</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.05-p014-l006-required-modifiable</item>
+                <name>Terminal Identification Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.06-p020-l006-required-modifiable</item>
+                <name>Transaction Serial Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.07-p026-l004-required-modifiable</item>
+                <name>Transaction Date</name>
+                <edit>mmdd</edit>
+            </field>
+            <field>
+                <item>x07.08-p030-l006-optional-modifiable</item>
+                <name>Authorization Code or Card Expiration Date</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.09-p036-l027-required-modifiable</item>
+                <name>Terminal Location</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.10-p063-l015-required-modifiable</item>
+                <name>Terminal City</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.11-p078-l002-required-modifiable</item>
+                <name>Terminal State</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.12-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA1</format>
+            <name>IAT First Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=10</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l003-required-modifiable</item>
+                <name>Transaction Type Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p007-l018-required-modifiable</item>
+                <name>Foreign Payment Amount</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p025-l022-optional-modifiable</item>
+                <name>Foreign Trace Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.06-p047-l035-mandatory-modifiable</item>
+                <name>Receiving Company Name/Individual Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.07-p082-l006-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.08-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA2</format>
+            <name>IAT Second Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=11</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l035-mandatory-modifiable</item>
+                <name>Originator Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p039-l035-mandatory-modifiable</item>
+                <name>Originator Street Address</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.05-p074-l014-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.06-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA3</format>
+            <name>IAT Third Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=12</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l035-mandatory-modifiable</item>
+                <name>Originator City/State/Province</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p039-l035-mandatory-modifiable</item>
+                <name>Originator Country/Postal Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.05-p074-l014-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.06-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA4</format>
+            <name>IAT Fourth Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=13</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l035-mandatory-modifiable</item>
+                <name>Originating DFI Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p039-l002-mandatory-modifiable</item>
+                <name>Originating DFI Identification Number Qualifer</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p041-l034-mandatory-modifiable</item>
+                <name>Originating DFI Identification</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.06-p075-l003-mandatory-modifiable</item>
+                <name>Originating DFI Branch Country Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.07-p078-l010-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.08-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA5</format>
+            <name>IAT Fifth Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=14</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l035-mandatory-modifiable</item>
+                <name>Receiving DFI Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p039-l002-mandatory-modifiable</item>
+                <name>Receiving DFI Identification Number Qualifer</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p041-l034-mandatory-modifiable</item>
+                <name>Receiving DFI Identification</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.06-p075-l003-mandatory-modifiable</item>
+                <name>Receiving DFI Branch Country Code</name>
+                <edit>ans</edit>
+                <edit>AchIatRdfiBranchCountryCode</edit>
+            </field>
+            <field>
+                <item>x07.07-p078-l010-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.08-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA6</format>
+            <name>IAT Sixth Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=15</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l015-optional-modifiable</item>
+                <name>Receiving Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p019-l035-mandatory-modifiable</item>
+                <name>Receiver Street Address</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.05-p054-l034-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.06-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IA7</format>
+            <name>IAT Seventh Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=16</values>
+                <edit>n</edit>
+                <edit>ascending</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l035-mandatory-modifiable</item>
+                <name>Receiver City/State/Province</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p039-l035-mandatory-modifiable</item>
+                <name>Receiver Country/Postal Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.05-p074-l014-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.06-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IAR</format>
+            <name>IAT Remittance Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=17</values>
+                <edit>n</edit>
+                <edit>ascendingOrEqual</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l080-optional-modifiable</item>
+                <name>Payment Related Information</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p084-l004-mandatory-modifiable</item>
+                <name>Addenda Sequence Number</name>
+                <edit>sequential2</edit>
+            </field>
+            <field>
+                <item>x07.05-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>IAC</format>
+            <name>IAT Foreign Correspondent Bank Information Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=18</values>
+                <edit>n</edit>
+                <edit>ascendingOrEqual</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l035-mandatory-modifiable</item>
+                <name>Foreign Correspondent Bank Name</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.04-p039-l002-mandatory-modifiable</item>
+                <name>Foreign Correspondent Bank Identification Number Qualifier</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p041-l034-mandatory-modifiable</item>
+                <name>Foreign Correspondent Bank Identification Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.06-p075-l003-mandatory-modifiable</item>
+                <name>Foreign Correspondent Bank Branch Country Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.07-p078-l006-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.08-p084-l004-mandatory-modifiable</item>
+                <name>Addenda Sequence Number</name>
+                <edit>sequential2</edit>
+            </field>
+            <field>
+                <item>x07.09-p088-l007-mandatory-modifiable</item>
+                <name>Entry Detail Sequence Number</name>
+                <edit>n</edit>
+                <edit>AchAddendumCompare7ToTrace</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>NOC</format>
+            <name>Notification of Change Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=98</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l003-mandatory-modifiable</item>
+                <name>Change Code</name>
+                <edit>an</edit>
+                <edit>table/achChangeCodes</edit>
+            </field>
+            <field>
+                <item>x07.04-p007-l015-mandatory-modifiable</item>
+                <name>Original Entry Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p022-l006-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.06-p028-l008-optional-modifiable</item>
+                <name>Originating DFI Identification Code</name>
+                <edit>achABA8</edit>
+            </field>
+            <field>
+                <item>x07.07-p036-l029-mandatory-modifiable</item>
+                <name>Corrected Data</name>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x07.08-p065-l015-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.09-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>RTN</format>
+            <name>Returns Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=99</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l003-mandatory-modifiable</item>
+                <name>Return Reason Code</name>
+                <edit>an</edit>
+                <edit>table/achReturnReasons</edit>
+            </field>
+            <field>
+                <item>x07.04-p007-l015-mandatory-modifiable</item>
+                <name>Original Entry Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p022-l006-optional-modifiable</item>
+                <name>Date of Death</name>
+                <edit>yymmdd</edit>
+                <edit>test/achReturnsDateOfDeath</edit>
+            </field>
+            <field>
+                <item>x07.06-p028-l008-required-modifiable</item>
+                <name>Original Receiving DFI Identification Code</name>
+                <edit>achABA8</edit>
+            </field>
+            <field>
+                <item>x07.07-p036-l044-optional-modifiable</item>
+                <name>Addenda Information</name>
+                <edit>ans</edit>
+                <edit>test/achReturnsAddendaInfo</edit>
+            </field>
+            <field>
+                <item>x07.08-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>DRN</format>
+            <name>Dishonored Returns Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=99</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l003-mandatory-modifiable</item>
+                <name>Dishonored Return Reason Code</name>
+                <edit>an</edit>
+                <edit>table/achReturnReasons</edit>
+            </field>
+            <field>
+                <item>x07.04-p007-l015-mandatory-modifiable</item>
+                <name>Original Entry Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p022-l006-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.06-p028-l008-required-modifiable</item>
+                <name>Original Receiving DFI Identification Code</name>
+                <edit>achABA8</edit>
+            </field>
+            <field>
+                <item>x07.07-p036-l003-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.08-p039-l015-mandatory-modifiable</item>
+                <name>Return Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.09-p054-l003-mandatory-modifiable</item>
+                <name>Settlement Date Julian</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+                <edit>max/366</edit>
+            </field>
+            <field>
+                <item>x07.10-p057-l002-mandatory-modifiable</item>
+                <name>Return Reason Code</name>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x07.11-p059-l021-optional-modifiable</item>
+                <name>Addenda Information</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x07.12-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>7</type>
+            <format>CRN</format>
+            <name>Contested Dishonored Returns Addenda Record</name>
+            <length>f94</length>
+            <field>
+                <item>x07.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.02-p002-l002-mandatory-modifiable</item>
+                <name>Addenda Type Code</name>
+                <values>=99</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.03-p004-l003-mandatory-modifiable</item>
+                <name>Contested Dishonored Return Reason Code</name>
+                <edit>an</edit>
+                <edit>table/achReturnReasons</edit>
+            </field>
+            <field>
+                <item>x07.04-p007-l015-mandatory-modifiable</item>
+                <name>Original Entry Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.05-p022-l006-optional-modifiable</item>
+                <name>Date Original Entry Returned</name>
+                <edit>yymmdd</edit>
+            </field>
+            <field>
+                <item>x07.06-p028-l008-required-modifiable</item>
+                <name>Original Receiving DFI Identification Code</name>
+                <edit>achABA8</edit>
+            </field>
+            <field>
+                <item>x07.07-p036-l003-mandatory-modifiable</item>
+                <name>Original Settlement Date Julian</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+                <edit>max/366</edit>
+            </field>
+            <field>
+                <item>x07.08-p039-l015-mandatory-modifiable</item>
+                <name>Return Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.09-p054-l003-mandatory-modifiable</item>
+                <name>Return Settlement Date Julian</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+                <edit>max/366</edit>
+            </field>
+            <field>
+                <item>x07.10-p057-l002-mandatory-modifiable</item>
+                <name>Return Reason Code</name>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x07.11-p059-l015-mandatory-modifiable</item>
+                <name>Return Trace Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x07.12-p074-l003-mandatory-modifiable</item>
+                <name>Dishonored Return Settlement Date</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+                <edit>max/366</edit>
+            </field>
+            <field>
+                <item>x07.13-p077-l002-mandatory-modifiable</item>
+                <name>Dishonored Return Reason Code</name>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x07.14-p079-l001-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x07.15-p080-l015-mandatory-modifiable</item>
+                <name>Trace Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>8</type>
+            <format>000</format>
+            <name>Company/Batch Control Record</name>
+            <length>f94</length>
+            <field>
+                <item>x08.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x08.02-p002-l003-mandatory-modifiable</item>
+                <name>Service Class Code</name>
+                <edit>n</edit>
+                <edit>AchCompareToServiceCode</edit>
+            </field>
+            <field>
+                <item>x08.03-p005-l006-mandatory-modifiable</item>
+                <name>Entry/Addenda Count</name>
+                <edit>n</edit>
+                <edit>AchBatchEntryAddendaCount</edit>
+            </field>
+            <field>
+                <item>x08.04-p011-l010-mandatory-modifiable</item>
+                <name>Entry Hash</name>
+                <edit>n</edit>
+                <edit>AchBatchHash</edit>
+            </field>
+            <field>
+                <item>x08.05-p021-l012-mandatory-modifiable</item>
+                <name>Total Debit Entry Dollar Amount</name>
+                <edit>n</edit>
+                <edit>AchBatchDebitAmount</edit>
+            </field>
+            <field>
+                <item>x08.06-p033-l012-mandatory-modifiable</item>
+                <name>Total Credit Entry Dollar Amount</name>
+                <edit>n</edit>
+                <edit>AchBatchCreditAmount</edit>
+            </field>
+            <field>
+                <item>x08.07-p045-l010-required-modifiable</item>
+                <name>Company Identification</name>
+                <edit>ans</edit>
+                <edit>test/compareToBatchHeaderCompanyId</edit>
+            </field>
+            <field>
+                <item>x08.08-p055-l019-optional-modifiable</item>
+                <name>Message Authentification Code</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x08.09-p074-l006-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+            <field>
+                <item>x08.10-p080-l008-mandatory-modifiable</item>
+                <name>Originating DFI Identification Code</name>
+                <edit>achABA8</edit>
+                <edit>test/compareToBatchHeaderODFI</edit>
+            </field>
+            <field>
+                <item>x08.11-p088-l007-mandatory-modifiable</item>
+                <name>Batch Number</name>
+                <edit>n</edit>
+                <edit>AchCompareToBatchNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>8</type>
+            <format>ADV</format>
+            <name>ADV Company/Batch Control Record</name>
+            <length>f94</length>
+            <field>
+                <item>x08.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x08.02-p002-l003-mandatory-modifiable</item>
+                <name>Service Class Code</name>
+                <edit>n</edit>
+                <edit>AchCompareToServiceCode</edit>
+            </field>
+            <field>
+                <item>x08.03-p005-l006-mandatory-modifiable</item>
+                <name>Entry/Addenda Count</name>
+                <edit>n</edit>
+                <edit>AchBatchEntryAddendaCount</edit>
+            </field>
+            <field>
+                <item>x08.04-p011-l010-mandatory-modifiable</item>
+                <name>Entry Hash</name>
+                <edit>n</edit>
+                <edit>AchBatchHash</edit>
+            </field>
+            <field>
+                <item>x08.05-p021-l020-mandatory-modifiable</item>
+                <name>Total Debit Entry Dollar Amount</name>
+                <edit>n</edit>
+                <edit>AchBatchDebitAmount</edit>
+            </field>
+            <field>
+                <item>x08.06-p041-l020-mandatory-modifiable</item>
+                <name>Total Credit Entry Dollar Amount</name>
+                <edit>n</edit>
+                <edit>AchBatchCreditAmount</edit>
+            </field>
+            <field>
+                <item>x08.07-p061-l019-optional-modifiable</item>
+                <name>Ach Operator Data</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x08.08-p080-l008-mandatory-modifiable</item>
+                <name>Originating DFI Identification Code</name>
+                <edit>achABA8</edit>
+                <edit>test/compareToBatchHeaderODFI</edit>
+            </field>
+            <field>
+                <item>x08.09-p088-l007-mandatory-modifiable</item>
+                <name>Batch Number</name>
+                <edit>n</edit>
+                <edit>AchCompareToBatchNumber</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>9</type>
+            <format>000</format>
+            <name>File Control Record</name>
+            <length>f94</length>
+            <field>
+                <item>x09.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.02-p002-l006-mandatory-modifiable</item>
+                <name>Batch Count</name>
+                <edit>n</edit>
+                <edit>AchFileBatchCount</edit>
+            </field>
+            <field>
+                <item>x09.03-p008-l006-mandatory-modifiable</item>
+                <name>Block Count</name>
+                <edit>n</edit>
+                <edit>AchFileBlockCount</edit>
+            </field>
+            <field>
+                <item>x09.04-p014-l008-mandatory-modifiable</item>
+                <name>Entry/Addenda Count</name>
+                <edit>n</edit>
+                <edit>AchFileEntryAddendaCount</edit>
+            </field>
+            <field>
+                <item>x09.05-p022-l010-mandatory-modifiable</item>
+                <name>Entry Hash</name>
+                <edit>n</edit>
+                <edit>AchFileHash</edit>
+            </field>
+            <field>
+                <item>x09.06-p032-l012-mandatory-modifiable</item>
+                <name>Total Debit Entry Dollar Amount</name>
+                <edit>n</edit>
+                <edit>AchFileDebitAmount</edit>
+            </field>
+            <field>
+                <item>x09.07-p044-l012-mandatory-modifiable</item>
+                <name>Total Credit Entry Dollar Amount</name>
+                <edit>n</edit>
+                <edit>AchFileCreditAmount</edit>
+            </field>
+            <field>
+                <item>x09.08-p056-l039-conditional-modifiable</item>
+                <name>Reserved</name>
+                <edit>b</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>9</type>
+            <format>999</format>
+            <name>Nines Record</name>
+            <length>f94</length>
+            <field>
+                <item>x09.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.02-p002-l006-mandatory-notModifiable</item>
+                <name>Batch Count</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.03-p008-l006-mandatory-notModifiable</item>
+                <name>Block Count</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.04-p014-l008-mandatory-notModifiable</item>
+                <name>Entry/Addenda Count</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.05-p022-l010-mandatory-notModifiable</item>
+                <name>Entry Hash</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.06-p032-l012-mandatory-notModifiable</item>
+                <name>Total Debit Entry Dollar Amount</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.07-p044-l012-mandatory-notModifiable</item>
+                <name>Total Credit Entry Dollar Amount</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.08-p056-l013-mandatory-notModifiable</item>
+                <name>Nines1</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.09-p069-l013-mandatory-notModifiable</item>
+                <name>Nines2</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x09.10-p082-l013-mandatory-notModifiable</item>
+                <name>Nines3</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+    </records>
+</x9rules>

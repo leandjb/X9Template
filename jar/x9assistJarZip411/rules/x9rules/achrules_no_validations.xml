@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074622_603</timestamp>
+    <basis>
+        <base>achrules_nacha_2013.xml</base>
+    </basis>
+    <x9Controls>
+        <gender>ACH</gender>
+        <dialect>ACH</dialect>
+        <x9Specification>nacha no validations</x9Specification>
+        <applyFieldValidations>false</applyFieldValidations>
+    </x9Controls>
+    <overrides/>
+</x9rules>

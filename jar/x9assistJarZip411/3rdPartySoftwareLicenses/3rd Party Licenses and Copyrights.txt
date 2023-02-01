@@ -1,0 +1,96 @@
+Third Party Licenses and Copyrights
+
+Applies to X9 ?  YES
+Applies to ACH ?  YES
+Applies to CPA005 ?  YES
+
+X9Ware LLC Copyright and License Agreement
+X9Ware products are Copyright(c) 2012-2018 X9Ware LLC. All Rights Reserved. This is proprietary software as developed and licensed by X9Ware LLC under the exclusive legal right of the copyright holder. The X9Ware License Agreement is accepted by the user as part of our software installation process and can be subsequently reviewed on the X9Assist “About” panel and is also included in the “licenseAgreement” folder as part of software installation. All licensees provide the right to use the software only under defined conditions and are restricted from other actions including modification, sharing, reuse, redistribution, or reverse engineering.
+Use of Third Party Products
+Certain third party products are used by X9Ware for specific functions. Each of these products have their own respective licenses as follows:
+
+Zulu OpenJDK: OpenJDK is a free and open-source implementation of the Java SE Platform Edition. OpenJDK is developed by Oracle, OpenJDK, and the Java Community. However, the top-notch companies like Red Hat, Azul Systems, IBM, Apple Inc., SAP AG also take an active part in its development.
+GNU GPL version 2. 
+Sun Microsystems JAI 
+A subset of the Sun JAI is used for various TIFF image capabilities. 
+The Sun Copyright statement is provided below. JAI is protected by the Apache 2.0 License: 
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Sun Microsystems SwingX: A subset of the Sun SwingX UI extensions are used by X9Assist, as is, with no modifications. 
+The Sun Copyright statement is provided below. SwingX is protected by the Apache LGPL license.
+
+https://www.gnu.org/licenses/lgpl-3.0.en.html
+
+Apache POI: Apache POI is used for Excel spreadsheet read and write support. 
+Apache POI is protected by the Apache 2.0 License.
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Apache Commons: Several Apache Commons tools are used including Apache Commons Lang3, Apache Commons IO, and Apache Commons Collections. 
+Apache Commons is protected by the Apache 2.0 License.
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+SLF4J: The SLF4J logging facade is an abstraction for several logging frameworks. 
+SLF4J source code and binaries are distributed under the MIT license.
+
+https://www.slf4j.org/license.html
+
+JSON-Simple: JSON-Simple is used internally to parse JSON result strings. 
+JSON-Simple is protected by the Apache 2.0 License.
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+MigLayout: MigLayout is used internally for GUI component layouts. 
+MigLayout is protected by the BSD license which is provided below. 
+
+FlatLaf: FlatLaf is used for our cross-platform lite and dark themes. 
+FlatLaf is protected by the Apache 2.0 License.
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+JDatePicker: JDatePicker is used internally for date selection drop downs. 
+JDatePicker s protected by the BSD license which is provided below. 
+Open Source Fonts
+Certain open source fonts are used for image drawing. All such fonts are freely available for commercial use. 
+Several of these fonts are protected by the Open Font License. 
+
+https://opensource.org/licenses/OFL-1.1
+
+StAEDI is used as part of our ACH integration
+StAEDI is a streaming API which is used  to parse and validate EDI documents that are embedded within type 7 addenda records. 
+StAEDI is protected by the Apache 2.0 License.
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Encog is used as part of our E13B OCR MICR recognition tools
+Encog is a Java based machine learning framework that supports different learning algorithms such as Bayesian Networks, Hidden Markov Models and Support Vector Machines. Its main strength lies in its neural network algorithms.
+Apache 2.0 License.
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Advanced Installer is used to build our Windows installers for X9Assist and X9Utilities 
+Advanced Installer is used to package and deploy our several of our products for the Windows environment. These include our desktop products (eg, X9Assist) and X9Utilities. 
+Advanced Installer is a very commonly used tool throughout the industry, for this specific purpose. 
+
+Sun Copyright
+Copyright (c) 2001 Sun Microsystems, Inc. All Rights Reserved.
+ 
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+Redistribution in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ 
+Neither the name of Sun Microsystems, Inc. or the names of contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+This software is provided "AS IS," without a warranty of any kind. ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT, ARE HEREBY EXCLUDED. SUN AND ITS LICENSORS SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING THE SOFTWARE OR ITS DERIVATIVES. IN NO EVENT WILL SUN OR ITS LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE USE OF OR INABILITY TO USE SOFTWARE, EVEN IF SUN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ 
+You acknowledge that Software is not designed, licensed or intended for use in the design, construction, operation or maintenance of any nuclear facility.
+MigLayout License 
+ License (BSD):
+ 
+Redistribution and use in source and binary forms, with or without modification,  are permitted provided that the following conditions are met:  Redistributions of source code must retain the above copyright notice, this list  of conditions and the following disclaimer. Redistributions in binary form must reproduce the above copyright notice, this  list of conditions and the following disclaimer in the documentation and/or other  materials provided with the distribution. Neither the name of the MiG InfoCom AB nor the names of its contributors may be  used to endorse or promote products derived from this software without specific  prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,  OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY  OF SUCH DAMAGE. 

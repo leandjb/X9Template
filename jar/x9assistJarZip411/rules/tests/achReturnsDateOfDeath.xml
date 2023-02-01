@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: achReturnsDateOfDeath -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>7.3</field> <isEqual>R14</isEqual> <fail>b</fail> </test>
+  <test> <field>7.3</field> <isEqual>R15</isEqual> <fail>b</fail> </test>
+  <test> <pass>[true]</pass> </test>  
+  <message>Required when return reason has a value of R14 or R15</message>
+</testSet>

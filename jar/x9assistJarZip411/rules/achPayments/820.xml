@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns="http://xlate.io/EDISchema/v4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xlate.io/EDISchema/v4 https://www.xlate.io/EDISchema/EDISchema-v4.xsd">
+  <transaction>
+    <sequence>
+      <segment type="BPR" minOccurs="1"/>
+      <segment type="NTE" maxOccurs="99999"/>
+      <segment type="TRN"/>
+      <segment type="CUR"/>
+      <segment type="REF" maxOccurs="99999"/>
+      <segment type="DTM" maxOccurs="99999"/>
+      <loop code="L0001" maxOccurs="99999">
+        <sequence>
+          <segment type="N1"/>
+          <segment type="N2" maxOccurs="99999"/>
+          <segment type="N3" maxOccurs="99999"/>
+          <segment type="N4"/>
+          <segment type="REF" maxOccurs="99999"/>
+          <segment type="PER" maxOccurs="99999"/>
+          <segment type="RDM"/>
+          <segment type="DTM"/>
+        </sequence>
+      </loop>
+      <loop code="L0002" maxOccurs="99999">
+        <sequence>
+          <segment type="ENT"/>
+          <loop code="L0003" maxOccurs="99999">
+            <sequence>
+              <segment type="NM1"/>
+              <segment type="N2" maxOccurs="99999"/>
+              <segment type="N3" maxOccurs="99999"/>
+              <segment type="N4"/>
+              <segment type="REF" maxOccurs="99999"/>
+              <segment type="PER" maxOccurs="99999"/>
+            </sequence>
+          </loop>
+          <loop code="L0004" maxOccurs="99999">
+            <sequence>
+              <segment type="ADX"/>
+              <segment type="NTE" maxOccurs="99999"/>
+              <segment type="PER" maxOccurs="99999"/>
+              <segment type="DTM"/>
+              <loop code="L0005" maxOccurs="99999">
+                <sequence>
+                  <segment type="REF"/>
+                  <segment type="DTM" maxOccurs="99999"/>
+                </sequence>
+              </loop>
+              <loop code="L0006" maxOccurs="99999">
+                <sequence>
+                  <segment type="IT1"/>
+                  <loop code="L0007" maxOccurs="99999">
+                    <sequence>
+                      <segment type="REF"/>
+                      <segment type="DTM"/>
+                    </sequence>
+                  </loop>
+                  <loop code="L0008" maxOccurs="99999">
+                    <sequence>
+                      <segment type="SAC"/>
+                      <segment type="TXI" maxOccurs="99999"/>
+                    </sequence>
+                  </loop>
+                  <loop code="L0009" maxOccurs="99999">
+                    <sequence>
+                      <segment type="SLN"/>
+                      <loop code="L0010" maxOccurs="99999">
+                        <sequence>
+                          <segment type="REF"/>
+                          <segment type="DTM" maxOccurs="99999"/>
+                        </sequence>
+                      </loop>
+                      <loop code="L0011" maxOccurs="99999">
+                        <sequence>
+                          <segment type="SAC"/>
+                          <segment type="TXI" maxOccurs="99999"/>
+                        </sequence>
+                      </loop>
+                    </sequence>
+                  </loop>
+                </sequence>
+              </loop>
+            </sequence>
+          </loop>
+          <loop code="L0012" maxOccurs="99999">
+            <sequence>
+              <segment type="RMR"/>
+              <segment type="NTE" maxOccurs="99999"/>
+              <segment type="REF" maxOccurs="99999"/>
+              <segment type="DTM" maxOccurs="99999"/>
+              <loop code="L0013" maxOccurs="99999">
+                <sequence>
+                  <segment type="IT1"/>
+                  <loop code="L0014" maxOccurs="99999">
+                    <sequence>
+                      <segment type="REF"/>
+                      <segment type="DTM"/>
+                    </sequence>
+                  </loop>
+                  <loop code="L0015" maxOccurs="99999">
+                    <sequence>
+                      <segment type="SAC"/>
+                      <segment type="TXI" maxOccurs="99999"/>
+                    </sequence>
+                  </loop>
+                  <loop code="L0016" maxOccurs="99999">
+                    <sequence>
+                      <segment type="SLN"/>
+                      <loop code="L0017" maxOccurs="99999">
+                        <sequence>
+                          <segment type="REF"/>
+                          <segment type="DTM" maxOccurs="99999"/>
+                        </sequence>
+                      </loop>
+                      <loop code="L0018" maxOccurs="99999">
+                        <sequence>
+                          <segment type="SAC"/>
+                          <segment type="TXI" maxOccurs="99999"/>
+                        </sequence>
+                      </loop>
+                    </sequence>
+                  </loop>
+                </sequence>
+              </loop>
+              <loop code="L0019" maxOccurs="99999">
+                <sequence>
+                  <segment type="ADX"/>
+                  <segment type="NTE" maxOccurs="99999"/>
+                  <segment type="PER" maxOccurs="99999"/>
+                  <loop code="L0020" maxOccurs="99999">
+                    <sequence>
+                      <segment type="REF"/>
+                      <segment type="DTM" maxOccurs="99999"/>
+                    </sequence>
+                  </loop>
+                  <loop code="L0021" maxOccurs="99999">
+                    <sequence>
+                      <segment type="IT1"/>
+                      <loop code="L0022" maxOccurs="99999">
+                        <sequence>
+                          <segment type="REF"/>
+                          <segment type="DTM"/>
+                        </sequence>
+                      </loop>
+                      <loop code="L0023" maxOccurs="99999">
+                        <sequence>
+                          <segment type="SAC"/>
+                          <segment type="TXI" maxOccurs="99999"/>
+                        </sequence>
+                      </loop>
+                      <loop code="L0024" maxOccurs="99999">
+                        <sequence>
+                          <segment type="SLN"/>
+                          <loop code="L0025" maxOccurs="99999">
+                            <sequence>
+                              <segment type="REF"/>
+                              <segment type="DTM" maxOccurs="99999"/>
+                            </sequence>
+                          </loop>
+                          <loop code="L0026" maxOccurs="99999">
+                            <sequence>
+                              <segment type="SAC"/>
+                              <segment type="TXI" maxOccurs="99999"/>
+                            </sequence>
+                          </loop>
+                        </sequence>
+                      </loop>
+                    </sequence>
+                  </loop>
+                </sequence>
+              </loop>
+            </sequence>
+          </loop>
+        </sequence>
+      </loop>
+      <loop code="L0027" maxOccurs="99999">
+        <sequence>
+          <segment type="TXP"/>
+          <segment type="TXI" maxOccurs="99999"/>
+        </sequence>
+      </loop>
+      <loop code="L0028" maxOccurs="99999">
+        <sequence>
+          <segment type="DED"/>
+        </sequence>
+      </loop>
+      <loop code="L0029" maxOccurs="99999">
+        <sequence>
+          <segment type="LX"/>
+          <segment type="REF" maxOccurs="99999"/>
+          <segment type="TRN" maxOccurs="99999"/>
+          <loop code="L0030" maxOccurs="99999">
+            <sequence>
+              <segment type="NM1"/>
+              <segment type="REF" maxOccurs="99999"/>
+              <segment type="G53"/>
+              <loop code="L0031" maxOccurs="99999">
+                <sequence>
+                  <segment type="AIN"/>
+                  <segment type="QTY" maxOccurs="99999"/>
+                  <segment type="DTP" maxOccurs="99999"/>
+                </sequence>
+              </loop>
+              <loop code="L0032" maxOccurs="99999">
+                <sequence>
+                  <segment type="PEN"/>
+                  <segment type="AMT" maxOccurs="99999"/>
+                  <segment type="DTP" maxOccurs="99999"/>
+                  <loop code="L0033" maxOccurs="99999">
+                    <sequence>
+                      <segment type="INV"/>
+                      <segment type="DTP" maxOccurs="99999"/>
+                    </sequence>
+                  </loop>
+                </sequence>
+              </loop>
+            </sequence>
+          </loop>
+        </sequence>
+      </loop>
+      <loop code="L0034">
+        <sequence>
+          <segment type="N9"/>
+          <loop code="L0035" maxOccurs="99999">
+            <sequence>
+              <segment type="AMT"/>
+              <segment type="REF" maxOccurs="99999"/>
+            </sequence>
+          </loop>
+          <loop code="L0036" maxOccurs="99999">
+            <sequence>
+              <segment type="N1"/>
+              <segment type="REF" maxOccurs="99999"/>
+              <loop code="L0037" maxOccurs="99999">
+                <sequence>
+                  <segment type="EMS"/>
+                  <segment type="ATN" maxOccurs="99999"/>
+                  <segment type="AIN" maxOccurs="99999"/>
+                  <segment type="PYD" maxOccurs="99999"/>
+                </sequence>
+              </loop>
+            </sequence>
+          </loop>
+        </sequence>
+      </loop>
+      <loop code="L0038" maxOccurs="99999">
+        <sequence>
+          <segment type="RYL"/>
+          <loop code="L0039" maxOccurs="99999">
+            <sequence>
+              <segment type="NM1"/>
+              <loop code="L0040" maxOccurs="99999">
+                <sequence>
+                  <segment type="LOC"/>
+                  <loop code="L0041" maxOccurs="99999">
+                    <sequence>
+                      <segment type="PID"/>
+                      <segment type="DTM"/>
+                      <loop code="L0042" maxOccurs="99999">
+                        <sequence>
+                          <segment type="PCT"/>
+                          <segment type="QTY"/>
+                          <loop code="L0043" maxOccurs="99999">
+                            <sequence>
+                              <segment type="AMT"/>
+                              <segment type="ADX" maxOccurs="99999"/>
+                            </sequence>
+                          </loop>
+                        </sequence>
+                      </loop>
+                    </sequence>
+                  </loop>
+                </sequence>
+              </loop>
+              <loop code="L0044">
+                <sequence>
+                  <segment type="ASM"/>
+                  <segment type="ADX"/>
+                </sequence>
+              </loop>
+            </sequence>
+          </loop>
+        </sequence>
+      </loop>
+    </sequence>
+  </transaction>
+
+
+  <elementType name="E0100" base="string" minLength="3" maxLength="3" title="Currency Code">
+    <enumeration>
+      <value title="Canadian Dollars">CAD</value>
+      <value title="US Dollars">USD</value>
+    </enumeration>
+  </elementType>
+
+  <elementType name="E0478" base="string" title="Credit/Debit Flag Code">
+    <enumeration>
+      <value title="Credit">C</value>
+      <value title="Debit">D</value>
+    </enumeration>
+  </elementType>
+
+  <elementType name="E0506" base="string" minLength="2" maxLength="2" title="(DFI) ID Number Qualifier">
+    <!--
+    <enumeration>
+      <value title="ABA Transit Routing Number Including Check Digits (9 digits)">01</value>
+    </enumeration>
+    -->
+  </elementType>
+
+  <elementType name="E0591" base="string" minLength="3" maxLength="3" title="Payment Method Code">
+    <enumeration>
+      <value title="Automated Clearing House">ACH</value>
+      <value>X12</value>
+    </enumeration>
+  </elementType>
+
+  <elementType name="E0623" base="string" minLength="2" maxLength="2" title="Time Code">
+    <enumeration>
+      <value title="Central Time">CT</value>
+      <value title="Eastern Time">ET</value>
+      <value title="Mountain Time">MT</value>
+      <value title="Pacific Time">PT</value>
+    </enumeration>
+  </elementType>
+
+  <elementType name="E0812" base="string" maxLength="10" title="Payment Format Code">
+    <enumeration>
+      <value>CCP</value>
+      <value>CTX</value>
+    </enumeration>
+  </elementType>
+
+  <elementType name="E0019" base="string" minLength="2" maxLength="30" title="City Name"/>
+  <elementType name="E0026" base="string" minLength="2" maxLength="3" title="Country Code"/>
+  <elementType name="E0066" base="string" maxLength="2" title="Identification Code Qualifier" />
+  <elementType name="E0067" base="string" minLength="2" maxLength="80" title="Identification Code"/>
+  <elementType name="E0093" base="string" maxLength="60" title="Name"/>
+  <elementType name="E0098" base="string" minLength="2" maxLength="3" title="Entity Identifier Code"/>
+  <elementType name="E0116" base="string" minLength="3" maxLength="15" title="Postal Code"/>
+  <elementType name="E0127" base="string" maxLength="30" title="Reference Identification"/>
+  <elementType name="E0128" base="string" minLength="2" maxLength="3" title="Reference Identification Qualifier"/>
+  <elementType name="E0156" base="string" minLength="2" maxLength="2" title="State or Province Code"/>
+  <elementType name="E0166" base="string" maxLength="55" title="Address Information"/>
+  <elementType name="E0280" base="decimal" minLength="4" maxLength="10" title="Exchange Rate"/>
+  <elementType name="E0305" code="305" base="string" maxLength="2" title="Transaction Handling Code"/>
+  <elementType name="E0309" base="string" maxLength="2" title="Location Qualifier"/>
+  <elementType name="E0310" base="string" maxLength="30" title="Location Identifier"/>
+  <elementType name="E0337" base="time" minLength="4" maxLength="8" title="Time"/>
+  <elementType name="E0352" base="string" maxLength="80" title="Description"/>
+  <elementType name="E0363" base="string" minLength="3" maxLength="3" title="Note Reference Code"/>
+  <elementType name="E0373" base="date" minLength="8" maxLength="8" title="Date"/>
+  <elementType name="E0374" base="string" minLength="3" maxLength="3" title="Date/Time Qualifier"/>
+  <elementType name="E0426" base="string" minLength="2" maxLength="2" title="Adjustment Reason Code"/>
+  <elementType name="E0481" base="string" maxLength="2" title="Trace Type Code"/>
+  <elementType name="E0482" base="string" minLength="2" maxLength="2" title="Payment Action Code"/>
+  <elementType name="E0507" base="string" minLength="3" maxLength="12" title="(DFI) Identification Number"/>
+  <elementType name="E0508" base="string" maxLength="35" title="Account Number"/>
+  <elementType name="E0509" base="string" minLength="10" maxLength="10" title="Originating Company Identifier"/>
+  <elementType name="E0510" base="string" minLength="9" maxLength="9" title="Originating Company Supplemental Code"/>
+  <elementType name="E0554" base="numeric" maxLength="6" title="Assigned Number"/>
+  <elementType name="E0569" base="string" maxLength="3" title="Account Number Qualifier"/>
+  <elementType name="E0669" base="string" minLength="3" maxLength="3" title="Currency Market/Exchange Code"/>
+  <elementType name="E0706" base="string" minLength="2" maxLength="2" title="Entity Relationship Code"/>
+  <elementType name="E0782" base="decimal" maxLength="18" title="Monetary Amount"/>
+  <elementType name="E1048" base="string" maxLength="3" title="Business Function Code"/>
+  <elementType name="E1250" base="string" minLength="2" maxLength="3" title="Date Time Period Format Qualifier"/>
+  <elementType name="E1251" base="string" maxLength="35" title="Date Time Period"/>
+
+  <compositeType name="C040" title="Reference Identifier">
+    <sequence>
+      <element type="E0128" minOccurs="1"/>
+      <element type="E0127" minOccurs="1"/>
+      <element type="E0128"/>
+      <element type="E0127"/>
+      <element type="E0128"/>
+      <element type="E0127"/>
+    </sequence>
+  </compositeType>
+
+  <!-- Segments with element details defined in typically published 4010 payment exchange standards -->
+  <segmentType name="BPR" title="Beginning Segment for Payment Order/Remittance Advice">
+    <sequence>
+      <element type="E0305" minOccurs="1"/>
+      <element type="E0782" minOccurs="1"/>
+      <element type="E0478" minOccurs="1"/>
+      <element type="E0591" minOccurs="1"/>
+      <element type="E0812"/>
+      <element type="E0506"/>
+      <element type="E0507"/>
+      <element type="E0569"/>
+      <element type="E0508"/>
+      <element type="E0509"/>
+      <element type="E0510"/>
+      <element type="E0506"/>
+      <element type="E0507"/>
+      <element type="E0569"/>
+      <element type="E0508"/>
+      <element type="E0373"/>
+      <element type="E1048"/>
+      <element type="E0506"/>
+      <element type="E0507"/>
+      <element type="E0569"/>
+      <element type="E0508"/>
+    </sequence>
+    <syntax type="paired">
+      <position>6</position>
+      <position>7</position>
+    </syntax>
+    <syntax type="conditional">
+      <position>8</position>
+      <position>9</position>
+    </syntax>
+    <syntax type="paired">
+      <position>12</position>
+      <position>13</position>
+    </syntax>
+    <syntax type="conditional">
+      <position>14</position>
+      <position>15</position>
+    </syntax>
+  </segmentType>
+  <segmentType name="CUR" title="Currency">
+    <sequence>
+      <element type="E0098" minOccurs="1"/>
+      <element type="E0100" minOccurs="1"/>
+      <element type="E0280"/>
+      <element type="E0098"/>
+      <element type="E0100"/>
+      <element type="E0669"/>
+      <element type="E0374"/>
+      <element type="E0373"/>
+      <element type="E0337"/>
+      <element type="E0374"/>
+      <element type="E0373"/>
+      <element type="E0337"/>
+      <element type="E0374"/>
+      <element type="E0373"/>
+      <element type="E0337"/>
+      <element type="E0374"/>
+      <element type="E0373"/>
+      <element type="E0337"/>
+      <element type="E0374"/>
+      <element type="E0373"/>
+      <element type="E0337"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="DTM" title="Date/Time Reference">
+    <sequence>
+      <element type="E0374" minOccurs="1"/>
+      <element type="E0373"/>
+      <element type="E0337"/>
+      <element type="E0623"/>
+      <element type="E1250"/>
+      <element type="E1251"/>
+    </sequence>
+    <syntax type="required">
+      <position>2</position>
+      <position>3</position>
+      <position>5</position>
+    </syntax>
+    <syntax type="conditional">
+      <position>4</position>
+      <position>3</position>
+    </syntax>
+  </segmentType>
+  <segmentType name="ENT" title="Entity">
+    <sequence>
+      <element type="E0554"/>
+      <element type="E0098"/>
+      <element type="E0066"/>
+      <element type="E0067"/>
+      <element type="E0098"/>
+      <element type="E0066"/>
+      <element type="E0067"/>
+      <element type="E0128"/>
+      <element type="E0127"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="N1" title="Name">
+    <sequence>
+      <element type="E0098" minOccurs="1"/>
+      <element type="E0093"/>
+      <element type="E0066"/>
+      <element type="E0067"/>
+      <element type="E0706"/>
+      <element type="E0098"/>
+    </sequence>
+    <syntax type="required">
+      <position>2</position>
+      <position>3</position>
+    </syntax>
+    <syntax type="paired">
+      <position>3</position>
+      <position>4</position>
+    </syntax>
+  </segmentType>
+  <segmentType name="N3" title="Address Information">
+    <sequence>
+      <element type="E0166" minOccurs="1"/>
+      <element type="E0166"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="N4" title="Geographic Location">
+    <sequence>
+      <element type="E0019"/>
+      <element type="E0156"/>
+      <element type="E0116"/>
+      <element type="E0026"/>
+      <element type="E0309"/>
+      <element type="E0310"/>
+    </sequence>
+    <syntax type="conditional">
+      <position>6</position>
+      <position>5</position>
+    </syntax>
+  </segmentType>
+  <segmentType name="NTE" title="Note/Special Instruction">
+    <sequence>
+      <element type="E0363"/>
+      <element type="E0352" minOccurs="1"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="REF" title="Reference Identification">
+    <sequence>
+      <element type="E0128" minOccurs="1"/>
+      <element type="E0127"/>
+      <element type="E0352"/>
+      <composite type="C040"/>
+    </sequence>
+    <syntax type="required">
+      <position>2</position>
+      <position>3</position>
+    </syntax>
+  </segmentType>
+  <segmentType name="RMR" title="Remittance Advice Accounts Receivable Open Item Reference">
+    <sequence>
+      <element type="E0128"/>
+      <element type="E0127"/>
+      <element type="E0482"/>
+      <element type="E0782"/>
+      <element type="E0782"/>
+      <element type="E0782"/>
+      <element type="E0426"/>
+      <element type="E0782"/>
+    </sequence>
+    <syntax type="paired">
+      <position>1</position>
+      <position>2</position>
+    </syntax>
+    <syntax type="paired">
+      <position>7</position>
+      <position>8</position>
+    </syntax>
+  </segmentType>
+  <segmentType name="TRN" title="Trace">
+    <sequence>
+      <element type="E0481" minOccurs="1"/>
+      <element type="E0127" minOccurs="1"/>
+      <element type="E0509"/>
+      <element type="E0127"/>
+    </sequence>
+  </segmentType>
+
+  <!-- Segments listed in transaction set, but without element information -->
+  <segmentType name="ADX" title="Adjustment">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="AIN" title="Income">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="AMT" title="Monetary Amount">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="ASM" title="Amount and Settlement Method">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="ATN" title="Attendance">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="DED" title="Deductions">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="DTP" title="Date or Time or Period">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="EMS" title="Employment Position">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="G53" title="Maintenance Type">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="INV" title="Investment Vehicle Selection">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="IT1" title="Baseline Item Data (Invoice)">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="LOC" title="Location">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="LX" title="Assigned Number">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="N2" title="Additional Name Information">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="N9" title="Reference Identification">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="NM1" title="Individual or Organizational Name">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="PCT" title="Percent Amounts">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="PEN" title='Pension Information'>
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="PER" title="Administrative Communications Contact">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="PID" title="Product/Item Description">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="PYD" title="Payroll Deduction">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="QTY" title="Quantity">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="RDM" title="Remittance Delivery Method">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="RYL" title="Royalty Payment">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="SAC" title="Service, Promotion, Allowance, or Charge Information">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="SLN" title="Subline Item Detail">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="TXI" title="Tax Information">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+  <segmentType name="TXP" title="Tax Payment">
+    <sequence>
+      <any maxOccurs="99"/>
+    </sequence>
+  </segmentType>
+</schema>

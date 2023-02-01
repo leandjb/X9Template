@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: addendaType02 -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>5.06</field> <isEqual>MTE</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>POS</isEqual> </test>
+  <test> <field>5.06</field> <isEqual>SHR</isEqual> </test>  
+  <message>Invalid for this standard entry class</message>
+</testSet>

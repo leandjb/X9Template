@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9micrFont>
+  <copyright>X9Ware LLC 2012-2018</copyright>
+  <company>X9Ware LLC</company>
+  <release>R4.11</release>
+  <buildDate>2018.12.14</buildDate>
+  <timestamp>20190105_065120_152</timestamp>
+  
+ <attributes>
+  <xmlName>IDAutomationCMC7.xml</xmlName>
+  <fontName>IDAutomationCMC7.otf</fontName>
+  <fontPointSize>12.0</fontPointSize>
+  <fontStyle>Plain</fontStyle>
+  <ocrType>cmc7</ocrType>
+  <s1>A</s1>
+  <s2>B</s2>
+  <s3>C</s3>
+  <s4>D</s4>
+  <s5>E</s5>
+  <inchesFromBottom>0.2188</inchesFromBottom>
+  <inchesFromRight>0.3125</inchesFromRight>
+  <inchesFromLeft>0.2</inchesFromLeft>
+  <drawAsSingleCharacters>false</drawAsSingleCharacters>
+ </attributes>
+</x9micrFont>
+

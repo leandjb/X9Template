@@ -1,0 +1,38 @@
+Sub TestValidateRouting()
+  MsgBox (ValidateRouting("17770006"))
+End Sub
+Public Function ValidateRouting(Routing As String) As String
+
+    Dim rt As String
+    rt = Trim(Routing)
+    Do While Len(rt) < 9
+        rt = "0" & rt
+    Loop
+    
+    Dim i As Integer, RtIsNumeric As Boolean
+    i = 1
+    RtIsNumeric = True
+    Do While i <= Len(rt) And RtIsNumeric
+        If Not IsNumeric(Mid(rt, i, 1)) Then
+             RtIsNumeric = False
+        End If
+    i = i + 1
+    Loop
+
+    If Not RtIsNumeric Then
+        ValidateRouting = "NOT NUMERIC"
+    ElseIf Len(rt) > 9 Then
+        ValidateRouting = "TOO LONG"
+    Else
+        Dim Sum As Long
+        Sum = 3 * Val(Mid$(rt, 1, 1)) + 7 * Val(Mid$(rt, 2, 1)) + Val(Mid$(rt, 3, 1)) + _
+                3 * Val(Mid$(rt, 4, 1)) + 7 * Val(Mid$(rt, 5, 1)) + Val(Mid$(rt, 6, 1)) + _
+                3 * Val(Mid$(rt, 7, 1)) + 7 * Val(Mid$(rt, 8, 1)) + Val(Mid$(rt, 9, 1))
+        If ((Sum Mod 10) = 0) Then
+            ValidateRouting = "yes"
+        Else
+            ValidateRouting = "==NO=="
+        End If
+    End If
+    
+End Function

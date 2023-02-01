@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>21</key> <value>Demand Credit ReturnsNocs</value> </entry>
+  <entry> <key>22</key> <value>Demand Credit</value> </entry>
+  <entry> <key>23</key> <value>Demand Credit Prenotes</value> </entry>
+  <entry> <key>24</key> <value>Demand Credit ZeroDollar</value> </entry>
+  <entry> <key>26</key> <value>Demand Debit ReturnsNocs</value> </entry>
+  <entry> <key>27</key> <value>Demand Debit</value> </entry>
+  <entry> <key>28</key> <value>Demand Debit Prenotes</value> </entry>
+  <entry> <key>29</key> <value>Demand Debit ZeroDollar</value> </entry>
+  <entry> <key>31</key> <value>Savings Credit ReturnsNocs</value> </entry>
+  <entry> <key>32</key> <value>Savings Credit</value> </entry>
+  <entry> <key>33</key> <value>Savings Credit Prenotes</value> </entry>
+  <entry> <key>34</key> <value>Savings Credit ZeroDollar</value> </entry>
+  <entry> <key>36</key> <value>Savings Debit ReturnsNocs</value> </entry>
+  <entry> <key>37</key> <value>Savings Debit</value> </entry>
+  <entry> <key>38</key> <value>Savings Debit Prenotes</value> </entry>
+  <entry> <key>39</key> <value>Savings Debit ZeroDollar</value> </entry>
+  <entry> <key>41</key> <value>GL Credit ReturnsNocs</value> </entry>
+  <entry> <key>42</key> <value>GL Credit</value> </entry>
+  <entry> <key>43</key> <value>GL Credit Prenotes</value> </entry>
+  <entry> <key>44</key> <value>GL Credit ZeroDollar</value> </entry>
+  <entry> <key>46</key> <value>GL Debit ReturnsNocs</value> </entry>
+  <entry> <key>47</key> <value>GL Debit</value> </entry>
+  <entry> <key>48</key> <value>DGL Debit Prenotes</value> </entry>
+  <entry> <key>49</key> <value>GL Debit ZeroDollar</value> </entry>
+  <entry> <key>51</key> <value>Loan Credit ReturnsNocs</value> </entry>
+  <entry> <key>52</key> <value>Loan Credit</value> </entry>
+  <entry> <key>53</key> <value>Loan Credit Prenotes</value> </entry>
+  <entry> <key>54</key> <value>Loan Credit ZeroDollar</value> </entry>
+  <entry> <key>55</key> <value>Loan Reversal Debit</value> </entry>
+  <entry> <key>56</key> <value>Loan Reversal ReturnsNocs</value> </entry>
+  <entry> <key>81</key> <value>Credit for ACH debits originated</value> </entry>
+  <entry> <key>82</key> <value>Debit for ACH credits originated</value> </entry>
+  <entry> <key>83</key> <value>Credit for ACH credits received </value> </entry>
+  <entry> <key>84</key> <value>Debit for ACH debits received </value> </entry>
+  <entry> <key>85</key> <value>Credit for ACH credits in Rejected batches</value> </entry>
+  <entry> <key>86</key> <value>Debit for ACH debits in Rejected batches</value> </entry>
+  <entry> <key>87</key> <value>Summary credit for ACH respondent activity </value> </entry>
+  <entry> <key>88</key> <value>Summary debit for ACH respondent activity</value> </entry>
+
+</x9table>

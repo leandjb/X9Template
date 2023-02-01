@@ -1,0 +1,160 @@
+Product: Excelsior JET, Professional Edition for Windows 
+
+Excelsior Individual Software License Agreement
+
+This License Agreement (”Agreement”) is a legal agreement between You (either an individual or a single entity) and 
+Excelsior, LLC (”Excelsior”) for the Excelsior software product identified above, which includes computer software, electronic
+documentation, and the associated printed materials (”Software”). By installing, copying or otherwise using the
+Software, You agree to be bound by the terms of this Agreement. If You do not agree to the terms of this Agreement,
+promptly return the unused Software to the place from which You obtained it for a full refund.
+
+A. SCOPE
+The license set out in this Agreement applies solely and exclusively to the use of the Software on computers and/or
+servers used for personal computing functions (such as e-mail, web browsing, office suite productivity) or running
+application servers in IT infrastructure (”General Purpose Desktop Computers And Servers”.)
+
+B. DEVELOPMENT LICENSE
+Excelsior hereby grants to You a non-exclusive, non-transferable license to use the accompanying Software to internally
+design, develop, test and evaluate applications on the following terms:
+You may: a. use the Software on any single computer; b. use the Software on a second computer as long as the first
+and second computers are not used simultaneously; and c. copy the Software for backup purposes, provided any copy
+must contain all of the original Software’s proprietary notices.
+You may not: a. distribute the Software to any third parties or permit other individuals or entities to use the Software;
+b. modify, translate, reverse engineer, reproduce, decompile, disassemble (except as expressly permitted by law), or
+create derivative works of the Software; c. copy the Software (except for back-up purposes); d. rent, lease, or otherwise
+transfer rights to the Software; or e. remove any proprietary notices or labels on the Software.
+The Software is in ”use” on a computer when it is loaded into temporary memory (i.e., RAM) or installed into permanent
+memory (e.g. hard disk, CD- ROM) of that computer. No separate license is required for installation on a network server
+for the sole purpose of internal distribution to one or more computer(s), provided You have a separate license for each
+computer to which the Software is installed.
+
+Upgrades. If the Software is an upgrade, whether from Excelsior or another supplier, You may use the Software only in
+conjunction with the upgraded product.
+
+Subscription Updates. If You have acquired the Software as part of a subscription package, then You must treat as an
+upgrade any subsequent versions of Software received as an update to Your subscription package.
+
+C. RUNTIME LICENSE
+In addition to the Development License granted above, Excelsior grants You a non-exclusive, non-transferable, feebearing
+license to use software programs or components of the Software that are incorporated or embedded in and
+used in the execution of Your software (”Runtime Components”) for the number of applications, users, CPUs, servers,
+or connections and at the sites, as specified on Your invoice, on the following terms:
+Embedded Use. Use of the Runtime Components in devices other than General Purpose Desktop Computers And
+Servers is not allowed under this Agreement. Please contact Excelsior for the conditions of such use.
+Production Use. You may use the Runtime Components in Your applications legally developed under the Development
+License above for internal business purposes, which may include third party customers’ access to or use of such
+applications.
+Redistribution Use. You may redistribute the Runtime Components on the following conditions:
+You agree to: a. distribute the Runtime Components in object code form only and in conjunction with and as a part
+of Your software product legally developed under the Development License above; b. not suppress, alter, or remove
+proprietary rights notices contained therein; c. indemnify, hold harmless, and defend Excelsior and its suppliers from
+and against any claims or lawsuits, including attorney’s fees, that arise or result from the use or distribution of Your
+software product; and d. ensure that Your distributors and customers agree to act in a manner consistent with Your
+obligations under this Agreement.
+Your license agreement with Your distributors and/or customers will: a. not permit Your end users to modify,
+translate, reverse engineer, decompile, or disassemble the Runtime Components except as expressly permitted by law;
+b. not permit further distribution of the Runtime Components by end users. c. include statements that Your product: (i)
+is licensed not sold, and that title to such offering is not passed to the customer, (ii) may include material licensed by a
+third party, and that You have assumed responsibility for the presence and use of this material; and (iii) comply with the
+requirements of Section H “Limited Warranty” as appropriate.
+Fees. The runtime license fees applicable to Production Use and Redistribution Use are detailed at
+http://www.excelsior-usa.com/fees.html.
+
+D. NO FAIL-SAFE USES
+The Software has been created using technologies that are not fault tolerant and thus the Software is not designed,
+manufactured, or intended for use or resale as on-line control equipment in hazardous environments requiring fail-safe
+performance, including, but without limitation, in the operation of nuclear facilities, aircraft navigation or communication
+systems, air traffic control, direct life support machines, or weapons systems, in which the failure of the technologies
+employed in the Software could lead directly to death, personal injury, or severe physical or environmental damage.
+
+E. TITLE
+Title, ownership rights, and intellectual property rights in and to the Software, and any copies of the Software shall
+remain with Excelsior and/or its suppliers. The Software is protected by the copyright laws of the Russian Federation
+and international copyright treaties. Title, ownership rights, and intellectual property rights in and to the content accessed
+through the Software is the property of the applicable content owner and may be protected by applicable copyright or
+other law. This Agreement gives You no rights to such content.
+
+F. MARKETING
+You agree to be identified as a customer of Excelsior, and that Excelsior may refer to You by name, trade name and/or
+trademark (and such references shall in no case constitute an infringement of any such trade names or trademarks, as
+the case may be), whether standing alone, or as part of a list of customers of Excelsior, at Excelsior’s choice; and further,
+Excelsior may briefly describe Your business in Excelsior’s marketing materials, on Excelsior’s web site, in public or legal
+documents, provided in each case, that any such description shall not include any information expressly identified by You
+as trade secret. It is understood and agreed that the right and license to use Your name, trade name and/or trademark,
+as the case may be, is granted to Excelsior solely for the purposes as set out in this Section F. The provisions of this
+Section F shall survive termination of this Agreement, and the rights granted by You to Excelsior pursuant to this Section
+F shall remain effective in perpetuity.
+
+G. TERMINATION
+This Agreement will terminate automatically if You fail to comply with the limitations described above. On termination,
+You must destroy all copies of the Software.
+
+H. LIMITED WARRANTY
+Excelsior warrants that for a period of ninety (90) days from the date of acquisition, the Software, if operated as directed,
+will substantially achieve the functionality described in the accompanying written materials. Excelsior does not warrant,
+however, that Your use of the Software will be uninterrupted or that the operation of the Software will be error-free or
+secure. Excelsior also warrants that the media containing the Software, if provided by Excelsior, is free from defects in
+material and workmanship and will so remain for ninety (90) days from the date You acquired the Software. Excelsior’s
+sole liability for any breach of this warranty shall be, in Excelsior’s sole discretion: a. to replace Your defective media; or
+b. to advise You how to achieve substantially the same functionality with the Software as described in the documentation
+through a procedure different from that set forth in the documentation. Repaired, corrected, or replaced Software shall
+be covered by this limited warranty for the period remaining under the warranty that covered the original Software, or
+if longer, for thirty (30) days after the date a. of shipment to You of the repaired or replaced Software, or b. Excelsior
+advised You how to operate the Software so as to achieve the functionality described in the documentation. Only if
+You inform Excelsior of Your problem with the Software during the applicable warranty period and provide evidence of
+the date You acquired the Software will Excelsior be obligated to honour this warranty. Excelsior will use reasonable
+commercial efforts to repair, replace or advise to the foregoing warranty within 30 days of being so notified.
+THIS IS A LIMITED WARRANTY AND IT IS THE ONLY WARRANTY MADE BY EXCELSIOR.
+EXCELSIOR MAKES NO OTHER EXPRESS WARRANTY AND NO WARRANTY OF NO INFRINGEMENT OF THIRD
+PARTIES’ RIGHTS. THE DURATION OF IMPLIEDWARRANTIES, INCLUDING WITHOUT LIMITATION,WARRANTIES
+OF MERCHANTABILITY AND OF FITNESS FOR A PARTICULAR PURPOSE, IS LIMITED TO THE ABOVE LIMITED
+WARRANTY PERIOD; SOME COUNTRIES DO NOT ALLOWLIMITATIONS ON HOWLONG AN IMPLIEDWARRANTY
+LASTS, SO LIMITATIONS MAY NOT APPLY TO YOU. NO EXCELSIOR DEALER, AGENT, OR EMPLOYEE IS AUTHORIZED
+TO MAKE ANY MODIFICATIONS, EXTENSIONS, OR ADDITIONS TO THIS WARRANTY.
+If any modifications are made to the Software by You during the warranty period; if the media is subjected to accident,
+abuse or improper use; or if You violate the terms of this Agreement, then this warranty shall immediately be terminated.
+This warranty shall not apply if the Software is used on or in conjunction with hardware or software other than the
+unmodified version of hardware and software with which the Software was designed to be used as described in the
+documentation.
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER LEGAL RIGHTS THAT
+VARY FROM COUNTRY TO COUNTRY OR BY JURISDICTION.
+
+I. NO LICENSE TO ORIGINAL SOFTWARE
+The Software licensed to You by Excelsior hereunder contains, in executable form, portions of the original code which
+was developed by Sun Microsystems and which implements the Java 2 Standard Edition technology (the ”Original
+Software”), and Excelsior hereby represents, warrants and confirms to You that it has any and all necessary license
+from Sun Microsystems, Inc., its affiliates, successors and assigns, as the case may be (the ”Original Contributor”), to
+create the Software (in particular, to modify the Original Software to the extent such modifications do not breach the
+compatibility requirements, and to include the resulting code into Excelsior product). It is however expressly understood
+and confirmed by You that any license granted to You by Excelsior hereunder, is granted solely by Excelsior, and not by
+the Original Contributor, and You hereby expressly confirm that You will have no right to bring any claims, suits, actions,
+causes of action, demands or requests against the Original Contributor hereunder, and You hereby expressly waive any
+such claims, suits, actions, causes of action, demands or requests.
+
+J. THIRD PARTY SOFTWARE
+The Software may contain third party software which requires notices and/or additional terms and conditions.
+Such required third party software notices and/or additional terms and conditions are located at
+http://www.excelsior-usa.com/thirdpartylicenses.html and are made a part of and incorporated by reference
+into this Agreement. By accepting this Agreement, you are also accepting the additional terms and conditions, if
+any, set forth therein.
+
+K. LIMITATION OF LIABILITY
+UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, TORT, CONTRACT, OR OTHERWISE, SHALL EXCELSIOR
+OR ITS SUPPLIERS OR RESELLERS BE LIABLE TO YOU OR ANY OTHER PERSON FOR ANY INDIRECT,
+SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION,
+DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR
+ANY AND ALL OTHER COMMERCIAL DAMAGES OR LOSSES, OR FOR ANY DAMAGES IN EXCESS OF EXCELSIOR’S
+LIST PRICE FOR A LICENSE TO THE SOFTWARE, EVEN IF EXCELSIOR SHALL HAVE BEEN INFORMED
+OF THE POSSIBILITY OF SUCH DAMAGES, OR FOR ANY CLAIM BY ANY OTHER PARTY. THIS LIMITATION OF
+LIABILITY SHALL NOT APPLY TO LIABILITY FOR DEATH OR PERSONAL INJURY TO THE EXTENT APPLICABLE
+LAW PROHIBITS SUCH LIMITATION. FURTHERMORE, SOME COUNTRIES DO NOT ALLOW THE EXCLUSION OR
+LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THIS LIMITATION AND EXCLUSION MAY NOT
+APPLY TO YOU.
+
+The provisions of this Section K shall survive the termination of this Agreement.
+This Agreement is the entire Agreement between us and supersedes any other communications,
+advertisements, or understandings with respect to the Software.
+Excelsior, LLC Tel: +7 (383) 330 5508 E-mail: info@excelsior-usa.com
+6 Lavrenteva Ave., Novosibirsk 630090, Russia Fax: +1 (509) 271 5205 WWW: http://www.excelsior-usa.com
+
+c 2000-2009 Excelsior LLC. All rights reserved.

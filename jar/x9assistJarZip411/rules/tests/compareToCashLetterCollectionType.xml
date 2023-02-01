@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: compareToCashLetterCollectionType -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>10.2</field> <isEqual>[this]</isEqual> </test>
+  <test> <field>10.2</field> <isEqual>99</isEqual> </test>
+  <repair>[10.2]</repair> 
+  <message>Must match cash letter collection type indicator</message>
+</testSet>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: eexReturnReason -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>10.14</field> <isEqual>E</isEqual> </test>
+  <test> <field>10.14</field> <isEqual>R</isEqual> </test>
+  <test> <field>10.14</field> <isEqual>D</isEqual> <values>=Y</values> </test>  
+  <test> <field>10.14</field> <isEqual>X</isEqual> <values>=Q|I|U|1|2|O</values> </test>
+  <message>Does not match EEX cash letter returns indicator</message>
+</testSet>

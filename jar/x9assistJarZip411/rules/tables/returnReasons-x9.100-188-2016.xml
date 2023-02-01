@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>A</key> <value>NOT SUFFICIENT FUNDS</value> </entry>
+  <entry> <key>B</key> <value>UNCOLLECTED FUNDS HOLD</value> </entry>
+  <entry> <key>C</key> <value>STOP PAYMENT</value> </entry>
+  <entry> <key>D</key> <value>CLOSED ACCOUNT</value> </entry>
+  <entry> <key>E</key> <value>UNABLE TO LOCATE ACCOUNT</value> </entry>
+  <entry> <key>F</key> <value>FROZEN BLOCKED</value> </entry>
+  <entry> <key>G</key> <value>STALE DATED</value> </entry>
+  <entry> <key>H</key> <value>POST DATED</value> </entry>
+  <entry> <key>I</key> <value>ENDORSEMENT MISSING</value> </entry>
+  <entry> <key>J</key> <value>EMDPORSEMENT IRREGULAR</value> </entry>
+  <entry> <key>K</key> <value>SIGNATURES MISSING</value> </entry>
+  <entry> <key>L</key> <value>SIGNATURES IRREGULAR</value> </entry>
+  <entry> <key>M</key> <value>NON CASH ITEM</value> </entry>
+  <entry> <key>N</key> <value>ALTERED FICTITIOUS</value> </entry>
+  <entry> <key>O</key> <value>UNABLE TO PROCESS</value> </entry>
+  <entry> <key>P</key> <value>EXCEEDS DOLLAR AMOUNT</value> </entry>
+  <entry> <key>Q</key> <value>NOT AUTHORIZED</value> </entry>
+  <entry> <key>R</key> <value>BRANCH ACCOUNT SOLD</value> </entry>
+  <entry> <key>S</key> <value>REFER TO MAKER</value> </entry>
+  <entry> <key>T</key> <value>STOP PAYMENT SUSPECT</value> </entry>
+  <entry> <key>U</key> <value>UNUSABLE IMAGE</value> </entry>
+  <entry> <key>W</key> <value>CANNOT DETERMINE AMOUNT</value> </entry>
+  <entry> <key>X</key> <value>REFER TO IMAGE</value> </entry>
+  <entry> <key>Y</key> <value>DUPLICATE PRESENTMENT</value> </entry>
+  <entry> <key>Z</key> <value>FORGERY</value> </entry>
+  <entry> <key>3</key> <value>INELIGIBLE</value> </entry>
+  <entry> <key>4</key> <value>NOT OUR ITEM</value> </entry>
+  <entry> <key>5</key> <value>RETIRED ABA</value> </entry>
+  <entry> <key>6</key> <value>SUSPECTED COUNTERFEIT</value> </entry>
+  <entry> <key>7</key> <value>RESERVED FOR FUTURE USE</value> </entry>
+  <entry> <key>8</key> <value>RESERVED FOR FUTURE USE</value> </entry>
+  <entry> <key>9</key> <value>RESERVED FOR FUTURE USE</value> </entry>
+  <entry> <key>0</key> <value>RESERVED FOR FUTURE USE</value> </entry>
+
+</x9table>

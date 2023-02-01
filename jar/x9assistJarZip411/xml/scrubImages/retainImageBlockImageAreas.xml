@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9ScrubImages>
+  <copyright>X9Ware LLC 2012-2018</copyright>
+  <company>X9Ware LLC</company>
+  <release>R4.11</release>
+  <buildDate>2018.12.14</buildDate>
+  <timestamp>20190105_065120_152</timestamp>
+ 
+  <frontImage>
+     <retainImage>true</retainImage>
+	 <scrubBoxes>
+	    <scrubBox>
+		   <x>0.00</x>
+		   <y>0.00</y>
+		   <width>3.00</width>
+		   <height>1.00</height>
+		</scrubBox>
+	    <scrubBox>
+		   <x>3.00</x>
+		   <y>0.00</y>
+		   <width>5.50</width>
+		   <height>0.50</height>
+		</scrubBox>
+	    <scrubBox>
+		   <x>0.00</x>
+		   <y>1.70</y>
+		   <width>8.500</width>
+		   <height>0.60</height>
+		</scrubBox>		
+	</scrubBoxes>
+  </frontImage>
+ 
+  <backImage>
+     <retainImage>true</retainImage>
+  </backImage>
+
+</x9ScrubImages>
+

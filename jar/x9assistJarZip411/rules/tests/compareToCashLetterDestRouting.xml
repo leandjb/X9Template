@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: compareToCashLetterDestRouting -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>10.3</field> <isEqual>[this]</isEqual> </test>
+  <test> <accept>notInCashLetter</accept></test>  
+  <message>Must match cash letter destination routing</message>  
+  <repair>[10.3]</repair> 
+</testSet>

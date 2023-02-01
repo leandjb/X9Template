@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: compareToCashLetterBusinessDate -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>10.5</field> <isEqual>[this]</isEqual> </test>
+  <message>Must match cash letter business date</message>  
+  <repair>[10.5]</repair> 
+</testSet>

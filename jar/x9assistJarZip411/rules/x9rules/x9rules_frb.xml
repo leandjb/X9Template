@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074825_322</timestamp>
+    <basis>
+        <base>x9rules_dstu_2003.xml</base>
+    </basis>
+    <x9Controls>
+        <gender>X9</gender>
+        <dialect>X9</dialect>
+        <x9Specification>FRB 2003</x9Specification>
+        <characterSet>ebcdic</characterSet>
+        <fieldZeroPresence>required</fieldZeroPresence>
+        <maximumFileSize>2048</maximumFileSize>
+        <userFieldsValidated>false</userFieldsValidated>
+        <reservedFieldsValidated>false</reservedFieldsValidated>
+    </x9Controls>
+    <overrides>
+        <x9record>
+            <type>1</type>
+            <format>000</format>
+            <name>File Header Record</name>
+            <length>f80</length>
+            <field>
+                <item>x01.01-p001-l002-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.02-p003-l002-mandatory-modifiable</item>
+                <name>Standard Level</name>
+                <values>=3</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.08-p036-l001-mandatory-modifiable</item>
+                <name>Resend Indicator</name>
+                <values>=N</values>
+                <edit>a</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>10</type>
+            <format>000</format>
+            <name>Cash Letter Header Record</name>
+            <length>f80</length>
+            <field>
+                <item>x10.02-p003-l002-mandatory-modifiable</item>
+                <name>Collection Type Indicator</name>
+                <values>=1|2|3</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x10.08-p043-l001-mandatory-modifiable</item>
+                <name>Cash Letter Record Type Indicator</name>
+                <values>=I</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x10.09-p044-l001-conditional-modifiable</item>
+                <name>Cash Letter Documentation Type Indicator</name>
+                <values>=G</values>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x10.10-p045-l008-conditional-modifiable</item>
+                <name>Cash Letter ID</name>
+                <edit>an</edit>
+                <edit>CashLetterIdIsUnique</edit>
+            </field>
+            <field>
+                <item>x10.13-p077-l001-conditional-modifiable</item>
+                <name>Fed Work Type</name>
+                <values>=A|B|C|D|H|I|J|K|L|M|N|R|S|X|1|3|7|8</values>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>20</type>
+            <format>000</format>
+            <name>Bundle Header Record</name>
+            <length>f80</length>
+            <field>
+                <item>x20.02-p003-l002-mandatory-modifiable</item>
+                <name>Collection Type Indicator</name>
+                <edit>n</edit>
+                <edit>test/compareToCashLetterCollectionType</edit>
+            </field>
+            <field>
+                <item>x20.10-p055-l009-conditional-modifiable</item>
+                <name>Return Location Routing Number</name>
+                <validate>false</validate>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>25</type>
+            <format>000</format>
+            <name>Check Detail Record</name>
+            <length>f80</length>
+            <creditsAddToItemCount>true</creditsAddToItemCount>
+            <creditsAddToTotalAmount>true</creditsAddToTotalAmount>
+            <field>
+                <item>x25.09-p073-l001-conditional-modifiable</item>
+                <name>Documentation Type Indicator</name>
+                <values>=G</values>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>28</type>
+            <format>000</format>
+            <name>Check Detail Addendum C Record</name>
+            <length>f80</length>
+            <field>
+                <item>x28.09-p040-l001-conditional-modifiable</item>
+                <name>Return Reason</name>
+                <values>=A|B|C|D|E|F|G|H|I|J|K|L|M|N|P|Q|R|S|T|W|X</values>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>31</type>
+            <format>000</format>
+            <name>Return Record</name>
+            <length>f80</length>
+            <creditsAddToItemCount>false</creditsAddToItemCount>
+            <creditsAddToTotalAmount>false</creditsAddToTotalAmount>
+            <field>
+                <item>x31.06-p042-l001-conditional-modifiable</item>
+                <name>Return Reason</name>
+                <values>=A|B|C|D|E|F|G|H|I|J|K|L|M|N|P|Q|R|S|T|W|X</values>
+                <edit>an</edit>
+            </field>
+            <field>
+                <item>x31.08-p045-l001-conditional-modifiable</item>
+                <name>Return Documentation Type Indicator</name>
+                <validate>false</validate>
+                <edit>an</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>35</type>
+            <format>000</format>
+            <name>Return Addendum D Record</name>
+            <length>f80</length>
+            <field>
+                <item>x35.09-p040-l001-conditional-modifiable</item>
+                <name>Return Reason</name>
+                <values>=A|B|C|D|E|F|G|H|I|J|K|L|M|N|P|Q|R|S|T|W|X</values>
+                <edit>an</edit>
+                <edit>CompareLastAddendumReturnReasonToItem</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>40</type>
+            <format>000</format>
+            <name>Account Totals Detail Record</name>
+            <length>f80</length>
+            <allowed>false</allowed>
+        </x9record>
+        <x9record>
+            <type>41</type>
+            <format>000</format>
+            <name>Non-Hit Totals Detail Record</name>
+            <length>f80</length>
+            <allowed>false</allowed>
+        </x9record>
+        <x9record>
+            <type>50</type>
+            <format>000</format>
+            <name>Image View Detail Record</name>
+            <length>f80</length>
+            <field>
+                <item>x50.02-p003-l001-mandatory-modifiable</item>
+                <name>Image Indicator</name>
+                <values>=0|1</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x50.05-p021-l002-mandatory-modifiable</item>
+                <name>Image View Format Indicator</name>
+                <values>=0</values>
+                <edit>nb</edit>
+            </field>
+            <field>
+                <item>x50.06-p023-l002-mandatory-modifiable</item>
+                <name>Image Compression Algorithm Indicator</name>
+                <values>=00</values>
+                <edit>nb</edit>
+            </field>
+            <field>
+                <item>x50.09-p033-l002-mandatory-modifiable</item>
+                <name>View Descriptor</name>
+                <values>=0</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x50.10-p035-l001-mandatory-modifiable</item>
+                <name>Digital Signature Indicator</name>
+                <values>=0</values>
+                <edit>nb</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>52</type>
+            <format>000</format>
+            <name>Image View Data Record</name>
+            <length>v117</length>
+            <field>
+                <item>x52.09-p085-l001-mandatory-modifiable</item>
+                <name>Clipping Origin</name>
+                <values>=0</values>
+                <edit>nb</edit>
+            </field>
+            <field>
+                <item>x52.18-p000-l007-mandatory-notModifiable</item>
+                <name>Length of Image Data</name>
+                <variableLengthDescriptor>true</variableLengthDescriptor>
+                <edit>nb</edit>
+                <edit>ImageBounds/250|200000</edit>
+                <edit>MaximumCombinedImageLength/400000</edit>
+                <edit>CompareToImageDetailImageLength</edit>
+                <edit>CompareToImageDetailImageIndicator</edit>
+                <edit>ImagePresenceBasedOnDocType</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>75</type>
+            <format>000</format>
+            <name>Box Summary Record</name>
+            <length>f80</length>
+            <allowed>false</allowed>
+        </x9record>
+        <x9record>
+            <type>85</type>
+            <format>000</format>
+            <name>Routing Number Summary Record</name>
+            <length>f80</length>
+            <allowed>false</allowed>
+        </x9record>
+    </overrides>
+</x9rules>

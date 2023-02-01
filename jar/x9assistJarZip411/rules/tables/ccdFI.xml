@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>001</key> <value>BMO</value> </entry> 
+  <entry> <key>002</key> <value>BNS</value> </entry> 
+  <entry> <key>003</key> <value>RBC</value> </entry> 
+  <entry> <key>004</key> <value>TD</value> </entry> 
+  <entry> <key>006</key> <value>NBC</value> </entry> 
+  <entry> <key>010</key> <value>CIBC</value> </entry> 
+  <entry> <key>016</key> <value>HSBC</value> </entry> 
+  <entry> <key>039</key> <value>LBC</value> </entry> 
+  <entry> <key>177</key> <value>BOC</value> </entry> 
+  <entry> <key>219</key> <value>ATB</value> </entry> 
+  <entry> <key>815</key> <value>FCDQ</value> </entry> 
+  <entry> <key>869</key> <value>Central1</value> </entry> 
+
+</x9table>

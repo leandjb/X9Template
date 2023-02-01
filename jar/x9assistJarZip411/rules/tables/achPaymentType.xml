@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>ANN</key> <value>Annuity</value> </entry> 
+  <entry> <key>BUS</key> <value>Business / Commercial</value> </entry>
+  <entry> <key>DEP</key> <value>Deposit</value> </entry> 
+  <entry> <key>PEN</key> <value>Pension</value> </entry>  
+  <entry> <key>LOA</key> <value>Loan</value> </entry> 
+  <entry> <key>REM</key> <value>Remittance</value> </entry>
+  
+</x9table>

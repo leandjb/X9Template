@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>R01</key> <value>Insufficient Funds</value> </entry> 
+  <entry> <key>R02</key> <value>Account Closed</value> </entry> 
+  <entry> <key>R03</key> <value>Unable to Locate Account</value> </entry> 
+  <entry> <key>R04</key> <value>Invalid Account Number Structure</value> </entry> 
+  <entry> <key>R05</key> <value>Unauthorized Debit to Consumer Account</value> </entry> 
+  <entry> <key>R06</key> <value>Returned per ODFI Request</value> </entry>
+  <entry> <key>R07</key> <value>Authorization Revoked by Customer</value> </entry>
+  <entry> <key>R08</key> <value>Payment Stopped</value> </entry>
+  <entry> <key>R09</key> <value>Uncollected Funds</value> </entry>
+  <entry> <key>R10</key> <value>Customer Advised Not Authorized / Improper / Ineligible</value> </entry>
+  <entry> <key>R11</key> <value>Check Truncation Entry Return</value> </entry>
+  <entry> <key>R12</key> <value>Account Sold to another DFI</value> </entry>
+  <entry> <key>R13</key> <value>Invalid ACH Routing Number</value> </entry>
+  <entry> <key>R14</key> <value>Representative Payee Deceased or Unable to Continue in Capacity</value> </entry>
+  <entry> <key>R15</key> <value>Beneficiary or Account Holder Deceased</value> </entry>
+  <entry> <key>R16</key> <value>Account Frozen</value> </entry>
+  <entry> <key>R17</key> <value>File Record Edit Criteria</value> </entry>
+  <entry> <key>R18</key> <value>Improper Effective Entry Date</value> </entry>
+  <entry> <key>R19</key> <value>Amount Field Error</value> </entry> 
+  <entry> <key>R20</key> <value>Non-Transaction Account</value> </entry>
+  <entry> <key>R21</key> <value>Invalid Company Identification</value> </entry>
+  <entry> <key>R22</key> <value>Invalid Individual ID Number</value> </entry>
+  <entry> <key>R23</key> <value>Credit Entry Refused by Receiver</value> </entry>
+  <entry> <key>R24</key> <value>Duplicate Entry</value> </entry>
+  <entry> <key>R25</key> <value>Addenda Error</value> </entry>
+  <entry> <key>R26</key> <value>Mandatory Field Error</value> </entry>
+  <entry> <key>R27</key> <value>Trace Number Error</value> </entry>
+  <entry> <key>R28</key> <value>Routing Number Check Digit Error</value> </entry>
+  <entry> <key>R29</key> <value>Corporate Customer Advises Not Authorized</value> </entry>
+  <entry> <key>R30</key> <value>RDFI Not Participant in Check Truncation Program</value> </entry>
+  <entry> <key>R31</key> <value>Permissible Return Entry</value> </entry>
+  <entry> <key>R32</key> <value>RDFI Non-Settlement</value> </entry>
+  <entry> <key>R33</key> <value>Return of XCK Entry</value> </entry>
+  <entry> <key>R34</key> <value>Limited Participation DFI</value> </entry>
+  <entry> <key>R35</key> <value>Return of Improper Debit Entry</value> </entry>
+  <entry> <key>R36</key> <value>Return of Improper Credit Entry</value> </entry>
+  <entry> <key>R37</key> <value>Source Document Presented for Payment</value> </entry>
+  <entry> <key>R38</key> <value>Stop Payment on Source Document</value> </entry>
+  <entry> <key>R39</key> <value>Improper Source Document / Source Document Presented for Payment</value> </entry>
+  <entry> <key>R40</key> <value>Return of ENR Entry by Federal Government Agency</value> </entry>
+  <entry> <key>R41</key> <value>Invalid Transaction Code</value> </entry>
+  <entry> <key>R42</key> <value>Routing Number / Check Digit Error</value> </entry>
+  <entry> <key>R43</key> <value>Invalid DFI Account Number</value> </entry>
+  <entry> <key>R44</key> <value>Invalid Individual ID Number / Identification Number</value> </entry>
+  <entry> <key>R45</key> <value>Invalid Individual Name / Company Name</value> </entry>
+  <entry> <key>R46</key> <value>Invalid Representative Payee Indicator</value> </entry>
+  <entry> <key>R47</key> <value>Duplicate Enrollment</value> </entry>
+  <entry> <key>R50</key> <value>State Law Affecting RCK Acceptance</value> </entry>
+  <entry> <key>R51</key> <value>Item Related to RCK Entry is Ineligible or RCK Entry is Improper</value> </entry>
+  <entry> <key>R52</key> <value>Stop Payment on Item Related to RCK Entry</value> </entry>
+  <entry> <key>R53</key> <value>Item and RCK Entry Presented for Payment</value> </entry>
+  <entry> <key>R61</key> <value>Misrouted Return</value> </entry>
+  <entry> <key>R67</key> <value>Duplicate Return</value> </entry>
+  <entry> <key>R68</key> <value>Untimely Return</value> </entry>
+  <entry> <key>R69</key> <value>Field Error(s)</value> </entry>
+  <entry> <key>R70</key> <value>Permissible Return Entry Not Accepted / Return Not Requested by ODFI</value> </entry>
+  <entry> <key>R71</key> <value>Misrouted Dishonored Return</value> </entry>
+  <entry> <key>R72</key> <value>Untimely Dishonored Return</value> </entry>
+  <entry> <key>R73</key> <value>Timely Original Return</value> </entry>
+  <entry> <key>R74</key> <value>Corrected Return</value> </entry>
+  <entry> <key>R75</key> <value>Return Not a Duplicate</value> </entry>
+  <entry> <key>R76</key> <value>No Errors Found</value> </entry>
+  <entry> <key>R80</key> <value>IAT Entry Coding Error</value> </entry>
+  <entry> <key>R81</key> <value>Non-Participant in IAT Program</value> </entry>
+  <entry> <key>R82</key> <value>Invalid Foreign Receiving DFI Identification</value> </entry>
+  <entry> <key>R83</key> <value>Foreign Receiving DFI Unable to Settle</value> </entry>
+  <entry> <key>R84</key> <value>Entry Not Processed by Gateway</value> </entry>
+  <entry> <key>R85</key> <value>Incorrectly Coded Outbound International Payment</value> </entry>
+
+</x9table>

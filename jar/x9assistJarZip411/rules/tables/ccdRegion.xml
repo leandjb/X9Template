@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+  <entry> <key>0</key> <value>Vancouver</value> </entry> 
+  <entry> <key>1</key> <value>Montreal</value> </entry> 
+  <entry> <key>2</key> <value>Toronto</value> </entry> 
+  <entry> <key>3</key> <value>Halifax</value> </entry> 
+  <entry> <key>7</key> <value>Winnipeg</value> </entry> 
+  <entry> <key>8</key> <value>National</value> </entry> 
+  <entry> <key>9</key> <value>Calgary</value> </entry> 
+
+</x9table>

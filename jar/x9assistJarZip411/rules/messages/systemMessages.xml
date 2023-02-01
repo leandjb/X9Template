@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<errorMessages>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.08</release>
+    <buildDate>2019.05.21</buildDate>
+    <timestamp>20190522_110531_079</timestamp>
+    <basis></basis>
+    <messages>
+	
+		<!-- Common system messages -->
+        <error>
+            <id>bindFailure</id>
+            <sev>Error</sev>
+            <desc>configuration bind failure</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>characterSetIsAscii</id>
+            <sev>Error</sev>
+            <desc>character set is Ascii which is not allowed per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>characterSetIsEbcdic</id>
+            <sev>Error</sev>
+            <desc>character set is Ebcdic which is not allowed per xml rules</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>fileIsEmpty</id>
+            <sev>Error</sev>
+            <desc>file is empty or does not contain data that can be parsed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fileIsStructurallyFlawed</id> 
+            <sev>Error</sev>
+            <desc>file is structurally flawed</desc>
+            <type>System</type>
+        </error>  		
+        <error>
+            <id>fileIsTruncatedWithinAnImage</id>
+            <sev>Error</sev>
+            <desc>file is unexpectedly truncated within an image; probable transmission error</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>fileDoesNotContainFileHeader</id>
+            <sev>Severe</sev>
+            <desc>file does not contain a file header</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fileDoesNotEndWithFileControlTrailer</id>
+            <sev>Severe</sev>
+            <desc>file does not end with a file control trailer record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fileContainsMultipleLogicalFiles</id>
+            <sev>Severe</sev>
+            <desc>file contains multiple logical files (more than one file header) which is not allowed per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fileValidationDoesNotMatchFileHeader</id>
+            <sev>Severe</sev>
+            <desc>file validation request does not agree with x9 standard level in file header positions 03-04</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fileNameInvalid</id>
+            <sev>Severe</sev>
+            <desc>file name is invalid per the validation requirements defined within x9Controls</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>lineBreaksArePresent</id>
+            <sev>Error</sev>
+            <desc>line breaks are present and are not allowed per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>lineBreaksAreNotPresent</id>
+            <sev>Error</sev>
+            <desc>line breaks are not present and are required per xml rules</desc>
+            <type>System</type>
+        </error>           
+        <error>
+            <id>fieldZeroLengthsArePresent</id>
+            <sev>Error</sev>
+            <desc>field zero record lengths are present and are not allowed per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fieldZeroLengthsAreNotPresent</id>
+            <sev>Error</sev>
+            <desc>field zero record lengths are not present and are required per xml rules</desc>
+            <type>System</type>
+        </error>  
+        <error>
+            <id>fieldZeroIsBigEndian</id>
+            <sev>Error</sev>
+            <desc>field zero format is bigEndian which is not allowed per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fieldZeroIsLittleEndian</id>
+            <sev>Error</sev>
+            <desc>field zero format is littleEndian which is not allowed per xml rules</desc>
+            <type>System</type>
+        </error>	
+        <error>
+            <id>validationsDisabled</id>
+            <sev>Warn</sev>
+            <desc>all field validations were disabled per xml rules</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>maximumFileSizeExceeded</id>
+            <sev>Error</sev>
+            <desc>maximum file size has been exceeded</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>maximumCheckCountPerBundleExceeded</id>
+            <sev>Error</sev>
+            <desc>maximum check count per bundle has been exceeded</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>maximumCheckCountPerCashLetterExceeded</id>
+            <sev>Error</sev>
+            <desc>maximum check count per cash letter has been exceeded</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>maximumCheckCountPerFileExceeded</id>
+            <sev>Error</sev>
+            <desc>maximum check count per file has been exceeded</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectFixedRecordLength</id>
+            <sev>Error</sev>
+            <desc>length incorrect for this record type</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectVariableRecordLength</id>
+            <sev>Error</sev>
+            <desc>variable record length incorrect for this record type</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>fieldZeroIsIncorrect</id>
+            <sev>Error</sev>
+            <desc>field zero record length does not match record content</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>readerError</id>
+            <sev>Severe</sev>
+            <desc>reader error</desc>
+            <type>System</type>
+        </error>  
+        <error>
+            <id>unexpectedEof90</id>
+            <sev>Error</sev>
+            <desc>end of file reached when reading type 90 record; file is damaged or incomplete</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>invalidRecordType</id>
+            <sev>Error</sev>
+            <desc>position 1 record type is invalid</desc>
+            <type>System</type>
+        </error>        
+        <error>
+            <id>invalidRecordTypePerStandards</id>
+            <sev>Error</sev>
+            <desc>invalid record type per all industry standards</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>invalidRecordTypePerCurrentValidationRules</id>
+            <sev>Error</sev>
+            <desc>invalid record type per current x9 validation rules</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>incorrectRecordLocation</id>
+            <sev>Error</sev>
+            <desc>relative location of record is incorrect per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missingFileHeader</id>
+            <sev>Severe</sev>
+            <desc>missing type 1 file header record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missingCashLetterHeader</id>
+            <sev>Severe</sev>
+            <desc>missing type 10 cash letter header record</desc>
+            <type>System</type>
+        </error>	
+        <error>
+            <id>missingBundleHeader</id>
+            <sev>Error</sev>
+            <desc>missing type 20 bundle header record</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>missingBatchHeader</id>
+            <sev>Error</sev>
+            <desc>missing type 5 batch header record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missingBundleTrailer</id>
+            <sev>Error</sev>
+            <desc>missing type 70 bundle trailer record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missingBatchTrailer</id>
+            <sev>Error</sev>
+            <desc>missing type 8 batch trailer record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missingCashLetterTrailer</id>
+            <sev>Error</sev>
+            <desc>missing type 90 cash letter trailer record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missingFileTrailer</id>
+            <sev>Error</sev>
+            <desc>missing file trailer record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missing6</id>
+            <sev>Error</sev>
+            <desc>missing 6 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missing25</id>
+            <sev>Error</sev>
+            <desc>missing 25 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missing31</id>
+            <sev>Error</sev>
+            <desc>missing 31 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missing50</id>
+            <sev>Error</sev>
+            <desc>missing 50 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>missing52</id>
+            <sev>Error</sev>
+            <desc>missing 52 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>moreThanOne27</id>
+            <sev>Error</sev>
+            <desc>more than one 27 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>moreThanOne33</id>
+            <sev>Error</sev>
+            <desc>more than one 33 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>moreThanOne34</id>
+            <sev>Error</sev>
+            <desc>more than one 34 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>moreThanOne61</id>
+            <sev>Ignore</sev>
+            <desc>more than one type 61 credit reconciliation record is present in cash letter</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>moreThanOne75</id>
+            <sev>Error</sev>
+            <desc>more than one 75 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>supplementalImageFormatIncorrect</id>
+            <sev>Error</sev>
+            <desc>supplemental image format is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>supplementalImageCountLow</id>
+            <sev>Error</sev>
+            <desc>supplemental image count less than minimum</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>supplementalImageCountHigh</id>
+            <sev>Error</sev>
+            <desc>supplemental image count exceeds maximum</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>supplementalImagesArePresent</id>
+            <sev>Warn</sev>
+            <desc>supplemental images (more than two images per item) are present</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mandatory</id>
+            <sev>Error</sev>
+            <desc>mandatory field contains blanks</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>undefinedPresentmentType</id>
+            <sev>Error</sev>
+            <desc>unable to determine file presentment type</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>truncationIndicatorY</id>
+            <sev>Error</sev>
+            <desc>at least one endorsement must have truncation indicator 'y'</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>truncationIndicatorMultipleYs</id>
+            <sev>Error</sev>
+            <desc>truncation indicator set to 'y' on more than one endorsement</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>truncationIndicatorMustBeNoWhenEpcIs4</id>
+            <sev>Error</sev>
+            <desc>truncation indicator should be 'n' when epc has value '4'</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>endorsementAddendumCountIncorrect</id>
+            <sev>Error</sev>
+            <desc>endorsement count does not agree with addenda records present</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>abaEndorsementDistrictIncorrect</id>
+            <sev>Warn</sev>
+            <desc>Endorsement routing FRB district not 00-12, 21-32, or 80</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>abaFileRoutingDistrictIncorrect</id>
+            <sev>Warn</sev>
+            <desc>File routing FRB district not 00-12, 21-32, 61-72, or 5x</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>abaMod10Incorrect</id>
+            <sev>Error</sev>
+            <desc>incorrect check digit</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>abaPayorDistrictIncorrect</id>
+            <sev>Warn</sev>
+            <desc>Payor routing FRB district not 00-12, 21-32, 80, or 5x</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>accountFieldExceeds14</id>
+            <sev>Warn</sev>
+            <desc>OnUs account field exceeds 14 characters</desc>
+            <type>System</type>
+        </error>		
+		<error>
+            <id>amountExceedsMaximumValue</id>
+            <sev>Error</sev>
+            <desc>amount exceeds maximum allowable value</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>bundleNotUniqueWithinCashLetter</id>
+            <sev>Error</sev>
+            <desc>bundleId+bundleSequenceNumber not unique within this cash letter</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>bundleNotUniqueWithinFile</id>
+            <sev>Error</sev>
+            <desc>bundleId+bundleSequenceNumber+cashLetterBusinessDate not unique within this file</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>bundleSequenceNumberIsNotAscending</id>
+            <sev>Error</sev>
+            <desc>bundle sequence number is not ascending within cash letter</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cashLetterContainsItems</id>
+            <sev>Error</sev>
+            <desc>cash letter cannot contain items when the record type indicator is 'N'</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cashLetterNotUniqueWithinFile</id>
+            <sev>Error</sev>
+            <desc>cashLetterId is not unique within this file</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>collectionAndRecordTypesDoNotAgreeWhenNoItems</id>
+            <sev>Error</sev>
+            <desc>collection type indicator should be 20 when record type indicator is N</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>consecutiveBlanks</id>
+            <sev>Error</sev>
+            <desc>consecutive blanks</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>containsNulls</id>
+            <sev>Severe</sev>
+            <desc>record contains null (0x00) characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>creditsAddToTrailerCountsEnabled</id>
+            <sev>Warn</sev>
+            <desc>t61 credits included in trailer item counts enabled based on auto discovery</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>creditsAddToTrailerCountsAndAmountsEnabled</id>
+            <sev>Warn</sev>
+            <desc>t61 credits included in trailer item counts and amounts enabled based on auto discovery</desc>
+            <type>System</type>
+        </error>  
+        <error>
+            <id>creditsExcludeFromTrailerImageCountEnabled</id>
+            <sev>Warn</sev>
+            <desc>t61 credits excluded from trailer image counts enabled based on auto discovery</desc>
+            <type>System</type>
+        </error>          
+        <error>
+            <id>dataLengthExceedsFieldSize</id>
+            <sev>Error</sev>
+            <desc>data length exceeds field size</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>dataLengthNotEqualFieldSize</id>
+            <sev>Error</sev>
+            <desc>data length is not equal to field size</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>dateIsNotValidCalendarDate</id>
+            <sev>Error</sev>
+            <desc>date is not a valid calendar date</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>dateNotNumeric</id>
+            <sev>Error</sev>
+            <desc>date not numeric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>dayNot01thru31</id>
+            <sev>Error</sev>
+            <desc>day is not 01 thru 31</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>defaultCreditFormatAssigned</id>
+            <sev>Error</sev>
+            <desc>automated credit format identification failed; default credit format assigned</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositHasFreeItems</id>
+            <sev>Error</sev>
+            <desc>deposit has free items</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositIsOutOfBalance</id>
+            <sev>Error</sev>
+            <desc>deposit is out of balance</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositOutOfBalanceLimitExceeded</id>
+            <sev>Error</sev>
+            <desc>deposit out of balance reporting limit has been exceeded</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositsCannotCrossBundles</id>
+            <sev>Error</sev>
+            <desc>deposits cannot cross bundles</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositsCannotCrossCashLetters</id>
+            <sev>Error</sev>
+            <desc>deposits cannot cross cash letters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositsCreditsFirstButLastRequired</id>
+            <sev>Error</sev>
+            <desc>deposits have credits first but rules require credits last</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>depositsCreditsLastButFirstRequired</id>
+            <sev>Error</sev>
+            <desc>deposits have credits last but rules require credits first</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>documentationTypeIndVsCashLetter</id>
+            <sev>Ucd:error|info</sev>
+            <desc>documentation type indicator differs from the cash letter header record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>documentationTypeIndVsRecordTypeInd</id>
+            <sev>Error</sev>
+            <desc>documentation type indicator incorrect based on record type indicator value</desc>
+            <type>System</type>
+        </error>
+
+        <error>
+            <id>failedRegexPattern</id>
+            <sev>Error</sev>
+            <desc>failed regex matching pattern</desc>
+            <type>System</type>
+        </error>
+	
+		
+      
+
+        <error>
+            <id>greaterThanMaximum</id>
+            <sev>Error</sev>
+            <desc>greater than allowed maximum</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>gtMaximum</id>
+            <sev>Warn</sev>
+            <desc>greater than maximum value</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageArchiveSequenceNumberLengthIncorect</id>
+            <sev>Error</sev>
+            <desc>image archive sequence number length should be 34 when variable size record indicator is zero</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageNotAllowedBasedOnDocumentationType</id>
+            <sev>Error</sev>
+            <desc>image not allowed based on documentation type indicator in associated item</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageRequiredBasedOnDocumentationType</id>
+            <sev>Error</sev>
+            <desc>image required based on documentation type indicator in associated item</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageSizeZero</id>
+            <sev>Error</sev>
+            <desc>image has zero length (it is missing)</desc>
+            <type>System</type>
+        </error>  
+        <error>
+            <id>imageSizeLtMinimum</id>
+            <sev>Error</sev>
+            <desc>image size too small</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageSizeGtMaximum</id>
+            <sev>Error</sev>
+            <desc>image size too large</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageSizeGtCombinedMaximum</id>
+            <sev>Error</sev>
+            <desc>image size front+back greater than combined maximum limit</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>imageWidthInsufficientForAuxOnUsEncoding</id>
+            <sev>Info</sev>
+            <desc>image width insufficient for standard AUX MICR encoding based on AUX field length</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectAmountTotal</id>
+            <sev>Error</sev>
+            <desc>incorrect amount total</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectBundleCount</id>
+            <sev>Error</sev>
+            <desc>incorrect bundle count</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectCashLetterCount</id>
+            <sev>Severe</sev>
+            <desc>incorrect cash letter count</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectCreditAmount</id>
+            <sev>Error</sev>
+            <desc>incorrect credit amount</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectCreditCount</id>
+            <sev>Error</sev>
+            <desc>incorrect credit count</desc>
+            <type>System</type>
+        </error>
+
+        <error>
+            <id>incorrectImageCount</id>
+            <sev>Error</sev>
+            <desc>incorrect image count</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectItemCount</id>
+            <sev>Error</sev>
+            <desc>incorrect item count</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectMicrValidAmount</id>
+            <sev>Error</sev>
+            <desc>incorrect MICR valid item amount</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectRecordCount</id>
+            <sev>Severe</sev>
+            <desc>incorrect record count</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>incorrectFieldLength</id>
+            <sev>Severe</sev>
+            <desc>incorrect field length</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>invalidCharacters</id>
+            <sev>Error</sev>
+            <desc>invalid characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>invalidMicr</id>
+            <sev>Error</sev>
+            <desc>OnUs contains invalid MICR characters</desc>
+            <type>System</type>
+        </error>
+
+		
+
+        <error>
+            <id>itemSequenceNumberVsCheckDetail</id>
+            <sev>Error</sev>
+            <desc>must match the item sequence number for the current item group</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>lessThanMinimum</id>
+            <sev>Error</sev>
+            <desc>less than allowed minimum</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>ltMinimum</id>
+            <sev>Warn</sev>
+            <desc>less than minimum value</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mailboxRecordPresent</id>
+            <sev>Warn</sev>
+            <desc>mailbox/gateway record present on the input file</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mixedAddendaTypes</id>
+            <sev>Error</sev>
+            <desc>mixed addenda types within batch</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>monthNot01thru12</id>
+            <sev>Error</sev>
+            <desc>month is not 01 thru 12</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>moreThanTwoSlashes</id>
+            <sev>Warn</sev>
+            <desc>OnUs contains more than two slashes which is invalid per X9.100-160-1-2009</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>multipleCreditFormats</id>
+            <sev>Error</sev>
+            <desc>x9 file contains multiple type 61/62 credit formats</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustBeBlank</id>
+            <sev>Error</sev>
+            <desc>should be blank</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustBeBlankPerType50ImageIndicator</id>
+            <sev>Error</sev>
+            <desc>should be blank based on type 50 image indicator value of '0' (no image present)</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustBeOmittedBasedOnDigitalSignatureIndicator</id>
+            <sev>Error</sev>
+            <desc>should be omitted when associated Digital Signature Indicator is not equal to '1'</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustBePresentBasedOnDigitalSignatureIndicator</id>
+            <sev>Error</sev>
+            <desc>should be present when associated Digital Signature Indicator is equal to '1'</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustBeYorN</id>
+            <sev>Error</sev>
+            <desc>value should be Y or N</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchBundleBusinessDate</id>
+            <sev>Error</sev>
+            <desc>must match the bundle header business date</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchBundleCreationDate</id>
+            <sev>Error</sev>
+            <desc>must match the bundle header creation date</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchBundleCycleNumber</id>
+            <sev>Error</sev>
+            <desc>must match the bundle header cycle number</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchBundleEceRouting</id>
+            <sev>Error</sev>
+            <desc>must match the bundle header ECE routing number</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchCashLetterEceRouting</id>
+            <sev>Error</sev>
+            <desc>must match the cash letter header ECE institution routing number</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchCommonCashLetterBusinessDate</id>
+            <sev>Error</sev>
+            <desc>must match the common cash letter business date</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchFileHeaderCollectionType</id>
+            <sev>Error</sev>
+            <desc>must match the file header destination RT collection type indicator</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchFileHeaderOrigRouting</id>
+            <sev>Error</sev>
+            <desc>RT must match the file header origination routing</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchFileOriginRouting</id>
+            <sev>Error</sev>
+            <desc>must match the file header immediate origin routing number</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchItemPayorRouting</id>
+            <sev>Error</sev>
+            <desc>routing must match previous item payor bank routing</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>mustMatchItemReturnReason</id>
+            <sev>Error</sev>
+            <desc>return reason on last 35 addendum must match type 31 return reason</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>noSlashes</id>
+            <sev>Warn</sev>
+            <desc>OnUs contains no slashes</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>nonzeroByAgreementOnly</id>
+            <sev>Warn</sev>
+            <desc>nonzero by agreement only</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>nonzeroRequired</id>
+            <sev>Error</sev>
+            <desc>nonzero required</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notAlphabetic</id>
+            <sev>Error</sev>
+            <desc>not alphabetic</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notAlphameric</id>
+            <sev>Error</sev>
+            <desc>not alphameric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notAlphamericSpecial</id>
+            <sev>Error</sev>
+            <desc>not alphameric special characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notAscending</id>
+            <sev>Error</sev>
+            <desc>not ascending</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notInAdminReturnReasonList</id>
+            <sev>Error</sev>
+            <desc>not in Administrative Returns reason list</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notInCustomerReturnReasonList</id>
+            <sev>Error</sev>
+            <desc>not in Customer Returns reason list</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notInIclValuesList</id>
+            <sev>Error</sev>
+            <desc>not in ICL values list</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notInIclrValuesList</id>
+            <sev>Error</sev>
+            <desc>not in ICLR values list</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notInTable</id>
+            <sev>Error</sev>
+            <desc>not in table</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notInValuesList</id>
+            <sev>Error</sev>
+            <desc>field value not found in list</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notIncremented</id>
+            <sev>Error</sev>
+            <desc>not incremented by one</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notLeftJustified</id>
+            <sev>Error</sev>
+            <desc>not left justified</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notNumeric</id>
+            <sev>Error</sev>
+            <desc>not numeric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notNumericButIsNumericBlank</id>
+            <sev>Error</sev>
+            <desc>should be numeric-only (value should not include spaces)</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notNumericSpecial</id>
+            <sev>Error</sev>
+            <desc>not numeric special characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notRightJustified</id>
+            <sev>Error</sev>
+            <desc>not right justified</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notSequential</id>
+            <sev>Error</sev>
+            <desc>not sequential</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notSpecial</id>
+            <sev>Error</sev>
+            <desc>contains unacceptable characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>notUpperCase</id> 
+            <sev>Error</sev>
+            <desc>not upper case</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>optField4Exceeds4</id>
+            <sev>Warn</sev>
+            <desc>OnUs optional field 4 exceeds 4 characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>pcFieldExceeds6</id>
+            <sev>Warn</sev>
+            <desc>OnUs pc field exceed 6 characters</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>podFileOutOfBalance</id>
+            <sev>Error</sev>
+            <desc>file is out-of-balance debits to credits, which is not allowed per defined rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>podFileInBalance</id>
+            <sev>Error</sev>
+            <desc>file is in-balance debits to credits, which is not allowed per defined rules</desc>
+            <type>System</type>
+        </error>        
+		<error>
+            <id>reservedMustBeBlank</id>
+            <sev>Warn</sev>
+            <desc>reserved field should be blank</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>routingEcAchDigit9NotZero</id>
+            <sev>Error</sev>
+            <desc>routing digit 9 is not zero per EC-ACH rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>routingLengthMustBeNine</id>
+            <sev>Error</sev>
+            <desc>routing number should be nine digits</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>timeFormatInvalid</id>
+            <sev>Error</sev>
+            <desc>time format invalid</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>type50DigitalSignatureIndicatorMustBeOne</id>
+            <sev>Error</sev>
+            <desc>digital signature indicator should be '1' based on security key size value</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>type50ViewSideIndicatorIncorrect</id>
+            <sev>Error</sev>
+            <desc>view side indicator incorrect per the image position within the item group</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>type52ImageLengthDoesNotMatchType50</id>
+            <sev>Error</sev>
+            <desc>image length on the type 50 record does not match the type 52 record</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>type52ImageLengthVsType50ImageIndicator</id>
+            <sev>Error</sev>
+            <desc>image length on the type 52 record does not agree with type 50 image indicator</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>warnWhenZero</id>
+            <sev>Warn</sev>
+            <desc>zero not typically allowed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>zeroRequired</id>
+            <sev>Error</sev>
+            <desc>zero required</desc>
+            <type>System</type>
+        </error>
+
+		<!-- TIFF messages -->	
+		
+        <error>
+            <id>tiffCountIsIncorrect</id>
+            <sev>Error</sev>
+            <desc>tiff count is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffCountIsOutOfBounds</id>
+            <sev>Error</sev>
+            <desc>tiff count is out of bounds</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffDPIisIncorrectPerRules</id>
+            <sev>Error</sev>
+            <desc>tiff image DPI incorrect per xml rules</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffDuplicatePrivateTagsNotAllowed</id>
+            <sev>Error</sev>
+            <desc>tiff duplicate private tags not allowed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffDuplicateTagsNotAllowed</id>
+            <sev>Error</sev>
+            <desc>tiff duplicate tags not allowed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffErrorLoadingTiffDirectory</id>
+            <sev>Error</sev>
+            <desc>error attempting to load the tiff directory</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffHeightGreaterThanMaximum</id>
+            <sev>Error</sev>
+            <desc>tiff image height greater than maximum inches</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffHeightLessThanMinimum</id>
+            <sev>Error</sev>
+            <desc>tiff image height less than minimum inches</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffIfdOffsetNotOnWordBoundary</id>
+            <sev>Error</sev>
+            <desc>tiff ifd offset is not on a word boundary</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>invalidImageFormat</id>
+            <sev>Error</sev>
+            <desc>invalid image format (tiff required)</desc>
+            <type>System</type>
+        </error>   		
+        <error>
+            <id>tiffHasInvalidDirectory</id>
+            <sev>Error</sev>
+            <desc>tiff image directory is invalid</desc>
+            <type>System</type>
+        </error>        
+        <error>
+            <id>tiffImageNot49Or4d</id>
+            <sev>Error</sev>
+            <desc>tiff image invalid; does not begin 0x49492a00 or 0x4d4d002a</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffImageSegmentDoesNotEndEofb</id>
+            <sev>Warn</sev>
+            <desc>tiff image segment does not end with EOFB</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffImageSegmentEofbWithOnePadByte</id>
+            <sev>Warn</sev>
+            <desc>image segment ends with EOFB followed by one zero pad byte</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffImageSegmentEofbWithThreePadBytes</id>
+            <sev>Warn</sev>
+            <desc>image segment ends with EOFB followed by three zero pad bytes</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffImageSegmentEofbWithTwoPadBytes</id>
+            <sev>Warn</sev>
+            <desc>image segment ends with EOFB followed by two zero pad bytes</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffImageSegmentOverlap</id>
+            <sev>Error</sev>
+            <desc>image segment (begins tag 273 and ends tag 273 + tag 279 - 1) overlaps other fields</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffIsBigEndian</id>
+            <sev>Error</sev>
+            <desc>tiff is Big Endian</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffIsLittleEndian</id>
+            <sev>Error</sev>
+            <desc>tiff is Little Endian</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffLengthErrorInDPI</id>
+            <sev>Error</sev>
+            <desc>tiff tag for x/y resolution is defined incorrectly</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffMandatoryTagIsNotPresent</id>
+            <sev>Error</sev>
+            <desc>tiff mandatory tag is not present</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffMissingOrNotUsable</id>
+            <sev>Error</sev>
+            <desc>tiff image is either missing or unusable</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffMoreThanOneImage</id>
+            <sev>Error</sev>
+            <desc>tiff contains more than one image</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffMultiStripImagesNotAllowed</id>
+            <sev>Error</sev>
+            <desc>tiff multi-strip images are not allowed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffMustBeNonZero</id>
+            <sev>Error</sev>
+            <desc>tiff tag value must be nonzero</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffPrivateTagsNotAllowed</id>
+            <sev>Error</sev>
+            <desc>tiff private tags not allowed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTagDataPointersNotUnique</id>
+            <sev>Error</sev>
+            <desc>image tiff tag data pointer shared within another directory entry</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTag273PlusTag279GtImageSize</id>
+            <sev>Error</sev>
+            <desc>image segment ending position (tag 273 + tag 279) exceeds image size</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTagNotAllowed</id>
+            <sev>Error</sev>
+            <desc>tiff tag is not allowed</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTagsNotAscending</id>
+            <sev>Error</sev>
+            <desc>tiff tags not ascending</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTooDark</id>
+            <sev>Info</sev>
+            <desc>tiff image is too dark</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTooLight</id>
+            <sev>Info</sev>
+            <desc>tiff image is too light</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffDecompressionError</id>
+            <sev>Error</sev>
+            <desc>tiff image decompression error</desc>
+            <type>System</type>
+        </error>        
+        <error>
+            <id>tiffTypeMustBeAscii</id>
+            <sev>Error</sev>
+            <desc>tiff tag type must be ascii</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTypeMustBeByte</id>
+            <sev>Error</sev>
+            <desc>tiff tag type must be byte</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTypeMustBeLong</id>
+            <sev>Error</sev>
+            <desc>tiff tag type must be long</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTypeMustBeRational</id>
+            <sev>Error</sev>
+            <desc>tiff tag type must be rational</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTypeMustBeShort</id>
+            <sev>Error</sev>
+            <desc>tiff tag type must be short</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffTypeMustBeShortOrLong</id>
+            <sev>Error</sev>
+            <desc>tiff tag type must be short or long</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffValueGreaterThanMaximum</id>
+            <sev>Error</sev>
+            <desc>tiff value greater than maximum</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffValueIncorrect</id>
+            <sev>Error</sev>
+            <desc>tiff value incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffValueIsVariance</id>
+            <sev>Warn</sev>
+            <desc>tiff value is a defined variance</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffValueLessThanMinimum</id>
+            <sev>Error</sev>
+            <desc>tiff value less than minimum</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffWidthGreaterThanMaximum</id>
+            <sev>Error</sev>
+            <desc>tiff image width greater than maximum inches</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffWidthLessThanMinimum</id>
+            <sev>Error</sev>
+            <desc>tiff image width less than minimum inches</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>tiffCodeLineMisMatch</id>
+            <sev>Error</sev>
+            <desc>code line mismatch between x9 data and tiff image</desc>
+            <type>System</type>
+        </error>		
+
+		<!-- CPA015 messages -->		
+	
+        <error>
+            <id>cpaCurrencyDoesNotMatch</id>
+            <sev>Error</sev>
+            <desc>CPA orig currency does not match dest currency</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaCurrencyNotInTable</id>
+            <sev>Error</sev>
+            <desc>CPA currency subfield not found in table ccdCurrency.xml</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaCurrencyNotNumeric</id>
+            <sev>Error</sev>
+            <desc>CPA currency not numeric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaFiNotInTable</id>
+            <sev>Error</sev>
+            <desc>CPA routing FI number not in table ccdFI.xml</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaFiNumberNotNumeric</id>
+            <sev>Error</sev>
+            <desc>CPA routing fi number not numeric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaItemRoutingDoesNotMatchCurrency</id>
+            <sev>Error</sev>
+            <desc>CPA item routing (including transaction code) does not match file currency</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaItemTypeDoesNotMatch</id>
+            <sev>Error</sev>
+            <desc>CPA orig item type does not match dest item type</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaItemTypeNotNumeric</id>
+            <sev>Error</sev>
+            <desc>CPA routing item type is not numeric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaRegionDoesNotMatch</id>
+            <sev>Info</sev>
+            <desc>CPA orig region does not match dest region</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaRegionNotInTable</id>
+            <sev>Error</sev>
+            <desc>CPA routing region subfield not found in table ccdRegion.xml</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaRegionNotNumeric</id>
+            <sev>Error</sev>
+            <desc>CPA routing region is not numeric</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaReservedNotInTable</id>
+            <sev>Error</sev>
+            <desc>CPA routing reserved subfield not found in table ccdReserved.xml</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaReturnAddendumBRequired</id>
+            <sev>Error</sev>
+            <desc>CPA Return Addendum B (type 33) is required but missing</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaRoutingLengthMustBeNine</id>
+            <sev>Error</sev>
+            <desc>CPA routing number length must be nine</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cpaSiteNotNumeric</id>
+            <sev>Error</sev>
+            <desc>CPA routing site not numeric</desc>
+            <type>System</type>
+        </error>
+		
+		
+		<!-- ACH messages -->
+
+        <error>
+            <id>achNotAchFile</id> 
+            <sev>Error</sev>
+            <desc>not an ACH file</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>achNotAchFile</id> 
+            <sev>Error</sev>
+            <desc>not an ACH file</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achFileFormatUtf8Bom</id>
+            <sev>Error</sev>
+            <desc>file format is UTF-8-BOM and should be UTF-8</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achFileFormatUtf16LE</id>
+            <sev>Error</sev>
+            <desc>file format is UTF-16LE and should be UTF-8</desc>
+            <type>System</type>
+        </error>   
+        <error>
+            <id>achFileFormatUtf16BE</id>
+            <sev>Error</sev>
+            <desc>file format is UTF-16BE and should be UTF-8</desc>
+            <type>System</type>
+        </error> 
+        <error>
+            <id>achFileFormatUtf32LE</id>
+            <sev>Error</sev>
+            <desc>file format is UTF-32LE and should be UTF-8</desc>
+            <type>System</type>
+        </error>   
+        <error>
+            <id>achFileFormatUtf32BE</id>
+            <sev>Error</sev>
+            <desc>file format is UTF-32BE and should be UTF-8</desc>
+            <type>System</type>
+        </error>                     	
+        <error>
+            <id>achImmediateOriginNonStandardValue</id>
+            <sev>Warn</sev>
+            <desc>non-standard value (the standard requires blank plus 9 digit routing or '1' plus 9 digit tax-id)</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achAba10Invalid</id>
+            <sev>Error</sev>
+            <desc>standard value requires blank plus 9 digit routing</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achAddendaCountIncorrect</id>
+            <sev>Error</sev>
+            <desc>type 6 addenda count does not agree with actual addenda records present</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achAddendasMandatoryForEntryClass</id>
+            <sev>Error</sev>
+            <desc>addenda records are mandatory for this standard entry class</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achAddendasMandatoryForZeroDollarItems</id>
+            <sev>Error</sev>
+            <desc>addenda records are mandatory for zero dollar items</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>achAddendasNotAllowedForEntry</id>
+            <sev>Error</sev>
+            <desc>addenda records are not allowed per type 6 addendum record indicator</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achAddendasNotAllowedForEntryClass</id>
+            <sev>Error</sev>
+            <desc>addenda records are not allowed for this standard entry class</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achAdvicesNotAllowedForServiceClass</id>
+            <sev>Error</sev>
+            <desc>advices not allowed for this service class code</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achBatchNumberNotUnique</id>
+            <sev>Error</sev>
+            <desc>batch number is not unique</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achCreditsNotAllowedForEntryClass</id>
+            <sev>Error</sev>
+            <desc>credits not allowed for this standard entry class</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achCreditsNotAllowedForServiceClass</id>
+            <sev>Error</sev>
+            <desc>credits not allowed for this service class code</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achDebitsNotAllowedForEntryClass</id>
+            <sev>Error</sev>
+            <desc>debits not allowed for this standard entry class</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achDebitsNotAllowedForServiceClass</id>
+            <sev>Error</sev>
+            <desc>debits not allowed for this service class code</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIncorrectBatchCount</id>
+            <sev>Error</sev>
+            <desc>batch count is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIncorrectBlockCount</id>
+            <sev>Error</sev>
+            <desc>block count is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIncorrectCreditTotalAmount</id>
+            <sev>Error</sev>
+            <desc>credit total amount is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIncorrectDebitTotalAmount</id>
+            <sev>Error</sev>
+            <desc>debit total amount is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIncorrectEntryAddendaCount</id>
+            <sev>Error</sev>
+            <desc>entry plus addenda count is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIncorrectHash</id>
+            <sev>Error</sev>
+            <desc>hash count is incorrect</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achMaximumAddendasExceededForEntryClass</id>
+            <sev>Error</sev>
+            <desc>maximum number of addenda records exceeded for this standard entry class</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achMustMatchBatchHeaderBatchNumber</id>
+            <sev>Error</sev>
+            <desc>batch number does not match batch header</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achMustMatchBatchHeaderNumber</id>
+            <sev>Error</sev>
+            <desc>batch number does not match batch header</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achMustMatchBatchHeaderServiceClass</id>
+            <sev>Error</sev>
+            <desc>service class does not match batch header</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achMustMatchLast7OfItemTraceNumber</id>
+            <sev>Error</sev>
+            <desc>must match last 7 characters of item trace number</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIatCurrencyMustBeUsdWhenExchangeFF</id>
+            <sev>Error</sev>
+            <desc>currency code should be USD when the Foreign Exchange Indicator is FF</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIatRdfiBranchCountryMustBeUsWhenExchangeFF</id>
+            <sev>Error</sev>
+            <desc>RDFI branch country code should be US when the Foreign Exchange Indicator is FF</desc>
+            <type>System</type>
+        </error>			
+        <error>
+            <id>achIatLessThanMinimumAddendaRecords</id>
+            <sev>Error</sev>
+            <desc>IAT items must have at least seven addenda records</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIatMoreThanMaximumAddendaRecords</id>
+            <sev>Error</sev>
+            <desc>IAT item exceeds maximum allowed addenda record count</desc>
+            <type>System</type>
+        </error>        
+        <error>
+            <id>achIatAddendaTypesOutOfSequence</id>
+            <sev>Error</sev>
+            <desc>IAT addenda type codes out of sequence</desc>
+            <type>System</type>
+        </error>	
+        <error>
+            <id>achIatForeignBankInfoLimitExceeded</id>
+            <sev>Error</sev>
+            <desc>more than five IAT Foreign Correspondent Bank Information Records</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achIatRemittanceControlLimitExceeded</id>
+            <sev>Error</sev>
+            <desc>more than two IAT Remittance Control Records</desc>
+            <type>System</type>
+        </error>	
+        <error>
+            <id>achHealthCareEdiSegmentInvalid</id>
+            <sev>Error</sev>
+            <desc>health care EDI segment contains data errors</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>achEdi820PaymentDocumentInvalid</id>
+            <sev>Error</sev>
+            <desc>EDI 820 payment document contains data errors</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achNocMustAppearInCorEntryClass</id>
+            <sev>Error</sev>
+            <desc>notification of change addenda records must appear in COR standard entry class</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achTraceOdfiMustMatchBatchHeader</id>
+            <sev>Error</sev>
+            <desc>leading 8 digits of the trace number does not match batch header odfi routing</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achthisDneTrancodeRequiresOrginatorStatus2</id>
+            <sev>Error</sev>
+            <desc>DNE transaction code 22/33 requires originator status code 2</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achTrancode55OnlyAllowedInReversalBatches</id>
+            <sev>Error</sev>
+            <desc>transaction code 55 (debit to loan account) is only allowed in REVERSAL batches</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achTrancodes8188RequiresOriginatorStatusZero</id> 
+            <sev>Error</sev>
+            <desc>transaction codes 81-88 allowed only when batch header originator status code is zero</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achPadRecordLengthGreaterThan94</id> 
+            <sev>Error</sev>
+            <desc>Pad record contains more than 94 characters</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>achTrailingRecordIsBlank</id> 
+            <sev>Error</sev>
+            <desc>Trailing record is blank</desc>
+            <type>System</type>
+        </error>  
+        <error>
+            <id>achFilePadRecordsIncorrect</id>
+            <sev>Severe</sev>
+            <desc>file not correctly padded with nines records to a multiple of ten</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achFilePadRecordsRequired</id>
+            <sev>Severe</sev>
+            <desc>pad records are required</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>achFilePadRecodsNotAllowed</id>
+            <sev>Severe</sev>
+            <desc>pad records are not allowed</desc>
+            <type>System</type>
+        </error>		
+
+		<!-- CPA005 messages -->
+		
+        <error>
+            <id>cp5NotCp5File</id> 
+            <sev>Error</sev>
+            <desc>not a CPA005 file</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cp5LogicalRecordCountNotSequential</id> 
+            <sev>Error</sev>
+            <desc>logical record count not assigned sequentially</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cp5IncorrectOriginationControlData</id> 
+            <sev>Error</sev>
+            <desc>origination control data does not match the file header</desc>
+            <type>System</type>
+        </error>		
+        <error>
+            <id>cp5JdateNotLeadingZero</id> 
+            <sev>Error</sev>
+            <desc>date does not have required leading zero</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cp5JdateInvalid</id> 
+            <sev>Error</sev>
+            <desc>invalid 5 digit julian date</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cp5InvalidItemTraceNumber</id> 
+            <sev>Error</sev>
+            <desc>invalid item trace number</desc>
+            <type>System</type>
+        </error>
+        <error>
+            <id>cp5InvalidDataElementIdentification</id> 
+            <sev>Error</sev>
+            <desc>invalid data element identification has incorrect format</desc>
+            <type>System</type>
+        </error>		
+
+    </messages>		
+		
+</errorMessages>

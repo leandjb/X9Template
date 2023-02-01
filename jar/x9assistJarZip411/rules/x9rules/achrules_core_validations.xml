@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074541_761</timestamp>
+    <basis>
+        <base>achrules_nacha_2013.xml</base>
+    </basis>
+    <x9Controls>
+        <gender>ACH</gender>
+        <dialect>ACH</dialect>
+        <x9Specification>nacha core validations</x9Specification>
+    </x9Controls>
+    <overrides>
+        <x9record>
+            <type>5</type>
+            <format>000</format>
+            <name>Company/Batch Header Record</name>
+            <length>f94</length>
+            <field>
+                <item>x05.09-p070-l006-mandatory-modifiable</item>
+                <name>Effective Entry Date</name>
+                <edit>dateRange/-2F|+5F</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>5</type>
+            <format>IAT</format>
+            <name>IAT Company/Batch Header Record</name>
+            <length>f94</length>
+            <field>
+                <item>x05.13-p070-l006-mandatory-modifiable</item>
+                <name>Effective Entry Date</name>
+                <edit>dateRange/-2F|+5F</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>000</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ACK</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ADV</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l015-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.10-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ARC</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ATX</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>BOC</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>CCD</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>COR</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>CTX</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>DNE</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>ENR</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>MTE</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>POP</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>POS</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>PPD</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>RCK</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+            <field>
+                <item>x06.08-p055-l022-mandatory-modifiable</item>
+                <name>Individual Name</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>SHR</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.09-p055-l022-mandatory-modifiable</item>
+                <name>Individual Card Account Number</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>TEL</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>TRC</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>TRX</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>WEB</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>6</type>
+            <format>XCK</format>
+            <name></name>
+            <length>f94</length>
+            <field>
+                <item>x06.05-p013-l017-mandatory-modifiable</item>
+                <name>DFI Account Number</name>
+                <edit>ans</edit>
+            </field>
+        </x9record>
+    </overrides>
+</x9rules>

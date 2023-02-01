@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x9table>
+
+<!-- ISO 4217 defines the standard list of international currency codes -->
+
+  <entry> <key>AED</key> <value>United Arab Emirates Dirham</value> </entry>
+  <entry> <key>AFN</key> <value>Afghanistan Afghani</value> </entry>
+  <entry> <key>ALL</key> <value>Albania Lek</value> </entry>
+  <entry> <key>AMD</key> <value>Armenia Dram</value> </entry>
+  <entry> <key>ANG</key> <value>Netherlands Antilles Guilder</value> </entry>
+  <entry> <key>AOA</key> <value>Angola Kwanza</value> </entry>
+  <entry> <key>ARS</key> <value>Argentina Peso</value> </entry>
+  <entry> <key>AUD</key> <value>Australia Dollar</value> </entry>
+  <entry> <key>AWG</key> <value>Aruba Guilder</value> </entry>
+  <entry> <key>AZN</key> <value>Azerbaijan Manat</value> </entry>
+  <entry> <key>BAM</key> <value>Bosnia and Herzegovina Convertible Mark</value> </entry>
+  <entry> <key>BBD</key> <value>Barbados Dollar</value> </entry>
+  <entry> <key>BDT</key> <value>Bangladesh Taka</value> </entry>
+  <entry> <key>BGN</key> <value>Bulgaria Lev</value> </entry>
+  <entry> <key>BHD</key> <value>Bahrain Dinar</value> </entry>
+  <entry> <key>BIF</key> <value>Burundi Franc</value> </entry>
+  <entry> <key>BMD</key> <value>Bermuda Dollar</value> </entry>
+  <entry> <key>BND</key> <value>Brunei Darussalam Dollar</value> </entry>
+  <entry> <key>BOB</key> <value>Bolivia Bolíviano</value> </entry>
+  <entry> <key>BRL</key> <value>Brazil Real</value> </entry>
+  <entry> <key>BSD</key> <value>Bahamas Dollar</value> </entry>
+  <entry> <key>BTN</key> <value>Bhutan Ngultrum</value> </entry>
+  <entry> <key>BWP</key> <value>Botswana Pula</value> </entry>
+  <entry> <key>BYN</key> <value>Belarus Ruble</value> </entry>
+  <entry> <key>BZD</key> <value>Belize Dollar</value> </entry>
+  <entry> <key>CAD</key> <value>Canada Dollar</value> </entry>
+  <entry> <key>CDF</key> <value>Congo/Kinshasa Franc</value> </entry>
+  <entry> <key>CHF</key> <value>Switzerland Franc</value> </entry>
+  <entry> <key>CLP</key> <value>Chile Peso</value> </entry>
+  <entry> <key>CNY</key> <value>China Yuan Renminbi</value> </entry>
+  <entry> <key>COP</key> <value>Colombia Peso</value> </entry>
+  <entry> <key>CRC</key> <value>Costa Rica Colon</value> </entry>
+  <entry> <key>CUC</key> <value>Cuba Convertible Peso</value> </entry>
+  <entry> <key>CUP</key> <value>Cuba Peso</value> </entry>
+  <entry> <key>CVE</key> <value>Cape Verde Escudo</value> </entry>
+  <entry> <key>CZK</key> <value>Czech Republic Koruna</value> </entry>
+  <entry> <key>DJF</key> <value>Djibouti Franc</value> </entry>
+  <entry> <key>DKK</key> <value>Denmark Krone</value> </entry>
+  <entry> <key>DOP</key> <value>Dominican Republic Peso</value> </entry>
+  <entry> <key>DZD</key> <value>Algeria Dinar</value> </entry>
+  <entry> <key>EGP</key> <value>Egypt Pound</value> </entry>
+  <entry> <key>ERN</key> <value>Eritrea Nakfa</value> </entry>
+  <entry> <key>ETB</key> <value>Ethiopia Birr</value> </entry>
+  <entry> <key>EUR</key> <value>Euro Member Countries</value> </entry>
+  <entry> <key>FJD</key> <value>Fiji Dollar</value> </entry>
+  <entry> <key>FKP</key> <value>Falkland Islands (Malvinas) Pound</value> </entry>
+  <entry> <key>GBP</key> <value>United Kingdom Pound</value> </entry>
+  <entry> <key>GEL</key> <value>Georgia Lari</value> </entry>
+  <entry> <key>GGP</key> <value>Guernsey Pound</value> </entry>
+  <entry> <key>GHS</key> <value>Ghana Cedi</value> </entry>
+  <entry> <key>GIP</key> <value>Gibraltar Pound</value> </entry>
+  <entry> <key>GMD</key> <value>Gambia Dalasi</value> </entry>
+  <entry> <key>GNF</key> <value>Guinea Franc</value> </entry>
+  <entry> <key>GTQ</key> <value>Guatemala Quetzal</value> </entry>
+  <entry> <key>GYD</key> <value>Guyana Dollar</value> </entry>
+  <entry> <key>HKD</key> <value>Hong Kong Dollar</value> </entry>
+  <entry> <key>HNL</key> <value>Honduras Lempira</value> </entry>
+  <entry> <key>HRK</key> <value>Croatia Kuna</value> </entry>
+  <entry> <key>HTG</key> <value>Haiti Gourde</value> </entry>
+  <entry> <key>HUF</key> <value>Hungary Forint</value> </entry>
+  <entry> <key>IDR</key> <value>Indonesia Rupiah</value> </entry>
+  <entry> <key>ILS</key> <value>Israel Shekel</value> </entry>
+  <entry> <key>IMP</key> <value>Isle of Man Pound</value> </entry>
+  <entry> <key>INR</key> <value>India Rupee</value> </entry>
+  <entry> <key>IQD</key> <value>Iraq Dinar</value> </entry>
+  <entry> <key>IRR</key> <value>Iran Rial</value> </entry>
+  <entry> <key>ISK</key> <value>Iceland Krona</value> </entry>
+  <entry> <key>JEP</key> <value>Jersey Pound</value> </entry>
+  <entry> <key>JMD</key> <value>Jamaica Dollar</value> </entry>
+  <entry> <key>JOD</key> <value>Jordan Dinar</value> </entry>
+  <entry> <key>JPY</key> <value>Japan Yen</value> </entry>
+  <entry> <key>KES</key> <value>Kenya Shilling</value> </entry>
+  <entry> <key>KGS</key> <value>Kyrgyzstan Som</value> </entry>
+  <entry> <key>KHR</key> <value>Cambodia Riel</value> </entry>
+  <entry> <key>KMF</key> <value>Comorian Franc</value> </entry>
+  <entry> <key>KPW</key> <value>Korea (North) Won</value> </entry>
+  <entry> <key>KRW</key> <value>Korea (South) Won</value> </entry>
+  <entry> <key>KWD</key> <value>Kuwait Dinar</value> </entry>
+  <entry> <key>KYD</key> <value>Cayman Islands Dollar</value> </entry>
+  <entry> <key>KZT</key> <value>Kazakhstan Tenge</value> </entry>
+  <entry> <key>LAK</key> <value>Laos Kip</value> </entry>
+  <entry> <key>LBP</key> <value>Lebanon Pound</value> </entry>
+  <entry> <key>LKR</key> <value>Sri Lanka Rupee</value> </entry>
+  <entry> <key>LRD</key> <value>Liberia Dollar</value> </entry>
+  <entry> <key>LSL</key> <value>Lesotho Loti</value> </entry>
+  <entry> <key>LYD</key> <value>Libya Dinar</value> </entry>
+  <entry> <key>MAD</key> <value>Morocco Dirham</value> </entry>
+  <entry> <key>MDL</key> <value>Moldova Leu</value> </entry>
+  <entry> <key>MGA</key> <value>Madagascar Ariary</value> </entry>
+  <entry> <key>MKD</key> <value>Macedonia Denar</value> </entry>
+  <entry> <key>MMK</key> <value>Myanmar (Burma) Kyat</value> </entry>
+  <entry> <key>MNT</key> <value>Mongolia Tughrik</value> </entry>
+  <entry> <key>MOP</key> <value>Macau Pataca</value> </entry>
+  <entry> <key>MRU</key> <value>Mauritania Ouguiya</value> </entry>
+  <entry> <key>MUR</key> <value>Mauritius Rupee</value> </entry>
+  <entry> <key>MVR</key> <value>Maldives (Maldive Islands) Rufiyaa</value> </entry>
+  <entry> <key>MWK</key> <value>Malawi Kwacha</value> </entry>
+  <entry> <key>MXN</key> <value>Mexico Peso</value> </entry>
+  <entry> <key>MYR</key> <value>Malaysia Ringgit</value> </entry>
+  <entry> <key>MZN</key> <value>Mozambique Metical</value> </entry>
+  <entry> <key>NAD</key> <value>Namibia Dollar</value> </entry>
+  <entry> <key>NGN</key> <value>Nigeria Naira</value> </entry>
+  <entry> <key>NIO</key> <value>Nicaragua Cordoba</value> </entry>
+  <entry> <key>NOK</key> <value>Norway Krone</value> </entry>
+  <entry> <key>NPR</key> <value>Nepal Rupee</value> </entry>
+  <entry> <key>NZD</key> <value>New Zealand Dollar</value> </entry>
+  <entry> <key>OMR</key> <value>Oman Rial</value> </entry>
+  <entry> <key>PAB</key> <value>Panama Balboa</value> </entry>
+  <entry> <key>PEN</key> <value>Peru Sol</value> </entry>
+  <entry> <key>PGK</key> <value>Papua New Guinea Kina</value> </entry>
+  <entry> <key>PHP</key> <value>Philippines Peso</value> </entry>
+  <entry> <key>PKR</key> <value>Pakistan Rupee</value> </entry>
+  <entry> <key>PLN</key> <value>Poland Zloty</value> </entry>
+  <entry> <key>PYG</key> <value>Paraguay Guarani</value> </entry>
+  <entry> <key>QAR</key> <value>Qatar Riyal</value> </entry>
+  <entry> <key>RON</key> <value>Romania Leu</value> </entry>
+  <entry> <key>RSD</key> <value>Serbia Dinar</value> </entry>
+  <entry> <key>RUB</key> <value>Russia Ruble</value> </entry>
+  <entry> <key>RWF</key> <value>Rwanda Franc</value> </entry>
+  <entry> <key>SAR</key> <value>Saudi Arabia Riyal</value> </entry>
+  <entry> <key>SBD</key> <value>Solomon Islands Dollar</value> </entry>
+  <entry> <key>SCR</key> <value>Seychelles Rupee</value> </entry>
+  <entry> <key>SDG</key> <value>Sudan Pound</value> </entry>
+  <entry> <key>SEK</key> <value>Sweden Krona</value> </entry>
+  <entry> <key>SGD</key> <value>Singapore Dollar</value> </entry>
+  <entry> <key>SHP</key> <value>Saint Helena Pound</value> </entry>
+  <entry> <key>SLL</key> <value>Sierra Leone Leone</value> </entry>
+  <entry> <key>SOS</key> <value>Somalia Shilling</value> </entry>
+  <entry> <key>SPL</key> <value>Seborga Luigino</value> </entry>
+  <entry> <key>SRD</key> <value>Suriname Dollar</value> </entry>
+  <entry> <key>STN</key> <value>Sao Tome and Príncipe Dobra</value> </entry>
+  <entry> <key>SVC</key> <value>El Salvador Colon</value> </entry>
+  <entry> <key>SYP</key> <value>Syria Pound</value> </entry>
+  <entry> <key>SZL</key> <value>eSwatini Lilangeni</value> </entry>
+  <entry> <key>THB</key> <value>Thailand Baht</value> </entry>
+  <entry> <key>TJS</key> <value>Tajikistan Somoni</value> </entry>
+  <entry> <key>TMT</key> <value>Turkmenistan Manat</value> </entry>
+  <entry> <key>TND</key> <value>Tunisia Dinar</value> </entry>
+  <entry> <key>TOP</key> <value>Tonga Paanga</value> </entry>
+  <entry> <key>TRY</key> <value>Turkey Lira</value> </entry>
+  <entry> <key>TTD</key> <value>Trinidad and Tobago Dollar</value> </entry>
+  <entry> <key>TVD</key> <value>Tuvalu Dollar</value> </entry>
+  <entry> <key>TWD</key> <value>Taiwan New Dollar</value> </entry>
+  <entry> <key>TZS</key> <value>Tanzania Shilling</value> </entry>
+  <entry> <key>UAH</key> <value>Ukraine Hryvnia</value> </entry>
+  <entry> <key>UGX</key> <value>Uganda Shilling</value> </entry>
+  <entry> <key>USD</key> <value>United States Dollar</value> </entry>
+  <entry> <key>UYU</key> <value>Uruguay Peso</value> </entry>
+  <entry> <key>UZS</key> <value>Uzbekistan Som</value> </entry>
+  <entry> <key>VEF</key> <value>Venezuela Bolivar</value> </entry>
+  <entry> <key>VND</key> <value>Viet Nam Dong</value> </entry>
+  <entry> <key>VUV</key> <value>Vanuatu Vatu</value> </entry>
+  <entry> <key>WST</key> <value>Samoa Tala</value> </entry>
+  <entry> <key>XAF</key> <value>Communaute Financière Africaine (BEAC) CFA Franc BEAC</value> </entry>
+  <entry> <key>XCD</key> <value>East Caribbean Dollar</value> </entry>
+  <entry> <key>XDR</key> <value>International Monetary Fund (IMF) Special Drawing Rights</value> </entry>
+  <entry> <key>XOF</key> <value>Communaute Financière Africaine (BCEAO) Franc</value> </entry>
+  <entry> <key>XPF</key> <value>Comptoirs Francais du Pacifique (CFP) Franc</value> </entry>
+  <entry> <key>YER</key> <value>Yemen Rial</value> </entry>
+  <entry> <key>ZAR</key> <value>South Africa Rand</value> </entry>
+  <entry> <key>ZMW</key> <value>Zambia Kwacha</value> </entry>
+  <entry> <key>ZWD</key> <value>Zimbabwe Dollar</value> </entry>
+
+</x9table>

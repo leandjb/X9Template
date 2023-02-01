@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: compareToBatchHeaderODFI -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>5.12</field> <isEqual>[this]</isEqual> </test>
+  <message>Must match the originating ODFI present in the preceding batch header at positions 80-87</message>  
+  <repair>[5.12]</repair> 
+</testSet>

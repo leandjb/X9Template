@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: compareToFileHeaderDestRouting -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>01.4</field> <isEqual>[this]</isEqual> </test>
+  <message>Must match file header destination routing</message>  
+  <repair>[01.4]</repair> 
+</testSet>

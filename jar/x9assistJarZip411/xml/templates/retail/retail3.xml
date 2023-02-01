@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkFormat>
+  <copyright>X9Ware LLC 2012-2018</copyright>
+  <company>X9Ware LLC</company>
+  <release>R4.11</release>
+  <buildDate>2018.12.14</buildDate>
+  <timestamp>20190105_065120_152</timestamp>
+ 
+  <template>
+    <formatName>retail3</formatName>
+    <templateName>retail3.tif</templateName>
+	<backTemplateName/>	
+	
+	<field>
+	<fieldName>nameAddress</fieldName>
+	<x>0.20</x> <y>0.20</y> <length>1.90</length>
+	<font>serif</font> <fontSize>25</fontSize>
+	</field>
+
+	<field>
+	<fieldName>payeeName</fieldName>
+	<x>0.90</x> <y>1.12</y> <length>3.00</length>
+	<font>handwriting3.ttf</font> <fontSize>60</fontSize>
+	</field>
+	
+	<field>
+	<fieldName>itemIdentifier</fieldName>
+	<x>4.10</x> <y>0.18</y> <length>1.87</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>	
+
+	<field>
+	<fieldName>checkNumber</fieldName>
+	<x>5.00</x> <y>0.32</y> <length>0.97</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>
+
+	<field>
+	<fieldName>dateWritten</fieldName>
+	<x>4.30</x> <y>0.55</y> <length>1.65</length>
+	<font>handwriting3.ttf</font> <fontSize>45</fontSize>
+	<formatString>MMMM d, yyyy</formatString>
+	</field>
+
+	<field>
+	<fieldName>courtesyAmount</fieldName>
+	<x>4.15</x> <y>1.12</y> <length>1.70</length>
+	<font>handwriting3.ttf</font> <fontSize>70</fontSize>
+	</field>
+
+	<field>
+	<fieldName>legalAmount</fieldName>
+	<x>0.85</x> <y>1.65</y> <length>5.32</length>
+	<font>handwriting3.ttf</font> <fontSize>50</fontSize>
+	</field>
+
+	<field>
+	<fieldName>bankName</fieldName>
+	<x>2.60</x> <y>0.55</y> <length>1.15</length>
+	<font>serif</font> <fontSize>20</fontSize>
+	</field>
+
+	<field>
+	<fieldName>memoLine</fieldName>
+	<x>0.64</x> <y>2.06</y> <length>1.76</length>
+	<font>handwriting3.ttf</font> <fontSize>60</fontSize>
+	</field>
+
+	<field>
+	<fieldName>signature</fieldName>
+	<x>3.47</x> <y>2.06</y> <length>2.70</length>
+	<font>handwriting3.ttf</font> <fontSize>60</fontSize>
+	</field>
+
+	<field>
+	<fieldName>endorsement</fieldName>
+	<x>0.50</x> <y>0.50</y> <length>4.00</length>
+	<font>serif</font> <fontSize>35</fontSize>
+	</field>	
+	
+  </template>	
+	
+</checkFormat>

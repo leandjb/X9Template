@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Test: compareToFileHeaderOrigRouting -->
+<!-- Severity: error -->
+<testSet>
+  <test> <field>01.5</field> <isEqual>[this]</isEqual> </test>
+  <message>Must match file header origination routing</message> 
+  <repair>[01.5]</repair> 
+</testSet>

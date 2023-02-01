@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.11</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_074640_561</timestamp>
+    <basis>
+        <base>x9rules_x9.100-187_CCD.xml</base>
+    </basis>
+    <x9Controls>
+        <gender>X9</gender>
+        <dialect>X9</dialect>
+        <x9Specification>CPA 015 100-187-2008 GrayScale</x9Specification>
+        <minimumSupplementalImages>2</minimumSupplementalImages>
+        <maximumSupplementalImages>2</maximumSupplementalImages>
+        <supplementalImageFormat>tif</supplementalImageFormat>
+    </x9Controls>
+    <overrides/>
+</x9rules>

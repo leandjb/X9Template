@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiffrules>
+
+	<tiffControls>
+		<editsEnabled>false</editsEnabled>
+	</tiffControls>
+
+	<tiffEdits>
+	</tiffEdits>
+
+	<mandatoryTiffTags>
+	</mandatoryTiffTags>
+
+	<tiffTagDescriptions>
+		<!--
+      <tiffTag> <tag>254</tag> <description>NewSubfileType</description> </tiffTag> 
+      -->
+	</tiffTagDescriptions>
+
+</tiffrules>
+

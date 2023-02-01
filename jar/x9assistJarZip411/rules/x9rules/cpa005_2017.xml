@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<x9rules>
+    <copyright>X9Ware LLC 2012-2018</copyright>
+    <company>X9Ware LLC</company>
+    <release>R4.12</release>
+    <buildDate>2022.07.04</buildDate>
+    <timestamp>20220706_080954_737</timestamp>
+    <x9Controls>
+        <gender>CPA005</gender>
+        <dialect>CPA005</dialect>
+        <x9Specification>cpa005_aft_2017</x9Specification>
+        <characterSet>either</characterSet>
+        <lineBreaks>required</lineBreaks>
+        <fieldZeroPresence>prohibited</fieldZeroPresence>
+        <maximumFileSize>0</maximumFileSize>
+        <dateMinimumYear>1993</dateMinimumYear>
+        <dateMaximumYear>2099</dateMaximumYear>
+        <dateWindowMinusDays>1095</dateWindowMinusDays>
+        <dateWindowPlusDays>95</dateWindowPlusDays>
+        <userFieldsValidated>true</userFieldsValidated>
+        <reservedFieldsValidated>true</reservedFieldsValidated>
+        <requiredFieldsAreMandatory>false</requiredFieldsAreMandatory>
+        <multipleLogicalFilesAllowed>false</multipleLogicalFilesAllowed>
+        <creditBalancing>disabled</creditBalancing>
+        <creditOrientation>any</creditOrientation>
+    </x9Controls>
+    <records>
+        <x9record>
+            <type>0</type>
+            <format>000</format>
+            <name>Invalid Record Type Within 1464 File</name>
+            <length>f1464</length>
+            <field>
+                <item>x00.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x00.02-p002-l1463-mandatory-modifiable</item>
+                <name>Reserved</name>
+                <edit>none</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>0</type>
+            <format>208</format>
+            <name>Invalid Record Type Within 208 File</name>
+            <length>f208</length>
+            <field>
+                <item>x00.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x00.02-p002-l207-mandatory-modifiable</item>
+                <name>Reserved</name>
+                <edit>none</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>1</type>
+            <format>000</format>
+            <name>Header Record for Transactions (A)</name>
+            <length>f1464</length>
+            <field>
+                <item>x01.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=A</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x01.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x01.03-p011-l010-mandatory-modifiable</item>
+                <name>Originator ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x01.04-p021-l004-mandatory-modifiable</item>
+                <name>File Creation Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x01.05-p025-l006-mandatory-modifiable</item>
+                <name>Creation Date</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x01.06-p031-l005-optional-modifiable</item>
+                <name>Destination Data Centre</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x01.07-p036-l020-optional-modifiable</item>
+                <name>Reserved Clearer Communication Area</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x01.08-p056-l003-mandatory-modifiable</item>
+                <name>Currency Code Identifier</name>
+                <values>=CAD|USD</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x01.09-p059-l1406-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>a</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>11</type>
+            <format>000</format>
+            <name>Deposit (C)</name>
+            <length>f264</length>
+            <field>
+                <item>x11.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=C</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x11.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x11.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+                <edit>cp5OriginationControl</edit>
+            </field>
+            <field>
+                <item>x11.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x11.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x11.06-p038-l006-mandatory-modifiable</item>
+                <name>Date Funds to be Available</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x11.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x11.08-p053-l012-mandatory-modifiable</item>
+                <name>Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x11.10-p087-l003-optional-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x11.11-p090-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.12-p105-l030-mandatory-modifiable</item>
+                <name>Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.13-p135-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.14-p165-l010-optional-modifiable</item>
+                <name>Originator Direct User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.15-p175-l019-optional-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.16-p194-l009-mandatory-modifiable</item>
+                <name>Institution ID Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x11.17-p203-l012-optional-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.18-p215-l015-optional-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.19-p230-l022-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.20-p252-l002-optional-modifiable</item>
+                <name>Originator Clearer Settlement Code</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x11.21-p254-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>12</type>
+            <format>000</format>
+            <name>Debit (D)</name>
+            <length>f264</length>
+            <field>
+                <item>x12.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=C</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x12.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x12.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+                <edit>cp5OriginationControl</edit>
+            </field>
+            <field>
+                <item>x12.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x12.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x12.06-p038-l006-mandatory-modifiable</item>
+                <name>Date Funds to be Available</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x12.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x12.08-p053-l012-mandatory-modifiable</item>
+                <name>Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x12.10-p087-l003-optional-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x12.11-p090-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.12-p105-l030-mandatory-modifiable</item>
+                <name>Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.13-p135-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.14-p165-l010-optional-modifiable</item>
+                <name>Originator Direct User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.15-p175-l019-optional-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.16-p194-l009-mandatory-modifiable</item>
+                <name>Institution ID Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x12.17-p203-l012-optional-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.18-p215-l015-optional-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.19-p230-l022-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.20-p252-l002-optional-modifiable</item>
+                <name>Originator Clearer Settlement Code</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x12.21-p254-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>21</type>
+            <format>000</format>
+            <name>Deposit Reversal (E)</name>
+            <length>f264</length>
+            <field>
+                <item>x21.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=E</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x21.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x21.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+                <edit>cp5OriginationControl</edit>
+            </field>
+            <field>
+                <item>x21.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x21.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x21.06-p038-l006-mandatory-modifiable</item>
+                <name>Date Funds to be Available</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x21.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x21.08-p053-l012-mandatory-modifiable</item>
+                <name>Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x21.10-p087-l003-optional-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x21.11-p090-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.12-p105-l030-mandatory-modifiable</item>
+                <name>Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.13-p135-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.14-p165-l010-optional-modifiable</item>
+                <name>Originator Direct User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.15-p175-l019-optional-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.16-p194-l009-mandatory-modifiable</item>
+                <name>Institution ID Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x21.17-p203-l012-optional-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.18-p215-l015-optional-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.19-p230-l022-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.20-p252-l002-optional-modifiable</item>
+                <name>Originator Clearer Settlement Code</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x21.21-p254-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>22</type>
+            <format>000</format>
+            <name>Debit Reversal(F)</name>
+            <length>f264</length>
+            <field>
+                <item>x22.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=F</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x22.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x22.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+                <edit>cp5OriginationControl</edit>
+            </field>
+            <field>
+                <item>x22.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x22.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x22.06-p038-l006-mandatory-modifiable</item>
+                <name>Date Funds to be Available</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x22.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x22.08-p053-l012-mandatory-modifiable</item>
+                <name>Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x22.10-p087-l003-optional-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x22.11-p090-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.12-p105-l030-mandatory-modifiable</item>
+                <name>Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.13-p135-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.14-p165-l010-optional-modifiable</item>
+                <name>Originator Direct User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.15-p175-l019-optional-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.16-p194-l009-mandatory-modifiable</item>
+                <name>Institution ID Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x22.17-p203-l012-optional-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.18-p215-l015-optional-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.19-p230-l022-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.20-p252-l002-optional-modifiable</item>
+                <name>Originator Clearer Settlement Code</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x22.21-p254-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>31</type>
+            <format>000</format>
+            <name>Returned Deposit (I)</name>
+            <length>f264</length>
+            <field>
+                <item>x31.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=I</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x31.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x31.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+                <edit>cp5OriginationControl</edit>
+            </field>
+            <field>
+                <item>x31.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x31.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x31.06-p038-l006-mandatory-modifiable</item>
+                <name>Date Funds to be Available</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x31.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x31.08-p053-l012-mandatory-modifiable</item>
+                <name>Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x31.10-p087-l003-mandatory-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x31.11-p090-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.12-p105-l030-mandatory-modifiable</item>
+                <name>Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.13-p135-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.14-p165-l010-mandatory-modifiable</item>
+                <name>Originator Direct User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.15-p175-l019-mandatory-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.16-p194-l009-mandatory-modifiable</item>
+                <name>Institution ID Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x31.17-p203-l012-mandatory-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.18-p215-l015-optional-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.19-p230-l022-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.20-p252-l002-mandatory-modifiable</item>
+                <name>Originator Clearer Settlement Code</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x31.21-p254-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>32</type>
+            <format>000</format>
+            <name>Returned Debit (J)</name>
+            <length>f264</length>
+            <field>
+                <item>x32.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=J</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x32.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x32.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+                <edit>cp5OriginationControl</edit>
+            </field>
+            <field>
+                <item>x32.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x32.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x32.06-p038-l006-mandatory-modifiable</item>
+                <name>Date Funds to be Available</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x32.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x32.08-p053-l012-mandatory-modifiable</item>
+                <name>Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x32.10-p087-l003-mandatory-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x32.11-p090-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.12-p105-l030-mandatory-modifiable</item>
+                <name>Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.13-p135-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.14-p165-l010-mandatory-modifiable</item>
+                <name>Originator Direct User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.15-p175-l019-mandatory-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.16-p194-l009-mandatory-modifiable</item>
+                <name>Institution ID Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x32.17-p203-l012-mandatory-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.18-p215-l015-optional-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.19-p230-l022-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.20-p252-l002-mandatory-modifiable</item>
+                <name>Originator Clearer Settlement Code</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x32.21-p254-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>41</type>
+            <format>000</format>
+            <name>MICR Debit (D)</name>
+            <length>f144</length>
+            <field>
+                <item>x41.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=B</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x41.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x41.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x41.04-p025-l003-mandatory-modifiable</item>
+                <name>Transaction Type</name>
+                <values>=100|150|200|201</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x41.05-p028-l010-mandatory-modifiable</item>
+                <name>Amount</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x41.06-p038-l006-optional-modifiable</item>
+                <name>Unused</name>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x41.07-p044-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x41.08-p053-l012-mandatory-modifiable</item>
+                <name>MICR Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x41.09-p065-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>cp5TraceNumber</edit>
+            </field>
+            <field>
+                <item>x41.10-p087-l003-optional-modifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x41.11-p090-l012-mandatory-modifiable</item>
+                <name>MICR Serial Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x41.12-p102-l004-mandatory-modifiable</item>
+                <name>MICR Internal Transaction Code</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x41.13-p106-l028-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x41.14-p134-l011-mandatory-modifiable</item>
+                <name>Invalid Data Element ID</name>
+                <edit>n</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>80</type>
+            <format>000</format>
+            <name>Header Record for Notice of Change (U)</name>
+            <length>f208</length>
+            <field>
+                <item>x80.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=U</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x80.02-p002-l010-mandatory-modifiable</item>
+                <name>Originator ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x80.03-p012-l004-mandatory-modifiable</item>
+                <name>File Creation Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x80.04-p016-l006-mandatory-modifiable</item>
+                <name>Creation Date</name>
+                <edit>cp5Jdate</edit>
+            </field>
+            <field>
+                <item>x80.05-p022-l005-optional-modifiable</item>
+                <name>Destination Data Centre</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x80.06-p027-l003-mandatory-modifiable</item>
+                <name>Currency Code Identifier</name>
+                <values>=CAD|USD</values>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x80.07-p030-l179-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>a</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>81</type>
+            <format>000</format>
+            <name>Notice of Change (S)</name>
+            <length>f264</length>
+            <field>
+                <item>x81.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=S</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x81.02-p002-l003-mandatory-notModifiable</item>
+                <name>Stored Transaction Type</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x81.03-p005-l009-mandatory-notModifiable</item>
+                <name>New Institution Identification Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x81.04-p014-l012-mandatory-modifiable</item>
+                <name>New Payor/Payee Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.05-p026-l022-mandatory-modifiable</item>
+                <name>Item Trace Number</name>
+                <edit>n</edit>
+                <edit>nonzero</edit>
+            </field>
+            <field>
+                <item>x81.06-p048-l030-mandatory-modifiable</item>
+                <name>Payor/Payee Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.07-p078-l010-mandatory-modifiable</item>
+                <name>Original Direct Clearer User ID</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.08-p088-l019-mandatory-modifiable</item>
+                <name>Originator Cross Reference Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.09-p107-l009-mandatory-modifiable</item>
+                <name>Originator Institutional Identification Number</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x81.10-p116-l012-mandatory-modifiable</item>
+                <name>Original Account Number</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.11-p128-l015-mandatory-modifiable</item>
+                <name>Originator Sundry Information</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.12-p143-l009-mandatory-modifiable</item>
+                <name>Institutional Identification Number for Returns</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x81.13-p152-l012-mandatory-modifiable</item>
+                <name>Account Number for Returns</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.14-p164-l030-mandatory-modifiable</item>
+                <name>Originator Long Name</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x81.15-p194-l015-mandatory-modifiable</item>
+                <name>Originator Short Name</name>
+                <edit>p</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>82</type>
+            <format>000</format>
+            <name>Trailer Record for Notice of Change (V)</name>
+            <length>f208</length>
+            <field>
+                <item>x82.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=V</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x82.02-p002-l008-mandatory-modifiable</item>
+                <name>Total Number of S Transactions</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x82.03-p010-l199-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>a</edit>
+            </field>
+        </x9record>
+        <x9record>
+            <type>99</type>
+            <format>000</format>
+            <name>Trailer Record for Transactions (Z)</name>
+            <length>f1464</length>
+            <field>
+                <item>x99.01-p001-l001-mandatory-notModifiable</item>
+                <name>Record Type</name>
+                <values>=Z</values>
+                <edit>a</edit>
+            </field>
+            <field>
+                <item>x99.02-p002-l009-mandatory-notModifiable</item>
+                <name>Logical Record Count</name>
+                <edit>n</edit>
+                <edit>cp5LogicalRecordCount</edit>
+            </field>
+            <field>
+                <item>x99.03-p011-l014-mandatory-notModifiable</item>
+                <name>Origination Control Data</name>
+                <edit>p</edit>
+            </field>
+            <field>
+                <item>x99.04-p025-l014-mandatory-modifiable</item>
+                <name>Total Value of Debits D+J</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.05-p039-l008-mandatory-modifiable</item>
+                <name>Total Number of Debits D+J</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.06-p047-l014-mandatory-modifiable</item>
+                <name>Total Value of Credits C+I</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.07-p061-l008-mandatory-modifiable</item>
+                <name>Total Number of Credits C+I</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.08-p069-l014-mandatory-modifiable</item>
+                <name>Total Value of Credit Reversals E</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.09-p083-l008-mandatory-modifiable</item>
+                <name>Total Number of Credit Reversals E</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.10-p091-l014-mandatory-modifiable</item>
+                <name>Total Value of Debit Reversals F</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.11-p105-l008-mandatory-modifiable</item>
+                <name>Total Number of Debit Reversals F</name>
+                <edit>n</edit>
+            </field>
+            <field>
+                <item>x99.12-p113-l1352-optional-modifiable</item>
+                <name>Filler</name>
+                <edit>a</edit>
+            </field>
+        </x9record>
+    </records>
+</x9rules>
