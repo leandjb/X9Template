@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="x937-0.2.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/x937-0.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/x937-0.2.1.jar!/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/main/resources/lib/x937-0.2.1.jar!/" />
+    </SOURCES>
+  </library>
+</component>

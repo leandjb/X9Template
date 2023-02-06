@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
@@ -39,14 +39,14 @@
             <version>3.12.0</version>
         </dependency>
         <!--local X9ware-->
-        <dependency>
-            <groupId>com.x9ware</groupId>
-            <artifactId>x9ware</artifactId>
-            <version>0.2.1</version>
-            <scope>system</scope>
-            <packaging>jar</packaging>
-            <systemPath>${project.basedir}/src/main/resources/lib/x937.jar</systemPath>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.x9ware</groupId>-->
+<!--            <artifactId>X9Assist</artifactId>-->
+<!--            <version>0.2.1</version>-->
+<!--            <scope>system</scope>-->
+<!--            <packaging>jar</packaging>-->
+<!--            <systemPath>${project.basedir}/src/main/resources/lib/x937.jar</systemPath>-->
+<!--        </dependency>-->
 
 
     </dependencies>
