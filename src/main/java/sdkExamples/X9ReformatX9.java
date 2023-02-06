@@ -52,7 +52,7 @@ public final class X9ReformatX9 {
 	/*
 	 * Constants.
 	 */
-	private static final String X9REFORMATX9 = "X9ReformatX9";
+	public static final String X9REFORMATX9 = "X9ReformatX9";
 
 	/**
 	 * Logger instance.
